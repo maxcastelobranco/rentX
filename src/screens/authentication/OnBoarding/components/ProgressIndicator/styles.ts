@@ -1,0 +1,18 @@
+import { useTheme } from "@shopify/restyle";
+
+import responsivePixelSize from "../../../../../utils/responsivePixelSize";
+import { Theme } from "../../../../../theme";
+
+const PROGRESS_INDICATOR_SIZE = responsivePixelSize(12);
+
+export const useStyles = (index: number) => {
+  const theme = useTheme<Theme>();
+
+  return {
+    backgroundColor: theme.colors.textDark1,
+    width: PROGRESS_INDICATOR_SIZE,
+    height: PROGRESS_INDICATOR_SIZE,
+    borderRadius: PROGRESS_INDICATOR_SIZE / 2,
+    marginLeft: index === 0 ? 0 : theme.spacing.xs,
+  };
+};

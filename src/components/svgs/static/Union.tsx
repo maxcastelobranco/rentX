@@ -1,9 +1,18 @@
 import * as React from "react";
 import Svg, { SvgProps, Path } from "react-native-svg";
 
+export const UNION_WIDTH = 80;
+export const UNION_HEIGHT = 50;
+
 const Union: React.FC<SvgProps> = (props: SvgProps) => {
   return (
-    <Svg width={80} height={50} viewBox="0 0 80 50" fill="none" {...props}>
+    <Svg
+      width={UNION_WIDTH}
+      height={UNION_HEIGHT}
+      viewBox="0 0 80 50"
+      fill="none"
+      {...props}
+    >
       <Path
         fillRule="evenodd"
         clipRule="evenodd"

@@ -50,7 +50,51 @@ const theme = createTheme({
     xxl: responsivePixelSize(92),
   },
   borderRadii: {},
-  textVariants: {},
+  textVariants: {
+    onBoardingNumeration: {
+      fontFamily: "Archivo-Bold",
+      color: "textLight2",
+      fontSize: responsivePixelSize(72),
+    },
+    titleDarkLargeBold: {
+      fontFamily: "Archivo-Bold",
+      color: "textDark1",
+      fontSize: responsivePixelSize(48),
+    },
+    titleDarkLargeSemiBold: {
+      fontFamily: "Archivo-SemiBold",
+      color: "textDark1",
+      fontSize: responsivePixelSize(48),
+    },
+    titleLightLargeSemiBold: {
+      fontFamily: "Archivo-SemiBold",
+      color: "textLight1",
+      fontSize: responsivePixelSize(48),
+    },
+    regularTextDark: {
+      fontFamily: "Roboto-Regular",
+      color: "textDark2",
+      fontSize: responsivePixelSize(24),
+      lineHeight: responsivePixelSize(30),
+    },
+    regularTextMediumLight: {
+      fontFamily: "Roboto-Regular",
+      color: "textMediumLight2",
+      fontSize: responsivePixelSize(24),
+      lineHeight: responsivePixelSize(30),
+    },
+    mediumTextMediumLight: {
+      fontFamily: "Roboto-Medium",
+      color: "textMediumLight2",
+      fontSize: responsivePixelSize(24),
+      lineHeight: responsivePixelSize(30),
+    },
+    smallTextMediumDark: {
+      fontFamily: "Archivo-Medium",
+      color: "textDark2",
+      fontSize: responsivePixelSize(20),
+    },
+  },
   breakpoints: {},
   zIndices: {},
 });

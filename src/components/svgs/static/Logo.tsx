@@ -1,9 +1,18 @@
 import * as React from "react";
 import Svg, { SvgProps, G, Path, Defs, ClipPath } from "react-native-svg";
 
+export const LOGO_WIDTH = 180;
+export const LOGO_HEIGHT = 20;
+
 const Logo: React.FC<SvgProps> = (props: SvgProps) => {
   return (
-    <Svg width={180} height={20} viewBox="0 0 180 20" fill="none" {...props}>
+    <Svg
+      width={LOGO_WIDTH}
+      height={LOGO_HEIGHT}
+      viewBox="0 0 180 20"
+      fill="none"
+      {...props}
+    >
       <G clipPath="url(#prefix__clip0)">
         <Path
           fillRule="evenodd"

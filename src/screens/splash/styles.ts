@@ -1,25 +1,16 @@
-import { BoxProps } from "@shopify/restyle";
-import { Dimensions, ViewStyle } from "react-native";
+import { useTheme } from "@shopify/restyle";
+import { ViewStyle } from "react-native";
 
 import { Theme } from "../../theme";
 
-const { height } = Dimensions.get("window");
-
 export const useStyles = () => {
-  const containerStyles: BoxProps<Theme> = {
+  const theme = useTheme<Theme>();
+  const containerStyles: ViewStyle = {
     flex: 1,
-    alignItems: "center",
-    justifyContent: "center",
-    backgroundColor: "backgroundDark1",
-  };
-  const svgStyles: ViewStyle = {
-    position: "absolute",
-    top: height / 2,
-    bottom: height / 2,
+    backgroundColor: theme.colors.backgroundDark1,
   };
 
   return {
     containerStyles,
-    svgStyles,
   };
 };
