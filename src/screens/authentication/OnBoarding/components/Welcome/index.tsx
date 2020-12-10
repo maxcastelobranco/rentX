@@ -8,6 +8,7 @@ import Animated, {
 } from "react-native-reanimated";
 import { RectButton } from "react-native-gesture-handler";
 import { useTheme } from "@shopify/restyle";
+import { useNavigation } from "@react-navigation/native";
 
 import { Box, Text, Theme } from "../../../../../theme";
 import LogoAnimation from "../../../../../components/animated/LogoAnimation";
@@ -32,6 +33,7 @@ const Welcome: React.FC<WelcomeProps> = ({ currentIndex, scrollViewRef }) => {
     goBackButtonTextStyles,
     goBackButtonStyles,
   } = useStyles();
+  const navigation = useNavigation();
   const animatedStyle = useAnimatedStyle(() => ({
     opacity: interpolate(currentIndex.value, [1, 2], [0, 1], Extrapolate.CLAMP),
   }));
@@ -42,6 +44,12 @@ const Welcome: React.FC<WelcomeProps> = ({ currentIndex, scrollViewRef }) => {
       scrollTo(scrollViewRef, 0, 0, true);
     })();
   };
+  const navigateToLogin = () => {
+    navigation.navigate("Login");
+  };
+  const navigateToSignUp = () => {
+    navigation.navigate("SignUp");
+  };
 
   return (
     <Animated.View style={[containerStyles, animatedStyle]}>
@@ -49,10 +57,10 @@ const Welcome: React.FC<WelcomeProps> = ({ currentIndex, scrollViewRef }) => {
       <Text {...titleStyles}>Welcome</Text>
       <Text {...descriptionStyles}>What action do you wish to perform?</Text>
       <Box {...buttonsContainerStyles}>
-        <RectButton style={loginButtonStyles}>
+        <RectButton style={loginButtonStyles} onPress={navigateToLogin}>
           <Text {...buttonTextStyles}>Login</Text>
         </RectButton>
-        <RectButton style={signUpButtonStyles}>
+        <RectButton style={signUpButtonStyles} onPress={navigateToSignUp}>
           <Text {...buttonTextStyles}>SignUp</Text>
         </RectButton>
       </Box>

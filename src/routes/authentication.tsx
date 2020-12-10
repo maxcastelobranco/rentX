@@ -6,6 +6,8 @@ import {
 import { CompositeNavigationProp, RouteProp } from "@react-navigation/native";
 
 import OnBoarding from "../screens/authentication/OnBoarding";
+import Login from "../screens/authentication/Login";
+import SignUp from "../screens/authentication/SignUp";
 
 import { HomeRoutes } from "./home";
 
@@ -31,6 +33,8 @@ const AuthenticationNavigator: React.FC = () => {
   return (
     <AuthenticationStack.Navigator headerMode="none">
       <AuthenticationStack.Screen name="OnBoarding" component={OnBoarding} />
+      <AuthenticationStack.Screen name="Login" component={Login} />
+      <AuthenticationStack.Screen name="SignUp" component={SignUp} />
     </AuthenticationStack.Navigator>
   );
 };

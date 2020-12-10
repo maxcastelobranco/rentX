@@ -18,11 +18,11 @@ export const useStyles = () => {
   };
   const titleStyles: TextProps<Theme> = {
     variant: "titleLightLargeSemiBold",
-    marginBottom: "m",
+    marginBottom: "s",
   };
   const descriptionStyles: TextProps<Theme> = {
     variant: "regularTextMediumLight",
-    marginBottom: "xxl",
+    marginBottom: "xl",
   };
   const buttonsContainerStyles: BoxProps<Theme> = {
     marginTop: "xxl",
@@ -51,9 +51,9 @@ export const useStyles = () => {
     variant: "smallTextMediumDark",
   };
   const goBackButtonStyles: ViewStyle = {
-    paddingHorizontal: theme.spacing.l,
+    paddingHorizontal: theme.spacing.m,
     paddingVertical: theme.spacing.m,
-    margin: theme.spacing.l,
+    margin: theme.spacing.m,
   };
 
   return {
