@@ -34,8 +34,15 @@ const Welcome: React.FC<WelcomeProps> = ({ currentIndex, scrollViewRef }) => {
     goBackButtonStyles,
   } = useStyles();
   const navigation = useNavigation();
+  const inputRange = [1, 2];
   const animatedStyle = useAnimatedStyle(() => ({
-    opacity: interpolate(currentIndex.value, [1, 2], [0, 1], Extrapolate.CLAMP),
+    opacity: interpolate(
+      currentIndex.value,
+      inputRange,
+      [0, 1],
+      Extrapolate.CLAMP
+    ),
+    transform: [{ scale: interpolate(currentIndex.value, inputRange, [0, 1]) }],
   }));
 
   const goBack = () => {

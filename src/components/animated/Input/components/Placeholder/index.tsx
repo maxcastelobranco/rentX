@@ -16,7 +16,7 @@ const Placeholder: React.FC<PlaceholderProps> = ({
   animationDriver,
   placeholderText,
 }) => {
-  const width = placeholderText.length * 12;
+  const width = placeholderText.length * 16;
 
   const containerStyles: BoxProps<Theme> = {
     ...StyleSheet.absoluteFillObject,

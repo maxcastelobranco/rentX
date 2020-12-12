@@ -1,33 +1,35 @@
 import React from "react";
 import { Controller } from "react-hook-form";
-import { TextInput } from "react-native";
+import { BoxProps } from "@shopify/restyle";
 
-import { BaseControllerProps } from "../../../../../utils/types";
-import Input from "../../../../../components/animated/Input";
+import Input from "../../../../../../../components/animated/Input";
+import { BaseControllerProps } from "../../../../../../../utils/types";
+import { Theme } from "../../../../../../../theme";
 
 interface PasswordControllerProps extends BaseControllerProps {
-  passwordInputRef?: React.RefObject<TextInput>;
+  name: string;
+  errorMessage: string;
+  extraContainerStyles?: BoxProps<Theme>;
 }
 
 const PasswordController: React.FC<PasswordControllerProps> = ({
   control,
   errors,
-  passwordInputRef,
+  name,
+  errorMessage,
+  extraContainerStyles,
 }) => {
   return (
     <Controller
-      {...{ control }}
+      {...{ control, name }}
       render={({ value, onBlur, onChange }) => (
         <Input
-          ref={passwordInputRef}
           privateProps={{
             ...{ value, onBlur, onChange },
             error: errors.password,
             iconName: "lock",
             placeholderText: "Password",
-            extraContainerStyles: {
-              marginTop: "xs",
-            },
+            extraContainerStyles,
           }}
           inputProps={{
             returnKeyType: "send",
@@ -37,10 +39,9 @@ const PasswordController: React.FC<PasswordControllerProps> = ({
           isPasswordInput
         />
       )}
-      name="password"
       defaultValue=""
       rules={{
-        required: "Password is required",
+        required: errorMessage,
         minLength: {
           message: "Minimum of 6 characters",
           value: 6,

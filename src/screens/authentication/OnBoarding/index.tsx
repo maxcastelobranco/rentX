@@ -37,7 +37,6 @@ const OnBoarding: React.FC<
         showsHorizontalScrollIndicator={false}
         horizontal
         snapToInterval={width}
-        decelerationRate="fast"
         scrollEventThrottle={16}
       >
         {slideData.map(({ Icon, title, description }, index) => (

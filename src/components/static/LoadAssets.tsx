@@ -6,9 +6,9 @@ import Constants from "expo-constants";
 import AsyncStorage from "@react-native-community/async-storage";
 import { runOnJS, useSharedValue, withTiming } from "react-native-reanimated";
 
-import Splash from "../screens/splash";
+import Splash from "../../screens/splash";
+import { SPLASH_ANIMATION_DURATION } from "../animated/LogoAnimation";
 
-import { SPLASH_ANIMATION_DURATION } from "./animated/LogoAnimation";
 const NAVIGATION_STATE_KEY = `NAVIGATION_STATE_KEY-${Constants.manifest.sdkVersion}`;
 
 export type FontSource = Parameters<typeof Font.loadAsync>[0];

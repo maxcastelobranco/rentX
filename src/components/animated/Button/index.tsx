@@ -28,6 +28,7 @@ const Button: React.FC<ButtonProps> = ({ enabled, label, onPress }) => {
     <Animated.View style={[containerStyles, animatedStyle]}>
       <RectButton
         style={buttonStyles}
+        // TODO: {...{enabled, onPress}}
         onPress={() => {
           enabled && onPress();
         }}

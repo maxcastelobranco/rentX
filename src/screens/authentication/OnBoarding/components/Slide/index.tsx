@@ -4,16 +4,18 @@ import Animated, {
   useAnimatedStyle,
 } from "react-native-reanimated";
 import { Dimensions } from "react-native";
+import { useTheme } from "@shopify/restyle";
 
-import { Box, Text } from "../../../../../theme";
+import { Box, Theme } from "../../../../../theme";
+import SlideOutText from "../../../components/SlideOutText";
 
 import { useStyles } from "./styles";
 
 interface SlideProps {
   Icon: React.FC;
   index: number;
-  title: string;
-  description: string;
+  title: string[];
+  description: string[];
   translationX: Animated.SharedValue<number>;
 }
 
@@ -33,23 +35,46 @@ const Slide: React.FC<SlideProps> = ({
     titleStyles,
     descriptionStyles,
   } = useStyles();
+  const theme = useTheme<Theme>();
+
+  const inputRange = [(index - 1) * width, index * width, (index + 1) * width];
+  const outputRange = [0, 1, 0];
   const animatedStyle = useAnimatedStyle(() => {
     return {
-      opacity: interpolate(
-        translationX.value,
-        [(index - 1) * width, index * width, (index + 1) * width],
-        [0, 1, 0]
-      ),
+      opacity: interpolate(translationX.value, inputRange, outputRange),
     };
   });
+
   return (
     <Animated.View style={[containerStyles, animatedStyle]}>
       <Box {...headerStyles}>
         <Icon />
-        <Text {...numerationStyles}>{`${0}${index + 1}`}</Text>
+        <SlideOutText
+          text={`${0}${index + 1}`}
+          style={numerationStyles}
+          {...{ translationX, inputRange }}
+        />
       </Box>
-      <Text {...titleStyles}>{title}</Text>
-      <Text {...descriptionStyles}>{description}</Text>
+      {title.map((sentence, idx) => (
+        <SlideOutText
+          key={idx}
+          text={sentence}
+          style={titleStyles}
+          {...{ translationX, inputRange }}
+        />
+      ))}
+      {description.map((sentence, idx) => (
+        <SlideOutText
+          key={idx}
+          text={sentence}
+          style={
+            idx === 0
+              ? { ...descriptionStyles, marginTop: theme.spacing.ml }
+              : descriptionStyles
+          }
+          {...{ translationX, inputRange }}
+        />
+      ))}
     </Animated.View>
   );
 };

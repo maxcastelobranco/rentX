@@ -1,17 +1,12 @@
 import React from "react";
 import { Controller } from "react-hook-form";
 
-import { BaseControllerProps } from "../../../../../utils/types";
-import Input from "../../../../../components/animated/Input";
+import { BaseControllerProps } from "../../../../../../../utils/types";
+import Input from "../../../../../../../components/animated/Input";
 
-interface EmailControllerProps extends BaseControllerProps {
-  onSubmitEditing?: () => void;
-}
-
-const EmailController: React.FC<EmailControllerProps> = ({
+const EmailController: React.FC<BaseControllerProps> = ({
   control,
   errors,
-  onSubmitEditing,
 }) => {
   return (
     <Controller
@@ -28,13 +23,17 @@ const EmailController: React.FC<EmailControllerProps> = ({
       render={({ value, onBlur, onChange }) => (
         <Input
           privateProps={{
-            ...{ value, onBlur, onChange },
+            value,
+            onBlur,
+            onChange,
             error: errors.email,
             iconName: "mail",
             placeholderText: "Email",
+            extraContainerStyles: {
+              marginTop: "xs",
+            },
           }}
           inputProps={{
-            onSubmitEditing,
             autoCorrect: false,
             autoCapitalize: "none",
             keyboardType: "email-address",

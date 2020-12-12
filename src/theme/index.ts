@@ -55,11 +55,6 @@ const theme = createTheme({
   },
   borderRadii: {},
   textVariants: {
-    onBoardingNumeration: {
-      fontFamily: "Archivo-Bold",
-      color: "textLight2",
-      fontSize: responsivePixelSize(72),
-    },
     titleDarkLargeBold: {
       fontFamily: "Archivo-Bold",
       color: "textDark1",
@@ -69,6 +64,11 @@ const theme = createTheme({
       fontFamily: "Archivo-SemiBold",
       color: "textDark1",
       fontSize: responsivePixelSize(48),
+    },
+    titleDarkSemiBold: {
+      fontFamily: "Archivo-SemiBold",
+      fontSize: responsivePixelSize(20),
+      color: "textDark1",
     },
     titleLightLargeSemiBold: {
       fontFamily: "Archivo-SemiBold",

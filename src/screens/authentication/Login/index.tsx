@@ -1,12 +1,11 @@
 import React, { useRef } from "react";
-import { RectButton } from "react-native-gesture-handler";
-import { Feather } from "@expo/vector-icons";
 import { SubmitHandler, useForm } from "react-hook-form";
 import { KeyboardAvoidingView, TextInput } from "react-native";
 
 import { Text } from "../../../theme";
 import { AuthenticationNavigationProps } from "../../../routes/authentication";
 import Button from "../../../components/animated/Button";
+import GoBackButton from "../../../components/static/GoBackButton";
 
 import { useStyles } from "./styles";
 import EmailController from "./components/EmailController";
@@ -19,16 +18,8 @@ interface FormValues {
   remember: boolean;
 }
 
-const Login: React.FC<AuthenticationNavigationProps<"Login">> = ({
-  navigation,
-}) => {
-  const {
-    containerStyles,
-    backButtonContainerStyles,
-    titleStyles,
-    descriptionStyles,
-    ICON_SIZE,
-  } = useStyles();
+const Login: React.FC<AuthenticationNavigationProps<"Login">> = () => {
+  const { containerStyles, titleStyles, descriptionStyles } = useStyles();
   const passwordInputRef = useRef<TextInput>(null);
   const {
     control,
@@ -54,9 +45,7 @@ const Login: React.FC<AuthenticationNavigationProps<"Login">> = ({
 
   return (
     <KeyboardAvoidingView style={containerStyles} behavior="position">
-      <RectButton style={backButtonContainerStyles} onPress={navigation.goBack}>
-        <Feather name="chevron-left" size={ICON_SIZE} />
-      </RectButton>
+      <GoBackButton />
       <Text {...titleStyles}>We're almost there</Text>
       <Text {...descriptionStyles}>
         Login to embark on this amazing experience
