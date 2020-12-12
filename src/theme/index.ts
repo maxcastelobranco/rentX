@@ -58,12 +58,12 @@ const theme = createTheme({
     titleDarkLargeBold: {
       fontFamily: "Archivo-Bold",
       color: "textDark1",
-      fontSize: responsivePixelSize(48),
+      fontSize: responsivePixelSize(40),
     },
     titleDarkLargeSemiBold: {
       fontFamily: "Archivo-SemiBold",
       color: "textDark1",
-      fontSize: responsivePixelSize(48),
+      fontSize: responsivePixelSize(40),
     },
     titleDarkSemiBold: {
       fontFamily: "Archivo-SemiBold",
@@ -73,7 +73,7 @@ const theme = createTheme({
     titleLightLargeSemiBold: {
       fontFamily: "Archivo-SemiBold",
       color: "textLight1",
-      fontSize: responsivePixelSize(48),
+      fontSize: responsivePixelSize(40),
     },
     regularTextDark: {
       fontFamily: "Roboto-Regular",

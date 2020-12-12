@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useRef } from "react";
+import { TextInput } from "react-native";
 
 import { Box, Text } from "../../../../../theme";
 import { useStyles } from "../styles";
@@ -14,6 +15,10 @@ const Password: React.FC<SlideProps> = ({
   onSubmit,
 }) => {
   const { containerStyles, slideTitleStyles } = useStyles();
+  const passwordConfirmationRef = useRef<TextInput>(null);
+  const onSubmitEditing = () => {
+    passwordConfirmationRef.current?.focus();
+  };
 
   return (
     <Box {...containerStyles}>
@@ -21,9 +26,10 @@ const Password: React.FC<SlideProps> = ({
       <PasswordController
         name="password"
         errorMessage="Password is required"
-        {...{ control, errors }}
+        {...{ control, errors, onSubmitEditing }}
       />
       <PasswordController
+        passwordInputRef={passwordConfirmationRef}
         name="passwordConfirmation"
         errorMessage="Password confirmation is required"
         extraContainerStyles={{ marginTop: "xs" }}

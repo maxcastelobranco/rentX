@@ -5,36 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2aeeec9b-380a-447b-91f6-3f9957591b9f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/static/GoBackButton/index.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/static/GoBackButton/styles.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/screens/authentication/SignUp/components/Data/components/EmailController/index.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/screens/authentication/SignUp/components/Data/components/NameController/index.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/screens/authentication/SignUp/components/Data/index.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/screens/authentication/SignUp/components/Password/components/PasswordController/index.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/screens/authentication/SignUp/components/Password/index.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/screens/authentication/SignUp/components/styles.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/screens/authentication/SignUp/components/types.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/screens/authentication/SignUp/slideData.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/screens/authentication/components/SlideOutText/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/animated/FullScreenNotification/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/animated/FullScreenNotification/styles.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/svgs/animated/Done.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/svgs/animated/LargeUnion.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/screens/authentication/SignUpSuccessful/index.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/LoadAssets.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/static/LoadAssets.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/animated/Button/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/animated/Button/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/animated/Input/components/Placeholder/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/animated/Input/components/Placeholder/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/screens/authentication/Login/components/EmailController/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/authentication/Login/components/EmailController/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/screens/authentication/Login/components/PasswordController/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/authentication/Login/components/PasswordController/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/screens/authentication/Login/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/authentication/Login/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/screens/authentication/Login/styles.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/authentication/Login/styles.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/screens/authentication/OnBoarding/components/Footer/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/authentication/OnBoarding/components/Footer/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/screens/authentication/OnBoarding/components/ProgressIndicator/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/authentication/components/ProgressIndicator/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/screens/authentication/OnBoarding/components/ProgressIndicator/styles.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/authentication/components/ProgressIndicator/styles.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/screens/authentication/OnBoarding/components/Slide/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/authentication/OnBoarding/components/Slide/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/screens/authentication/OnBoarding/components/Slide/styles.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/authentication/OnBoarding/components/Slide/styles.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/screens/authentication/OnBoarding/components/Welcome/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/authentication/OnBoarding/components/Welcome/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/screens/authentication/OnBoarding/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/authentication/OnBoarding/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/screens/authentication/OnBoarding/slideData.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/authentication/OnBoarding/slideData.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/authentication.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/authentication.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/authentication/SignUp/components/Data/components/EmailController/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/authentication/SignUp/components/Data/components/EmailController/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/authentication/SignUp/components/Data/components/NameController/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/authentication/SignUp/components/Data/components/NameController/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/authentication/SignUp/components/Data/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/authentication/SignUp/components/Data/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/authentication/SignUp/components/Password/components/PasswordController/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/authentication/SignUp/components/Password/components/PasswordController/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/authentication/SignUp/components/Password/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/authentication/SignUp/components/Password/index.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/screens/authentication/SignUp/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/authentication/SignUp/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/screens/authentication/SignUp/styles.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/authentication/SignUp/styles.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/theme/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/theme/index.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -45,8 +28,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="TypeScript File" />
         <option value="TypeScript JSX File" />
+        <option value="TypeScript File" />
       </list>
     </option>
   </component>
@@ -67,7 +50,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/screens/authentication/SignUp/components/Data/components" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components/svgs/animated" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -85,18 +68,18 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\max_c\OneDrive\Desktop\PortfolioWorthy\rentX\src\components\svgs\animated" />
+      <recent name="C:\Users\max_c\OneDrive\Desktop\PortfolioWorthy\rentX\src\components\svgs\static" />
       <recent name="C:\Users\max_c\OneDrive\Desktop\PortfolioWorthy\rentX\src\screens\authentication\SignUp\components\Data\components" />
       <recent name="C:\Users\max_c\OneDrive\Desktop\PortfolioWorthy\rentX\src\screens\authentication\SignUp\components" />
       <recent name="C:\Users\max_c\OneDrive\Desktop\PortfolioWorthy\rentX\src\screens\authentication\Login\components" />
-      <recent name="C:\Users\max_c\OneDrive\Desktop\PortfolioWorthy\rentX\src\utils" />
-      <recent name="C:\Users\max_c\OneDrive\Desktop\PortfolioWorthy\rentX\src\components\animated\Input\components" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\max_c\OneDrive\Desktop\PortfolioWorthy\rentX\src\components\svgs\animated" />
       <recent name="C:\Users\max_c\OneDrive\Desktop\PortfolioWorthy\rentX\src\screens\authentication\components" />
       <recent name="C:\Users\max_c\OneDrive\Desktop\PortfolioWorthy\rentX\src\screens\authentication\OnBoarding\components\SlideOutText" />
       <recent name="C:\Users\max_c\OneDrive\Desktop\PortfolioWorthy\rentX\src\screens\authentication\Login\components" />
       <recent name="C:\Users\max_c\OneDrive\Desktop\PortfolioWorthy\rentX\src\components\static" />
-      <recent name="C:\Users\max_c\OneDrive\Desktop\PortfolioWorthy\rentX\src\components\animated\Input" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -121,6 +104,8 @@
       <workItem from="1607692248820" duration="7600000" />
       <workItem from="1607712909477" duration="10122000" />
       <workItem from="1607733638110" duration="7665000" />
+      <workItem from="1607784941685" duration="6024000" />
+      <workItem from="1607793905467" duration="8586000" />
     </task>
     <servers />
   </component>

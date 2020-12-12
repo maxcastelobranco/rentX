@@ -8,6 +8,7 @@ import { CompositeNavigationProp, RouteProp } from "@react-navigation/native";
 import OnBoarding from "../screens/authentication/OnBoarding";
 import Login from "../screens/authentication/Login";
 import SignUp from "../screens/authentication/SignUp";
+import SignUpSuccessful from "../screens/authentication/SignUpSuccessful";
 
 import { HomeRoutes } from "./home";
 
@@ -15,6 +16,7 @@ export type AuthenticationRoutes = {
   OnBoarding: undefined;
   Login: undefined;
   SignUp: undefined;
+  SignUpSuccessful: undefined;
 };
 
 export interface AuthenticationNavigationProps<
@@ -35,6 +37,10 @@ const AuthenticationNavigator: React.FC = () => {
       <AuthenticationStack.Screen name="OnBoarding" component={OnBoarding} />
       <AuthenticationStack.Screen name="Login" component={Login} />
       <AuthenticationStack.Screen name="SignUp" component={SignUp} />
+      <AuthenticationStack.Screen
+        name="SignUpSuccessful"
+        component={SignUpSuccessful}
+      />
     </AuthenticationStack.Navigator>
   );
 };

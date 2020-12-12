@@ -25,7 +25,9 @@ interface FormValues {
   passwordConfirmation: string;
 }
 
-const SignUp: React.FC<AuthenticationNavigationProps<"SignUp">> = () => {
+const SignUp: React.FC<AuthenticationNavigationProps<"SignUp">> = ({
+  navigation,
+}) => {
   const {
     containerStyles,
     headerStyles,
@@ -59,6 +61,7 @@ const SignUp: React.FC<AuthenticationNavigationProps<"SignUp">> = () => {
 
   const onSubmit = handleSubmit<FormValues>((data) => {
     console.log(data);
+    navigation.navigate("SignUpSuccessful");
   });
 
   return (

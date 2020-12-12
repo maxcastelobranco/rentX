@@ -1,6 +1,7 @@
 import React from "react";
 import { Controller } from "react-hook-form";
 import { BoxProps } from "@shopify/restyle";
+import { TextInput } from "react-native";
 
 import Input from "../../../../../../../components/animated/Input";
 import { BaseControllerProps } from "../../../../../../../utils/types";
@@ -10,6 +11,8 @@ interface PasswordControllerProps extends BaseControllerProps {
   name: string;
   errorMessage: string;
   extraContainerStyles?: BoxProps<Theme>;
+  onSubmitEditing?: () => void;
+  passwordInputRef?: React.RefObject<TextInput>;
 }
 
 const PasswordController: React.FC<PasswordControllerProps> = ({
@@ -18,12 +21,15 @@ const PasswordController: React.FC<PasswordControllerProps> = ({
   name,
   errorMessage,
   extraContainerStyles,
+  onSubmitEditing,
+  passwordInputRef,
 }) => {
   return (
     <Controller
       {...{ control, name }}
       render={({ value, onBlur, onChange }) => (
         <Input
+          ref={passwordInputRef}
           privateProps={{
             ...{ value, onBlur, onChange },
             error: errors.password,
@@ -35,6 +41,7 @@ const PasswordController: React.FC<PasswordControllerProps> = ({
             returnKeyType: "send",
             autoCapitalize: "none",
             autoCorrect: false,
+            onSubmitEditing,
           }}
           isPasswordInput
         />

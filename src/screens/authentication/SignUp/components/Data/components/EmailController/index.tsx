@@ -1,12 +1,18 @@
 import React from "react";
 import { Controller } from "react-hook-form";
+import { TextInput } from "react-native";
 
 import { BaseControllerProps } from "../../../../../../../utils/types";
 import Input from "../../../../../../../components/animated/Input";
 
-const EmailController: React.FC<BaseControllerProps> = ({
+interface EmailControllerProps extends BaseControllerProps {
+  emailInputRef: React.RefObject<TextInput>;
+}
+
+const EmailController: React.FC<EmailControllerProps> = ({
   control,
   errors,
+  emailInputRef,
 }) => {
   return (
     <Controller
@@ -22,6 +28,7 @@ const EmailController: React.FC<BaseControllerProps> = ({
       }}
       render={({ value, onBlur, onChange }) => (
         <Input
+          ref={emailInputRef}
           privateProps={{
             value,
             onBlur,

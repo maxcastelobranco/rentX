@@ -1,6 +1,6 @@
-import React from "react";
+import React, { useRef } from "react";
 import { scrollTo, runOnUI } from "react-native-reanimated";
-import { Dimensions } from "react-native";
+import { Dimensions, TextInput } from "react-native";
 
 import { Box, Text } from "../../../../../theme";
 import { useStyles } from "../styles";
@@ -19,6 +19,11 @@ const Data: React.FC<SlideProps> = ({
   scrollViewRef,
 }) => {
   const { containerStyles, slideTitleStyles } = useStyles();
+  const emailInputRef = useRef<TextInput>(null);
+
+  const focusEmailInput = () => {
+    emailInputRef.current?.focus();
+  };
   const onPress = () => {
     runOnUI(() => {
       "worklet";
@@ -29,8 +34,11 @@ const Data: React.FC<SlideProps> = ({
   return (
     <Box {...containerStyles}>
       <Text {...slideTitleStyles}>01. Your info</Text>
-      <NameController {...{ control, errors }} />
-      <EmailController {...{ control, errors }} />
+      <NameController
+        onSubmitEditing={focusEmailInput}
+        {...{ control, errors }}
+      />
+      <EmailController {...{ control, errors, emailInputRef }} />
       <Button {...{ onPress }} enabled={scrollEnabled} label="Next" />
     </Box>
   );
