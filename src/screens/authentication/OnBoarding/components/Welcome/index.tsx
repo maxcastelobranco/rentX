@@ -42,7 +42,6 @@ const Welcome: React.FC<WelcomeProps> = ({ currentIndex, scrollViewRef }) => {
       [0, 1],
       Extrapolate.CLAMP
     ),
-    transform: [{ scale: interpolate(currentIndex.value, inputRange, [0, 1]) }],
   }));
 
   const goBack = () => {

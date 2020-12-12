@@ -26,6 +26,7 @@ const Password: React.FC<SlideProps> = ({
       <PasswordController
         name="password"
         errorMessage="Password is required"
+        returnKeyType="next"
         {...{ control, errors, onSubmitEditing }}
       />
       <PasswordController
@@ -33,6 +34,7 @@ const Password: React.FC<SlideProps> = ({
         name="passwordConfirmation"
         errorMessage="Password confirmation is required"
         extraContainerStyles={{ marginTop: "xs" }}
+        returnKeyType="send"
         {...{ control, errors }}
       />
       <Button onPress={onSubmit} enabled={submitEnabled} label="Submit" />
