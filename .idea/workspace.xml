@@ -5,27 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2aeeec9b-380a-447b-91f6-3f9957591b9f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/svgs/static/LongArrow.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/screens/home/CalendarScreen/components/Calendar/index.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/screens/home/CalendarScreen/components/DatePicker/components/FocusIndicator/index.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/screens/home/CalendarScreen/components/DatePicker/components/FocusIndicator/styles.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/screens/home/CalendarScreen/components/DatePicker/components/OptionContainer/index.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/screens/home/CalendarScreen/components/DatePicker/components/OptionContainer/styles.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/screens/home/CalendarScreen/components/DatePicker/components/Slider/index.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/screens/home/CalendarScreen/components/DatePicker/components/Slider/styles.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/screens/home/CalendarScreen/components/DatePicker/constants.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/screens/home/CalendarScreen/components/DatePicker/index.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/screens/home/CalendarScreen/components/DatePicker/styles.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/screens/home/CalendarScreen/index.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/screens/home/CalendarScreen/styles.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/animated/Button/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/animated/Button/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/authentication.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/authentication.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/home.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/home.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/screens/authentication/Login/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/authentication/Login/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/theme/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/theme/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/home/CalendarScreen/components/DatePicker/components/OptionContainer/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/home/CalendarScreen/components/DatePicker/components/OptionContainer/index.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -130,7 +111,7 @@
       <workItem from="1608492799205" duration="7048000" />
       <workItem from="1608561320756" duration="174000" />
       <workItem from="1608561517265" duration="3619000" />
-      <workItem from="1608571192989" duration="4955000" />
+      <workItem from="1608571192989" duration="5191000" />
     </task>
     <servers />
   </component>

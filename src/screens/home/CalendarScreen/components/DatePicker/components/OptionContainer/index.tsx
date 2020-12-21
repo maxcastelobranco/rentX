@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Animated, {
   interpolate,
   useAnimatedStyle,
@@ -60,6 +60,15 @@ const OptionContainer: React.FC<OptionContainerProps> = ({
     })();
     setValue(valueMap[option]);
   };
+
+  useEffect(() => {
+    if (selected) {
+      runOnUI(() => {
+        "worklet";
+        scrollTo(scrollViewRef, 0, OPTION_HEIGHT * index, true);
+      })();
+    }
+  }, [index, scrollViewRef, selected]);
 
   return (
     <RectButton {...{ onPress }}>
