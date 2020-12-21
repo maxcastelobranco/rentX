@@ -10,13 +10,14 @@ import Login from "../screens/authentication/Login";
 import SignUp from "../screens/authentication/SignUp";
 import SignUpSuccessful from "../screens/authentication/SignUpSuccessful";
 
-import { HomeRoutes } from "./home";
+import HomeNavigator, { HomeRoutes } from "./home";
 
 export type AuthenticationRoutes = {
   OnBoarding: undefined;
   Login: undefined;
   SignUp: undefined;
   SignUpSuccessful: undefined;
+  Home: undefined;
 };
 
 export interface AuthenticationNavigationProps<
@@ -24,7 +25,7 @@ export interface AuthenticationNavigationProps<
 > {
   navigation: CompositeNavigationProp<
     StackNavigationProp<AuthenticationRoutes, RouteName>,
-    StackNavigationProp<HomeRoutes, "Home">
+    StackNavigationProp<HomeRoutes, "Calendar">
   >;
   route: RouteProp<AuthenticationRoutes, RouteName>;
 }
@@ -41,6 +42,7 @@ const AuthenticationNavigator: React.FC = () => {
         name="SignUpSuccessful"
         component={SignUpSuccessful}
       />
+      <AuthenticationStack.Screen name="Home" component={HomeNavigator} />
     </AuthenticationStack.Navigator>
   );
 };

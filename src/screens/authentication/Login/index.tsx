@@ -18,7 +18,9 @@ interface FormValues {
   remember: boolean;
 }
 
-const Login: React.FC<AuthenticationNavigationProps<"Login">> = () => {
+const Login: React.FC<AuthenticationNavigationProps<"Login">> = ({
+  navigation,
+}) => {
   const { containerStyles, titleStyles, descriptionStyles } = useStyles();
   const passwordInputRef = useRef<TextInput>(null);
   const {
@@ -39,6 +41,7 @@ const Login: React.FC<AuthenticationNavigationProps<"Login">> = () => {
   };
   const onSubmit: SubmitHandler<FormValues> = (data) => {
     console.log(data);
+    navigation.navigate("Home");
   };
   const enabled =
     Object.keys(formState.touched).length === 2 && !Object.keys(errors).length;

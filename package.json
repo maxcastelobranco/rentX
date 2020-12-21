@@ -19,6 +19,7 @@
     "date-fns": "^2.16.1",
     "expo": "40.0.0",
     "expo-asset": "~8.2.1",
+    "expo-blur": "~8.2.2",
     "expo-constants": "~9.3.3",
     "expo-font": "~8.4.0",
     "expo-splash-screen": "~0.8.1",

@@ -4,6 +4,7 @@ import Animated, {
   withTiming,
 } from "react-native-reanimated";
 import { RectButton } from "react-native-gesture-handler";
+import { ViewStyle } from "react-native";
 
 import { Text } from "../../../theme";
 
@@ -13,9 +14,17 @@ interface ButtonProps {
   enabled: boolean;
   label: string;
   onPress(): void;
+  extraContainerStyles?: ViewStyle;
+  extraButtonStyles?: ViewStyle;
 }
 
-const Button: React.FC<ButtonProps> = ({ enabled, label, onPress }) => {
+const Button: React.FC<ButtonProps> = ({
+  enabled,
+  label,
+  onPress,
+  extraContainerStyles,
+  extraButtonStyles,
+}) => {
   const { containerStyles, buttonStyles, labelStyles } = useStyles();
 
   const animatedStyle = useAnimatedStyle(() => {
@@ -25,13 +34,12 @@ const Button: React.FC<ButtonProps> = ({ enabled, label, onPress }) => {
   });
 
   return (
-    <Animated.View style={[containerStyles, animatedStyle]}>
+    <Animated.View
+      style={[containerStyles, extraContainerStyles, animatedStyle]}
+    >
       <RectButton
-        style={buttonStyles}
-        // TODO: {...{enabled, onPress}}
-        onPress={() => {
-          enabled && onPress();
-        }}
+        style={[buttonStyles, extraButtonStyles]}
+        {...{ enabled, onPress }}
       >
         <Text {...labelStyles}>{label}</Text>
       </RectButton>

@@ -5,11 +5,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2aeeec9b-380a-447b-91f6-3f9957591b9f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/components/svgs/static/LongArrow.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/screens/home/CalendarScreen/components/Calendar/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/screens/home/CalendarScreen/components/DatePicker/components/FocusIndicator/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/screens/home/CalendarScreen/components/DatePicker/components/FocusIndicator/styles.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/screens/home/CalendarScreen/components/DatePicker/components/OptionContainer/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/screens/home/CalendarScreen/components/DatePicker/components/OptionContainer/styles.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/screens/home/CalendarScreen/components/DatePicker/components/Slider/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/screens/home/CalendarScreen/components/DatePicker/components/Slider/styles.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/screens/home/CalendarScreen/components/DatePicker/constants.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/screens/home/CalendarScreen/components/DatePicker/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/screens/home/CalendarScreen/components/DatePicker/styles.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/screens/home/CalendarScreen/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/screens/home/CalendarScreen/styles.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/screens/authentication/OnBoarding/components/Welcome/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/authentication/OnBoarding/components/Welcome/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/screens/authentication/SignUp/components/Password/components/PasswordController/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/authentication/SignUp/components/Password/components/PasswordController/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/screens/authentication/SignUp/components/Password/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/authentication/SignUp/components/Password/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/animated/Button/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/animated/Button/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/authentication.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/authentication.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/home.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/home.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/authentication/Login/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/authentication/Login/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/theme/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/theme/index.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -33,6 +48,7 @@
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectViewState">
+    <option name="autoscrollFromSource" value="true" />
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
     <option name="sortByType" value="true" />
@@ -42,7 +58,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components/svgs/animated" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/screens/home/CalendarScreen/components/Controllers" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -53,18 +69,18 @@
     <property name="node.js.selected.package.standard" value="" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="yarn" />
-    <property name="settings.editor.selected.configurable" value="editing.templates" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="ts.external.directory.path" value="C:\Users\max_c\OneDrive\Desktop\PortfolioWorthy\rentX\node_modules\typescript\lib" />
     <property name="ts.rename.search.for.dynamic.occurrences" value="true" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\max_c\OneDrive\Desktop\PortfolioWorthy\rentX\src\components\svgs\animated" />
+      <recent name="C:\Users\max_c\OneDrive\Desktop\PortfolioWorthy\rentX\src\screens\home\CalendarScreen\components\Controllers" />
       <recent name="C:\Users\max_c\OneDrive\Desktop\PortfolioWorthy\rentX\src\components\svgs\static" />
+      <recent name="C:\Users\max_c\OneDrive\Desktop\PortfolioWorthy\rentX\src\components\svgs\animated" />
       <recent name="C:\Users\max_c\OneDrive\Desktop\PortfolioWorthy\rentX\src\screens\authentication\SignUp\components\Data\components" />
       <recent name="C:\Users\max_c\OneDrive\Desktop\PortfolioWorthy\rentX\src\screens\authentication\SignUp\components" />
-      <recent name="C:\Users\max_c\OneDrive\Desktop\PortfolioWorthy\rentX\src\screens\authentication\Login\components" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\max_c\OneDrive\Desktop\PortfolioWorthy\rentX\src\components\svgs\animated" />
@@ -97,7 +113,24 @@
       <workItem from="1607712909477" duration="10122000" />
       <workItem from="1607733638110" duration="7665000" />
       <workItem from="1607784941685" duration="6024000" />
-      <workItem from="1607793905467" duration="10634000" />
+      <workItem from="1607793905467" duration="11069000" />
+      <workItem from="1607808414377" duration="2874000" />
+      <workItem from="1607866530758" duration="10713000" />
+      <workItem from="1607886106303" duration="7217000" />
+      <workItem from="1608038534417" duration="11555000" />
+      <workItem from="1608128265824" duration="10469000" />
+      <workItem from="1608159972004" duration="4695000" />
+      <workItem from="1608220304563" duration="1684000" />
+      <workItem from="1608231668171" duration="1543000" />
+      <workItem from="1608302334245" duration="2010000" />
+      <workItem from="1608329645281" duration="1920000" />
+      <workItem from="1608388338026" duration="1367000" />
+      <workItem from="1608400898853" duration="9953000" />
+      <workItem from="1608475920119" duration="3299000" />
+      <workItem from="1608492799205" duration="7048000" />
+      <workItem from="1608561320756" duration="174000" />
+      <workItem from="1608561517265" duration="3619000" />
+      <workItem from="1608571192989" duration="4955000" />
     </task>
     <servers />
   </component>

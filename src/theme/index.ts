@@ -77,8 +77,14 @@ const theme = createTheme({
     },
     regularTextDark: {
       fontFamily: "Roboto-Regular",
-      color: "textDark2",
+      color: "textDark1",
       fontSize: responsivePixelSize(24),
+      lineHeight: responsivePixelSize(30),
+    },
+    smallTextLight: {
+      fontFamily: "Roboto-Regular",
+      color: "textLight2",
+      fontSize: responsivePixelSize(16),
       lineHeight: responsivePixelSize(30),
     },
     regularTextMediumLight: {
@@ -103,6 +109,24 @@ const theme = createTheme({
       color: "textLight1",
       fontSize: responsivePixelSize(24),
       lineHeight: responsivePixelSize(30),
+    },
+    labelsDark: {
+      fontFamily: "Archivo-Regular",
+      fontSize: responsivePixelSize(16),
+      textTransform: "uppercase",
+      color: "textDark1",
+    },
+    labelsMedium: {
+      fontFamily: "Archivo-Regular",
+      fontSize: responsivePixelSize(16),
+      textTransform: "uppercase",
+      color: "textDark2",
+    },
+    labelsLight: {
+      fontFamily: "Archivo-Regular",
+      fontSize: responsivePixelSize(16),
+      textTransform: "uppercase",
+      color: "textMediumLight1",
     },
   },
   breakpoints: {},
