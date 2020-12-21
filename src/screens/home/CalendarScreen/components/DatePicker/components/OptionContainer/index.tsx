@@ -53,22 +53,20 @@ const OptionContainer: React.FC<OptionContainerProps> = ({
     };
   });
 
+  const scrollToIndex = runOnUI(() => {
+    "worklet";
+    scrollTo(scrollViewRef, 0, OPTION_HEIGHT * index, true);
+  });
   const onPress = () => {
-    runOnUI(() => {
-      "worklet";
-      scrollTo(scrollViewRef, 0, OPTION_HEIGHT * index, true);
-    })();
+    scrollToIndex();
     setValue(valueMap[option]);
   };
 
   useEffect(() => {
     if (selected) {
-      runOnUI(() => {
-        "worklet";
-        scrollTo(scrollViewRef, 0, OPTION_HEIGHT * index, true);
-      })();
+      scrollToIndex();
     }
-  }, [index, scrollViewRef, selected]);
+  }, [index, scrollToIndex, scrollViewRef, selected]);
 
   return (
     <RectButton {...{ onPress }}>
