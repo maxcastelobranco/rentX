@@ -5,12 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2aeeec9b-380a-447b-91f6-3f9957591b9f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/screens/home/CalendarScreen/components/Header/index.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/screens/home/CalendarScreen/components/Header/styles.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/screens/home/CalendarScreen/components/Calendar/components/CurrentMonth/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/screens/home/CalendarScreen/components/Calendar/components/CurrentMonth/styles.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/screens/home/CalendarScreen/components/Calendar/components/Day/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/screens/home/CalendarScreen/components/Calendar/components/Day/styles.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/screens/home/CalendarScreen/components/Calendar/components/Weekdays/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/screens/home/CalendarScreen/components/Calendar/components/Weekdays/styles.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/screens/home/CalendarScreen/components/Calendar/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/home/CalendarScreen/components/Calendar/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/screens/home/CalendarScreen/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/home/CalendarScreen/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/screens/home/CalendarScreen/styles.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/home/CalendarScreen/components/Calendar/styles.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/home/CalendarScreen/components/Calendar/styles.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -117,7 +122,7 @@
       <workItem from="1608561517265" duration="3619000" />
       <workItem from="1608571192989" duration="10572000" />
       <workItem from="1608599951176" duration="2722000" />
-      <workItem from="1608658315750" duration="1738000" />
+      <workItem from="1608658315750" duration="9827000" />
     </task>
     <servers />
   </component>

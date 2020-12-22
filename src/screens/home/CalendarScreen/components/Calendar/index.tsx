@@ -1,29 +1,34 @@
 import React, { useMemo, useState } from "react";
-import { add, eachWeekOfInterval, format, getDaysInMonth, sub } from "date-fns";
+import {
+  add,
+  eachWeekOfInterval,
+  format,
+  getDaysInMonth,
+  isAfter,
+  sub,
+} from "date-fns";
 import Animated, {
   Easing,
   useAnimatedStyle,
   withTiming,
 } from "react-native-reanimated";
-import { RectButton } from "react-native-gesture-handler";
-import { Feather } from "@expo/vector-icons";
 import { useTheme } from "@shopify/restyle";
 
-import { Box, Text, Theme } from "../../../../../theme";
-import responsivePixelSize from "../../../../../utils/responsivePixelSize";
-import { weekdays } from "../DatePicker/constants";
+import { Box, Theme } from "../../../../../theme";
+import Button from "../../../../../components/animated/Button";
 
 import { useStyles } from "./styles";
+import Day from "./components/Day";
+import CurrentMonth from "./components/CurrentMonth";
+import Weekdays from "./components/Weekdays";
 
-interface CalendarProps {
+export interface CalendarProps {
   startDate: Date;
   endDate: Date;
   setStartDate: React.Dispatch<React.SetStateAction<Date>>;
   setEndDate: React.Dispatch<React.SetStateAction<Date>>;
   anyPickerOpen: Animated.SharedValue<boolean>;
 }
-
-const ICON_SIZE = responsivePixelSize(24);
 
 const timingConfig: Animated.WithTimingConfig = {
   duration: 500,
@@ -38,31 +43,13 @@ const Calendar: React.FC<CalendarProps> = ({
   anyPickerOpen,
 }) => {
   const theme = useTheme<Theme>();
-  const {
-    containerStyles,
-    headerStyles,
-    currentMonthStyles,
-    chevronsContainerStyles,
-    chevronStyles,
-  } = useStyles();
-  const [currentDate, setCurrentDate] = useState(startDate);
+  const { containerStyles, rowStyles } = useStyles();
 
-  const animatedStyle = useAnimatedStyle(() => {
-    return {
-      flex: withTiming(anyPickerOpen.value ? 0.1 : 2, timingConfig),
-    };
-  });
+  const [currentDate, setCurrentDate] = useState(startDate);
 
   const formattedCurrentMonth = useMemo(() => format(currentDate, "MMMM, y"), [
     currentDate,
   ]);
-  const addOneMonth = () => {
-    setCurrentDate((prevState) => add(prevState, { months: 1 }));
-  };
-  const subtractOneMonth = () => {
-    setCurrentDate((prevState) => sub(prevState, { months: 1 }));
-  };
-
   const everyDayOfCurrentMonth = useMemo(() => {
     const everyDay: Date[][] = [];
 
@@ -92,29 +79,52 @@ const Calendar: React.FC<CalendarProps> = ({
     return everyDay;
   }, [currentDate]);
 
-  console.log(everyDayOfCurrentMonth);
+  const animatedStyle = useAnimatedStyle(() => {
+    return {
+      flex: withTiming(anyPickerOpen.value ? 0.1 : 2.5, timingConfig),
+    };
+  });
+
+  const addOneMonth = () => {
+    setCurrentDate((prevState) => add(prevState, { months: 1 }));
+  };
+  const subtractOneMonth = () => {
+    setCurrentDate((prevState) => sub(prevState, { months: 1 }));
+  };
 
   return (
     <Animated.View style={[containerStyles, animatedStyle]}>
-      <Box {...headerStyles}>
-        <Text {...currentMonthStyles}>{formattedCurrentMonth}</Text>
-        <Box {...chevronsContainerStyles}>
-          <RectButton style={chevronStyles} onPress={subtractOneMonth}>
-            <Feather
-              name="chevron-left"
-              size={ICON_SIZE}
-              color={theme.colors.textDark2}
-            />
-          </RectButton>
-          <RectButton style={chevronStyles} onPress={addOneMonth}>
-            <Feather
-              name="chevron-right"
-              size={ICON_SIZE}
-              color={theme.colors.textDark2}
-            />
-          </RectButton>
-        </Box>
-      </Box>
+      <CurrentMonth
+        {...{ addOneMonth, subtractOneMonth, formattedCurrentMonth }}
+      />
+      <Weekdays />
+      {everyDayOfCurrentMonth.map((week, weekIndex) => {
+        return (
+          <Box key={weekIndex} {...rowStyles}>
+            {week.map((day, dayIndex) => {
+              return (
+                <Day
+                  key={`${weekIndex}-${dayIndex}`}
+                  {...{
+                    day,
+                    currentDate,
+                    startDate,
+                    endDate,
+                    setStartDate,
+                    setEndDate,
+                  }}
+                />
+              );
+            })}
+          </Box>
+        );
+      })}
+      <Button
+        enabled={isAfter(endDate, startDate)}
+        label="Done"
+        onPress={() => true}
+        extraContainerStyles={{ marginTop: theme.spacing.m }}
+      />
     </Animated.View>
   );
 };
