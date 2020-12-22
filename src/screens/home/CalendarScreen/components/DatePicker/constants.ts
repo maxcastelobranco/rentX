@@ -40,11 +40,13 @@ years.forEach((year) => {
   valueMap[year] = Number(year);
 });
 
-const data = {
+export const weekdays = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+
+const constants = {
   days,
   months,
   years,
   valueMap,
 };
 
-export default data;
+export default constants;

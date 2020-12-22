@@ -13,7 +13,7 @@ import Button from "../../../../../components/animated/Button";
 
 import { useStyles } from "./styles";
 import Slider from "./components/Slider";
-import data from "./constants";
+import constants from "./constants";
 
 interface DatePickerProps {
   label: string;
@@ -49,7 +49,7 @@ const DatePicker: React.FC<DatePickerProps> = ({
   const [month, setMonth] = useState(date.getMonth());
   const [year, setYear] = useState(date.getFullYear());
 
-  const { days, months, years } = data;
+  const { days, months, years } = constants;
 
   const animatedStyle = useAnimatedStyle(() => {
     return {

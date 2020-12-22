@@ -10,7 +10,7 @@ import Animated, {
 import { RectButton } from "react-native-gesture-handler";
 
 import { Text } from "../../../../../../../theme";
-import data, { OPTION_HEIGHT } from "../../constants";
+import constants, { OPTION_HEIGHT } from "../../constants";
 import FocusIndicator from "../FocusIndicator";
 
 import { useStyles } from "./styles";
@@ -33,7 +33,7 @@ const OptionContainer: React.FC<OptionContainerProps> = ({
   scrollViewRef,
 }) => {
   const { containerStyles, optionTextStyles } = useStyles();
-  const { valueMap } = data;
+  const { valueMap } = constants;
   const selected = valueMap[option] === value;
 
   const animatedStyle = useAnimatedStyle(() => {
