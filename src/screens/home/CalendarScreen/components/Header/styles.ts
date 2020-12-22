@@ -1,6 +1,6 @@
 import { BoxProps, TextProps } from "@shopify/restyle";
 
-import { Theme } from "../../../theme";
+import { Theme } from "../../../../../theme";
 
 export const useStyles = () => {
   const containerStyles: BoxProps<Theme> = {

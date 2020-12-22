@@ -49,9 +49,7 @@ const Calendar: React.FC<CalendarProps> = ({
 
   const animatedStyle = useAnimatedStyle(() => {
     return {
-      flex: anyPickerOpen.value
-        ? withTiming(0.1, timingConfig)
-        : withTiming(2, timingConfig),
+      flex: withTiming(anyPickerOpen.value ? 0.1 : 2, timingConfig),
     };
   });
 
@@ -79,9 +77,9 @@ const Calendar: React.FC<CalendarProps> = ({
       getDaysInMonth(currentDate)
     );
 
-    const everySundayOfCurrentMonth = eachWeekOfInterval({ start, end });
+    const firstDays = eachWeekOfInterval({ start, end });
 
-    everySundayOfCurrentMonth.forEach((sunday) => {
+    firstDays.forEach((sunday) => {
       const daysOfTheWeek: Date[] = [sunday];
 
       for (let days = 1; days < 7; days++) {
