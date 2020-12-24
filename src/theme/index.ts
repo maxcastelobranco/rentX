@@ -10,8 +10,9 @@ const palette = {
   white: "#FFFFFF",
   whiteLilac: "#F2F2FA",
   honeydew: "#DAF3E5",
-  raisinBlack: "#1B1B1F",
+  gunPowder: "#3D3D4D",
   jet: "#29292E",
+  raisinBlack: "#1B1B1F",
   black: "#000000",
   // Texts
   darkLiver: "#47474D",
@@ -30,6 +31,7 @@ const theme = createTheme({
     backgroundDark1: palette.raisinBlack,
     backgroundDark2: palette.jet,
     backgroundDark3: palette.black,
+    backgroundDark4: palette.gunPowder,
     backgroundLight1: palette.white,
     backgroundLight2: palette.whiteLilac,
     backgroundLight3: palette.honeydew,

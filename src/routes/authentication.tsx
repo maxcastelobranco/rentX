@@ -25,7 +25,7 @@ export interface AuthenticationNavigationProps<
 > {
   navigation: CompositeNavigationProp<
     StackNavigationProp<AuthenticationRoutes, RouteName>,
-    StackNavigationProp<HomeRoutes, "Calendar">
+    StackNavigationProp<HomeRoutes, "CalendarScreen">
   >;
   route: RouteProp<AuthenticationRoutes, RouteName>;
 }

@@ -9,7 +9,7 @@ import { Theme } from "../../../../../../../theme";
 
 import { useStyles } from "./styles";
 
-interface DayProps extends Omit<CalendarProps, "anyPickerOpen"> {
+interface DayProps extends Omit<CalendarProps, "anyPickerOpen" | "navigation"> {
   day: Date;
   currentDate: Date;
 }

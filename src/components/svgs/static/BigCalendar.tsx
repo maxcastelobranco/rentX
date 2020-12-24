@@ -1,7 +1,7 @@
 import * as React from "react";
 import Svg, { SvgProps, Path } from "react-native-svg";
 
-const Calendar: React.FC<SvgProps> = (props: SvgProps) => {
+const BigCalendar: React.FC<SvgProps> = (props: SvgProps) => {
   return (
     <Svg width={80} height={80} viewBox="0 0 80 80" fill="none" {...props}>
       <Path
@@ -12,4 +12,4 @@ const Calendar: React.FC<SvgProps> = (props: SvgProps) => {
   );
 };
 
-export default Calendar;
+export default BigCalendar;

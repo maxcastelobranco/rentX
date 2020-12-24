@@ -8,25 +8,27 @@ import { BottomTabNavigationProp } from "@react-navigation/bottom-tabs";
 
 import CalendarScreen from "../screens/home/CalendarScreen";
 
-export type TabRoutes = {
-  Home: undefined;
-  Listing: undefined;
-  Scheduling: undefined;
-  Profile: undefined;
-};
+import TabsNavigator, { TabRoutes } from "./tabs";
 
 export type HomeRoutes = {
   CalendarScreen: undefined;
   EditProfile: undefined;
   CarDetails: undefined;
-  Tabs: undefined;
+  Tabs: {
+    startDate: string;
+    endDate: string;
+  };
 };
 
+export type HomeNavigationProp<
+  RouteName extends keyof HomeRoutes
+> = CompositeNavigationProp<
+  StackNavigationProp<HomeRoutes, RouteName>,
+  BottomTabNavigationProp<TabRoutes, "Home">
+>;
+
 export interface HomeNavigationProps<RouteName extends keyof HomeRoutes> {
-  navigation: CompositeNavigationProp<
-    StackNavigationProp<HomeRoutes, RouteName>,
-    BottomTabNavigationProp<TabRoutes, "Home">
-  >;
+  navigation: HomeNavigationProp<RouteName>;
   route: RouteProp<HomeRoutes, RouteName>;
 }
 
@@ -36,6 +38,7 @@ const HomeNavigator: React.FC = () => {
   return (
     <HomeStack.Navigator headerMode="none">
       <HomeStack.Screen name="CalendarScreen" component={CalendarScreen} />
+      <HomeStack.Screen name="Tabs" component={TabsNavigator} />
     </HomeStack.Navigator>
   );
 };

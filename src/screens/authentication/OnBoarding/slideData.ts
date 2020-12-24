@@ -1,9 +1,9 @@
-import Calendar from "../../../components/svgs/static/Calendar";
-import Car from "../../../components/svgs/static/Car";
+import BigCalendar from "../../../components/svgs/static/BigCalendar";
+import BigCar from "../../../components/svgs/static/BigCar";
 
 export const slideData = [
   {
-    Icon: Calendar,
+    Icon: BigCalendar,
     title: ["First you", "choose a date"],
     description: [
       "You decide on a time period",
@@ -12,7 +12,7 @@ export const slideData = [
     ],
   },
   {
-    Icon: Car,
+    Icon: BigCar,
     title: ["Then you", "can choose", "the car"],
     description: [
       "Plenty of beautiful, safe,",

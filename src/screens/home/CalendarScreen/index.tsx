@@ -7,7 +7,9 @@ import { HomeNavigationProps } from "../../../routes/home";
 import Calendar from "./components/Calendar";
 import Header from "./components/Header";
 
-const CalendarScreen: React.FC<HomeNavigationProps<"CalendarScreen">> = () => {
+const CalendarScreen: React.FC<HomeNavigationProps<"CalendarScreen">> = ({
+  navigation,
+}) => {
   const startDatePickerOpen = useSharedValue(false);
   const endDatePickerOpen = useSharedValue(false);
   const anyPickerOpen = useDerivedValue(
@@ -38,6 +40,7 @@ const CalendarScreen: React.FC<HomeNavigationProps<"CalendarScreen">> = () => {
           setStartDate,
           setEndDate,
           anyPickerOpen,
+          navigation,
         }}
       />
     </>

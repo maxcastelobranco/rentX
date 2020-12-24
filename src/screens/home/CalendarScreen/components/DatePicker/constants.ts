@@ -24,7 +24,7 @@ for (let i = 1; i <= 31; i++) {
   days.push(i.toString());
 }
 const currentYear = new Date().getFullYear();
-for (let i = currentYear + 10; i >= currentYear; i--) {
+for (let i = currentYear; i <= currentYear + 10; i++) {
   years.push(i.toString());
 }
 

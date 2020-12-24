@@ -16,6 +16,7 @@ import { useTheme } from "@shopify/restyle";
 
 import { Box, Theme } from "../../../../../theme";
 import Button from "../../../../../components/animated/Button";
+import { HomeNavigationProp } from "../../../../../routes/home";
 
 import { useStyles } from "./styles";
 import Day from "./components/Day";
@@ -28,6 +29,7 @@ export interface CalendarProps {
   setStartDate: React.Dispatch<React.SetStateAction<Date>>;
   setEndDate: React.Dispatch<React.SetStateAction<Date>>;
   anyPickerOpen: Animated.SharedValue<boolean>;
+  navigation: HomeNavigationProp<"CalendarScreen">;
 }
 
 const timingConfig: Animated.WithTimingConfig = {
@@ -41,6 +43,7 @@ const Calendar: React.FC<CalendarProps> = ({
   setStartDate,
   setEndDate,
   anyPickerOpen,
+  navigation,
 }) => {
   const theme = useTheme<Theme>();
   const { containerStyles, rowStyles } = useStyles();
@@ -91,6 +94,12 @@ const Calendar: React.FC<CalendarProps> = ({
   const subtractOneMonth = () => {
     setCurrentDate((prevState) => sub(prevState, { months: 1 }));
   };
+  const onPress = () => {
+    navigation.navigate("Tabs", {
+      startDate: JSON.stringify(startDate),
+      endDate: JSON.stringify(endDate),
+    });
+  };
 
   return (
     <Animated.View style={[containerStyles, animatedStyle]}>
@@ -122,8 +131,8 @@ const Calendar: React.FC<CalendarProps> = ({
       <Button
         enabled={isAfter(endDate, startDate)}
         label="Done"
-        onPress={() => true}
         extraContainerStyles={{ marginTop: theme.spacing.m }}
+        {...{ onPress }}
       />
     </Animated.View>
   );
