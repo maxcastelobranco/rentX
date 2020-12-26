@@ -48,7 +48,7 @@ const OptionContainer: React.FC<OptionContainerProps> = ({
       Extrapolate.CLAMP
     );
     return {
-      opacity: selected ? withTiming(1) : withTiming(0.6),
+      opacity: withTiming(selected ? 1 : 0.6),
       transform: [{ scale }],
     };
   });

@@ -1,29 +1,28 @@
-import React, { useState } from "react";
-import { useDerivedValue, useSharedValue } from "react-native-reanimated";
-import { add } from "date-fns";
+import React from "react";
 
 import { HomeNavigationProps } from "../../../routes/home";
 
 import Calendar from "./components/Calendar";
 import Header from "./components/Header";
+import { useCalendarBoilerplate } from "./components/Calendar/hooks/useCalendarBoilerplate";
 
 const CalendarScreen: React.FC<HomeNavigationProps<"CalendarScreen">> = ({
   navigation,
 }) => {
-  const startDatePickerOpen = useSharedValue(false);
-  const endDatePickerOpen = useSharedValue(false);
-  const anyPickerOpen = useDerivedValue(
-    () => startDatePickerOpen.value || endDatePickerOpen.value
-  );
-
-  const today = new Date();
-  const tomorrow = add(today, { days: 1 });
-  const [startDate, setStartDate] = useState(today);
-  const [endDate, setEndDate] = useState(tomorrow);
+  const {
+    startDatePickerOpen,
+    endDatePickerOpen,
+    anyPickerOpen,
+    startDate,
+    setStartDate,
+    endDate,
+    setEndDate,
+  } = useCalendarBoilerplate();
 
   return (
     <>
       <Header
+        showTitle
         {...{
           startDatePickerOpen,
           endDatePickerOpen,

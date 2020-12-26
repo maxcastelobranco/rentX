@@ -17,6 +17,8 @@ import { useTheme } from "@shopify/restyle";
 import { Box, Theme } from "../../../../../theme";
 import Button from "../../../../../components/animated/Button";
 import { HomeNavigationProp } from "../../../../../routes/home";
+import { useAppContext } from "../../../../../context";
+import { TimeIntervalActionTypes } from "../../../../../context/reducers/timeIntervalReducer";
 
 import { useStyles } from "./styles";
 import Day from "./components/Day";
@@ -45,6 +47,7 @@ const Calendar: React.FC<CalendarProps> = ({
   anyPickerOpen,
   navigation,
 }) => {
+  const { dispatch } = useAppContext();
   const theme = useTheme<Theme>();
   const { containerStyles, rowStyles } = useStyles();
 
@@ -95,10 +98,14 @@ const Calendar: React.FC<CalendarProps> = ({
     setCurrentDate((prevState) => sub(prevState, { months: 1 }));
   };
   const onPress = () => {
-    navigation.navigate("Tabs", {
-      startDate: JSON.stringify(startDate),
-      endDate: JSON.stringify(endDate),
+    dispatch({
+      type: TimeIntervalActionTypes.Update,
+      payload: {
+        startDate,
+        endDate,
+      },
     });
+    navigation.navigate("Tabs");
   };
 
   return (

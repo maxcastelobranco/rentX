@@ -7,15 +7,18 @@ import LoadAssets from "./src/components/static/LoadAssets";
 import { fonts } from "./assets/fonts";
 import AppStackNavigator from "./src/routes";
 import theme from "./src/theme";
+import { AppProvider } from "./src/context";
 
 const App: React.FC = () => {
   return (
-    <ThemeProvider {...{ theme }}>
-      <LoadAssets {...{ fonts }}>
-        <StatusBar hidden style="light" />
-        <AppStackNavigator />
-      </LoadAssets>
-    </ThemeProvider>
+    <AppProvider>
+      <ThemeProvider {...{ theme }}>
+        <LoadAssets {...{ fonts }}>
+          <StatusBar hidden style="light" />
+          <AppStackNavigator />
+        </LoadAssets>
+      </ThemeProvider>
+    </AppProvider>
   );
 };
 

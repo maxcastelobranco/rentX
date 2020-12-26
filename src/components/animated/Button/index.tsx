@@ -27,7 +27,7 @@ const Button: React.FC<ButtonProps> = ({
 }) => {
   const { containerStyles, buttonStyles, labelStyles } = useStyles();
 
-  const animatedStyle = useAnimatedStyle(() => {
+  const animatedContainerStyle = useAnimatedStyle(() => {
     return {
       opacity: enabled ? withTiming(1) : withTiming(0.4),
     };
@@ -35,7 +35,7 @@ const Button: React.FC<ButtonProps> = ({
 
   return (
     <Animated.View
-      style={[containerStyles, extraContainerStyles, animatedStyle]}
+      style={[containerStyles, extraContainerStyles, animatedContainerStyle]}
     >
       <RectButton
         style={[buttonStyles, extraButtonStyles]}

@@ -14,10 +14,7 @@ export type HomeRoutes = {
   CalendarScreen: undefined;
   EditProfile: undefined;
   CarDetails: undefined;
-  Tabs: {
-    startDate: string;
-    endDate: string;
-  };
+  Tabs: undefined;
 };
 
 export type HomeNavigationProp<
