@@ -6,17 +6,20 @@ import { TabNavigationProps } from "../../../../routes/tabs";
 import Header from "../../CalendarScreen/components/Header";
 import { useCalendarBoilerplate } from "../../CalendarScreen/components/Calendar/hooks/useCalendarBoilerplate";
 import { useAppContext } from "../../../../context";
+import { usePreventGoingBack } from "../hooks/usePreventGoingBack";
 
 import { useStyles } from "./styles";
 import Filter from "./components/Filter";
 import Results from "./components/Results";
 import Overlay from "./components/Overlay";
 
-const Home: React.FC<TabNavigationProps<"Home">> = () => {
+const Home: React.FC<TabNavigationProps<"Home">> = ({ navigation }) => {
   const {
     state: { timeInterval },
   } = useAppContext();
   const { containerStyles } = useStyles();
+  usePreventGoingBack("CalendarScreen", navigation);
+
   const {
     startDatePickerOpen,
     endDatePickerOpen,

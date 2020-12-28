@@ -7,6 +7,7 @@ import { RectButton } from "react-native-gesture-handler";
 import { ViewStyle } from "react-native";
 
 import { Text } from "../../../theme";
+import Loading from "../../static/Loading";
 
 import { useStyles } from "./styles";
 
@@ -16,6 +17,7 @@ interface ButtonProps {
   onPress(): void;
   extraContainerStyles?: ViewStyle;
   extraButtonStyles?: ViewStyle;
+  loading?: boolean;
 }
 
 const Button: React.FC<ButtonProps> = ({
@@ -24,6 +26,7 @@ const Button: React.FC<ButtonProps> = ({
   onPress,
   extraContainerStyles,
   extraButtonStyles,
+  loading,
 }) => {
   const { containerStyles, buttonStyles, labelStyles } = useStyles();
 
@@ -41,7 +44,11 @@ const Button: React.FC<ButtonProps> = ({
         style={[buttonStyles, extraButtonStyles]}
         {...{ enabled, onPress }}
       >
-        <Text {...labelStyles}>{label}</Text>
+        {loading ? (
+          <Loading size="small" />
+        ) : (
+          <Text {...labelStyles}>{label}</Text>
+        )}
       </RectButton>
     </Animated.View>
   );

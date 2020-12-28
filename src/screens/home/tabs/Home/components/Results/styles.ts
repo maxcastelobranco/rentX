@@ -26,7 +26,6 @@ export const useStyles = () => {
   const resultsCountStyles: TextProps<Theme> = {
     variant: "smallTextMediumLight",
   };
-
   const buttonStyles: ViewStyle = {
     padding: theme.spacing.s,
     marginLeft: theme.spacing.s,

@@ -10,14 +10,13 @@ import Login from "../screens/authentication/Login";
 import SignUp from "../screens/authentication/SignUp";
 import SignUpSuccessful from "../screens/authentication/SignUpSuccessful";
 
-import HomeNavigator, { HomeRoutes } from "./home";
+import { HomeRoutes } from "./home";
 
 export type AuthenticationRoutes = {
   OnBoarding: undefined;
   Login: undefined;
   SignUp: undefined;
   SignUpSuccessful: undefined;
-  Home: undefined;
 };
 
 export interface AuthenticationNavigationProps<
@@ -42,7 +41,6 @@ const AuthenticationNavigator: React.FC = () => {
         name="SignUpSuccessful"
         component={SignUpSuccessful}
       />
-      <AuthenticationStack.Screen name="Home" component={HomeNavigator} />
     </AuthenticationStack.Navigator>
   );
 };

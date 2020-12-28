@@ -9,6 +9,7 @@ import { add } from "date-fns";
 
 import { AppActions, InitialAppState } from "./types";
 import { timeIntervalReducer } from "./reducers/timeIntervalReducer";
+import { authenticationReducer } from "./reducers/authenticationReducer";
 
 const today = new Date();
 const tomorrow = add(today, { days: 1 });
@@ -17,6 +18,18 @@ const initialState: InitialAppState = {
   timeInterval: {
     startDate: today,
     endDate: tomorrow,
+  },
+  authentication: {
+    error: "",
+    loading: false,
+    user: {
+      id: "",
+      firstName: "",
+      lastName: "",
+      email: "",
+      password: "",
+      avatarUrl: "",
+    },
   },
 };
 
@@ -29,10 +42,11 @@ const AppContext = createContext<{
 });
 
 const mainReducer: Reducer<InitialAppState, AppActions> = (
-  { timeInterval }: InitialAppState,
+  { timeInterval, authentication }: InitialAppState,
   action: AppActions
 ) => ({
   timeInterval: timeIntervalReducer(timeInterval, action),
+  authentication: authenticationReducer(authentication, action),
 });
 
 const AppProvider: React.FC = ({ children }) => {

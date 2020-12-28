@@ -2,9 +2,6 @@ import { TextProps, useTheme } from "@shopify/restyle";
 import { ViewStyle } from "react-native";
 
 import { Theme } from "../../../theme";
-import responsivePixelSize from "../../../utils/responsivePixelSize";
-
-const ICON_SIZE = responsivePixelSize(40);
 
 export const useStyles = () => {
   const theme = useTheme<Theme>();
@@ -22,11 +19,15 @@ export const useStyles = () => {
     marginTop: "m",
     marginBottom: "xl",
   };
+  const notificationPosition = {
+    top: theme.spacing.s,
+    right: theme.spacing.s,
+  };
 
   return {
     containerStyles,
     titleStyles,
     descriptionStyles,
-    ICON_SIZE,
+    notificationPosition,
   };
 };
