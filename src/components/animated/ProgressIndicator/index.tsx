@@ -1,8 +1,8 @@
 import React from "react";
 import Animated, {
-  Extrapolate,
   interpolate,
   useAnimatedStyle,
+  Extrapolate,
 } from "react-native-reanimated";
 
 import { useStyles } from "./styles";
@@ -27,7 +27,12 @@ const ProgressIndicator: React.FC<ProgressIndicatorProps> = ({
     ),
     transform: [
       {
-        scale: interpolate(currentIndex.value, inputRange, [0.8, 1, 0.8]),
+        scale: interpolate(
+          currentIndex.value,
+          inputRange,
+          [0.8, 1, 0.8],
+          Extrapolate.CLAMP
+        ),
       },
     ],
   }));

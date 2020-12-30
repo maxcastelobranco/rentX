@@ -1,7 +1,7 @@
 import { useTheme } from "@shopify/restyle";
 
-import responsivePixelSize from "../../../../utils/responsivePixelSize";
-import { Theme } from "../../../../theme";
+import responsivePixelSize from "../../../utils/responsivePixelSize";
+import { Theme } from "../../../theme";
 
 const PROGRESS_INDICATOR_SIZE = responsivePixelSize(12);
 

@@ -14,7 +14,7 @@ import { Dimensions } from "react-native";
 import { Box, Theme } from "../../../../../theme";
 import { slideData } from "../../slideData";
 import responsivePixelSize from "../../../../../utils/responsivePixelSize";
-import ProgressIndicator from "../../../components/ProgressIndicator";
+import ProgressIndicator from "../../../../../components/animated/ProgressIndicator";
 
 import { useStyles } from "./styles";
 

@@ -15,6 +15,7 @@ interface HeaderProps {
   setStartDate: React.Dispatch<React.SetStateAction<Date>>;
   setEndDate: React.Dispatch<React.SetStateAction<Date>>;
   showTitle?: boolean;
+  compact?: boolean;
 }
 
 const Header: React.FC<HeaderProps> = ({
@@ -25,6 +26,7 @@ const Header: React.FC<HeaderProps> = ({
   setStartDate,
   setEndDate,
   showTitle,
+  compact,
 }) => {
   const {
     containerStyles,
@@ -33,7 +35,7 @@ const Header: React.FC<HeaderProps> = ({
   } = useStyles();
 
   return (
-    <Box {...containerStyles}>
+    <Box {...containerStyles} padding={compact ? "s" : "l"}>
       {showTitle && <Text {...titleStyles}>Pick a date and find a ride.</Text>}
       <Box {...datePickerContainerStyles}>
         <DatePicker

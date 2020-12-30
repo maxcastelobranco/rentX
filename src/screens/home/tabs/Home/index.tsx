@@ -43,6 +43,7 @@ const Home: React.FC<TabNavigationProps<"Home">> = ({ navigation }) => {
           setStartDate,
           setEndDate,
         }}
+        compact
       />
       <Results {...{ anyPickerOpen, filterOpen }} />
       <Filter open={filterOpen} />

@@ -11,7 +11,7 @@ import { useForm } from "react-hook-form";
 import { Box, Text } from "../../../theme";
 import { AuthenticationNavigationProps } from "../../../routes/authentication";
 import GoBackButton from "../../../components/static/GoBackButton";
-import ProgressIndicator from "../components/ProgressIndicator";
+import ProgressIndicator from "../../../components/animated/ProgressIndicator";
 
 import { slideData } from "./slideData";
 import { useStyles } from "./styles";
