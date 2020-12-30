@@ -5,39 +5,29 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2aeeec9b-380a-447b-91f6-3f9957591b9f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/svgs/static/Electric.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/svgs/static/Gas.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/svgs/static/Hybrid.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/screens/home/tabs/Home/components/Results/components/Car/components/CarData/index.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/screens/home/tabs/Home/components/Results/components/Car/components/CarData/styles.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/screens/home/tabs/Home/components/Results/components/Car/components/CarImages/components/AnimatedImage/index.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/screens/home/tabs/Home/components/Results/components/Car/components/CarImages/components/AnimatedImage/styles.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/screens/home/tabs/Home/components/Results/components/Car/components/CarImages/index.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/screens/home/tabs/Home/components/Results/components/Car/components/CarImages/styles.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/screens/home/tabs/Home/components/Results/components/Car/index.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/screens/home/tabs/Home/components/Results/components/Car/styles.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/screens/home/tabs/Home/components/Results/components/CarList/index.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/screens/home/tabs/Home/components/Results/components/Header/index.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/screens/home/tabs/Home/components/Results/components/Header/styles.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/screens/home/tabs/Home/components/Results/constants.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/screens/home/tabs/Home/components/Results/hooks/useCarData.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/Audi/A5/11814-2021-audi-a5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/Audi/A5/2021AUC190004_1280_05.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/Audi/A5/2021AUC190032_1280_01.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/Audi/A5/2021AUC190033_1280_02.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/Audi/A5/2021AUC190038_1280_11.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/Audi/R8/10293-2020-audi-r8.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/Audi/R8/2020AUC170004_1280_05.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/Audi/R8/2020AUC170021_1280_07.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/Audi/R8/2020AUC170029_1280_11.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/Audi/A5/ezgif-4-14f4c2b98d08.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/Audi/A5/ezgif-4-26a75b477854.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/Audi/A5/ezgif-4-295eb5111052.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/Audi/A5/ezgif-4-84db9a4da29b.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/Audi/A5/ezgif-4-9fb640011719.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/Audi/R8/2020AUC170001_1280_01.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/Audi/R8/2020AUC170001_1280_01.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/Audi/R8/2020AUC170002_1280_02.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/Audi/R8/2020AUC170002_1280_02.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/Audi/R8/ezgif-4-1752da24bb95.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/Audi/R8/ezgif-4-6913cc6267ef.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/Audi/R8/ezgif-4-b546e177ae0f.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/index.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/db/data/carData.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/db/data/carData.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/db/db.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/db/db.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/screens/authentication/OnBoarding/components/Footer/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/authentication/OnBoarding/components/Footer/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/screens/authentication/SignUp/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/authentication/SignUp/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/screens/authentication/components/ProgressIndicator/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/animated/ProgressIndicator/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/screens/authentication/components/ProgressIndicator/styles.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/animated/ProgressIndicator/styles.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/screens/home/CalendarScreen/components/Header/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/home/CalendarScreen/components/Header/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/screens/home/CalendarScreen/components/Header/styles.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/home/CalendarScreen/components/Header/styles.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/screens/home/tabs/Home/components/Results/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/home/tabs/Home/components/Results/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/screens/home/tabs/Home/components/Results/styles.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/home/tabs/Home/components/Results/styles.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/screens/home/tabs/Home/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/home/tabs/Home/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/screens/home/tabs/components/TabBar/constants.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/home/tabs/components/TabBar/constants.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/screens/home/tabs/components/TabBar/styles.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/home/tabs/components/TabBar/styles.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/api.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/api.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -163,7 +153,7 @@
       <workItem from="1609266104056" duration="953000" />
       <workItem from="1609267144244" duration="1675000" />
       <workItem from="1609268929344" duration="6496000" />
-      <workItem from="1609278614559" duration="10320000" />
+      <workItem from="1609278614559" duration="11897000" />
     </task>
     <servers />
   </component>
