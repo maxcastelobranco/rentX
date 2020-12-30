@@ -30,15 +30,15 @@ const CarList: React.FC<CarListProps> = ({ cars, loadCars, page }) => {
       onScroll={onScroll}
       data={cars}
       keyExtractor={({ id }: CarData) => id}
-      renderItem={({ item, index }: { item: CarData; index: number }) => (
-        <Car data={item} translationY={translationY} index={index} />
-      )}
       onEndReachedThreshold={0.5}
       onEndReached={() => {
         loadCars(page).catch(console.error);
       }}
       snapToInterval={CAR_ITEM_INTERVAL}
       showsVerticalScrollIndicator={false}
+      renderItem={({ item, index }: { item: CarData; index: number }) => (
+        <Car data={item} translationY={translationY} index={index} />
+      )}
     />
   );
 };

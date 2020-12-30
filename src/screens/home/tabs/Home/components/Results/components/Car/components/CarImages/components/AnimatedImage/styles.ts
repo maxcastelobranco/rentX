@@ -11,6 +11,7 @@ export const useStyles = () => {
   const IMAGE_HEIGHT = IMAGE_WIDTH / 2;
 
   const imageStyles: ImageStyle = {
+    marginTop: theme.spacing.ml,
     width: IMAGE_WIDTH,
     height: IMAGE_HEIGHT,
     alignSelf: "center",
