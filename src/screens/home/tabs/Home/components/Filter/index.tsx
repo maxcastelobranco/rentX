@@ -18,7 +18,7 @@ interface FilterProps {
 }
 const SNAP_POINTS = [SHEET_HEIGHT * 0.3, SHEET_HEIGHT];
 
-const Filter: React.FC<FilterProps> = ({ open, dailyRate, setDailyRate }) => {
+const Filter: React.FC<FilterProps> = ({ open, dailyRate }) => {
   const { containerStyles } = useStyles();
 
   const animatedStyle = useAnimatedStyle(() => {
@@ -38,7 +38,7 @@ const Filter: React.FC<FilterProps> = ({ open, dailyRate, setDailyRate }) => {
   return (
     <Animated.View style={[containerStyles, animatedStyle]}>
       <Header onPress={closeFilter} />
-      <DailyRate {...{ dailyRate, setDailyRate }} />
+      <DailyRate {...{ dailyRate }} />
     </Animated.View>
   );
 };

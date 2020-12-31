@@ -5,53 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2aeeec9b-380a-447b-91f6-3f9957591b9f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/assets/images/BMW/i8/11017-2020-bmw-i8.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/BMW/i8/11017-2020-bmw-i8.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/BMW/i8/2020BMC680012_1280_28.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/BMW/i8/2020BMC680012_1280_28.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/BMW/i8/2020BMC680015_1280_46.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/BMW/i8/2020BMC680015_1280_46.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/BMW/i8/2020BMC680016_1280_01.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/BMW/i8/2020BMC680016_1280_01.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/BMW/i8/2020BMC680018_1280_03.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/BMW/i8/2020BMC680018_1280_03.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/BMW/i8/2020BMC680023_1280_12.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/BMW/i8/2020BMC680023_1280_12.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/screens/home/tabs/Home/components/Filter/components/DailyRate/index.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/screens/home/tabs/Home/components/Filter/components/DailyRate/styles.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/screens/home/tabs/Home/components/Filter/components/Header/index.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/screens/home/tabs/Home/components/Filter/components/Header/styles.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/screens/home/tabs/Home/hooks/useFilterBoilerplate.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/.editorconfig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/svgs/static/SliderButton.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/screens/home/tabs/Home/components/Filter/components/DailyRate/Slider/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/screens/home/tabs/Home/components/Filter/components/DailyRate/Slider/styles.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/screens/home/tabs/Home/components/Filter/components/DailyRate/TextData/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/screens/home/tabs/Home/components/Filter/components/DailyRate/TextData/styles.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/BMW/i8/2020BMC680002_1280_02.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/BMW/i8/2020BMC680002_1280_02.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/BMW/i8/2020BMC680004_1280_05.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/BMW/i8/2020BMC680004_1280_05.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/BMW/i8/2020BMC680005_1280_06.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/BMW/i8/2020BMC680005_1280_06.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/BMW/i8/2020BMC680009_1280_13.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/BMW/i8/2020BMC680009_1280_13.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/BMW/i8/2020BMC680010_1280_18.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/BMW/i8/2020BMC680010_1280_18.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/BMW/i8/2020BMC680019_1280_05.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/BMW/i8/2020BMC680019_1280_05.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/BMW/i8/2020BMC680021_1280_07.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/BMW/i8/2020BMC680021_1280_07.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.json" beforeDir="false" afterPath="$PROJECT_DIR$/db.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/db/data/carData.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/db/data/carData.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/db/db.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/db/db.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/db/dbGenerator.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/db/dbGenerator.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/tabs.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/tabs.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/screens/home/CalendarScreen/components/Header/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/home/CalendarScreen/components/Header/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/screens/home/CalendarScreen/components/Header/styles.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/home/CalendarScreen/components/Header/styles.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/home/tabs/Home/components/Filter/components/DailyRate/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/home/tabs/Home/components/Filter/components/DailyRate/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/home/tabs/Home/components/Filter/components/DailyRate/styles.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/home/tabs/Home/components/Filter/components/DailyRate/styles.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/screens/home/tabs/Home/components/Filter/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/home/tabs/Home/components/Filter/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/screens/home/tabs/Home/components/Filter/styles.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/home/tabs/Home/components/Filter/styles.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/screens/home/tabs/Home/components/Results/components/Car/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/home/tabs/Home/components/Results/components/Car/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/screens/home/tabs/Home/components/Results/components/CarList/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/home/tabs/Home/components/Results/components/CarList/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/screens/home/tabs/Home/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/home/tabs/Home/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/api.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/api.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -94,7 +57,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components/svgs/static" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/screens/home/tabs/Home/components/Filter/components/DailyRate/Slider" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -112,11 +75,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\max_c\OneDrive\Desktop\PortfolioWorthy\rentX\src\screens\home\tabs\Home\components\Filter\components\DailyRate\Slider" />
       <recent name="C:\Users\max_c\OneDrive\Desktop\PortfolioWorthy\rentX\src\components\svgs\static" />
+      <recent name="C:\Users\max_c\OneDrive\Desktop\PortfolioWorthy\rentX\src\screens\home\tabs\Home\components\Filter\components\DailyRate\TextData" />
       <recent name="C:\Users\max_c\OneDrive\Desktop\PortfolioWorthy\rentX\src\utils" />
       <recent name="C:\Users\max_c\OneDrive\Desktop\PortfolioWorthy\rentX\src\components\animated\Notification" />
-      <recent name="C:\Users\max_c\OneDrive\Desktop\PortfolioWorthy\rentX\src\context\reducers" />
-      <recent name="C:\Users\max_c\OneDrive\Desktop\PortfolioWorthy\rentX\src\db" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\max_c\OneDrive\Desktop\PortfolioWorthy\rentX\src\screens\home\tabs\Home\components\Filter\components" />
@@ -190,7 +153,9 @@
       <workItem from="1609341259595" duration="1389000" />
       <workItem from="1609359780560" duration="676000" />
       <workItem from="1609364842882" duration="3731000" />
-      <workItem from="1609377260632" duration="6407000" />
+      <workItem from="1609377260632" duration="7327000" />
+      <workItem from="1609422096731" duration="12245000" />
+      <workItem from="1609443572627" duration="8698000" />
     </task>
     <servers />
   </component>
