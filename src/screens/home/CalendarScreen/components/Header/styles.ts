@@ -6,6 +6,7 @@ export const useStyles = () => {
   const containerStyles: BoxProps<Theme> = {
     flex: 1,
     backgroundColor: "backgroundDark1",
+    padding: "l",
   };
   const titleStyles: TextProps<Theme> = {
     variant: "titleLightLargeSemiBold",

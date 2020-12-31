@@ -12,6 +12,7 @@ import { useStyles } from "./styles";
 import Filter from "./components/Filter";
 import Results from "./components/Results";
 import Overlay from "./components/Overlay";
+import { useFilterBoilerplate } from "./hooks/useFilterBoilerplate";
 
 const Home: React.FC<TabNavigationProps<"Home">> = ({ navigation }) => {
   const {
@@ -19,7 +20,6 @@ const Home: React.FC<TabNavigationProps<"Home">> = ({ navigation }) => {
   } = useAppContext();
   const { containerStyles } = useStyles();
   usePreventGoingBack("CalendarScreen", navigation);
-
   const {
     startDatePickerOpen,
     endDatePickerOpen,
@@ -29,6 +29,14 @@ const Home: React.FC<TabNavigationProps<"Home">> = ({ navigation }) => {
     endDate,
     setEndDate,
   } = useCalendarBoilerplate(timeInterval.startDate, timeInterval.endDate);
+  const {
+    dailyRate,
+    setDailyRate,
+    engineType,
+    setEngineType,
+    transmission,
+    setTransmission,
+  } = useFilterBoilerplate();
 
   const filterOpen = useSharedValue(false);
 
@@ -43,10 +51,12 @@ const Home: React.FC<TabNavigationProps<"Home">> = ({ navigation }) => {
           setStartDate,
           setEndDate,
         }}
-        compact
       />
       <Results {...{ anyPickerOpen, filterOpen }} />
-      <Filter open={filterOpen} />
+      <Filter
+        open={filterOpen}
+        {...{ dailyRate, setDailyRate, engineType, setEngineType, transmission, setTransmission }}
+      />
       <Overlay open={filterOpen} />
     </Box>
   );

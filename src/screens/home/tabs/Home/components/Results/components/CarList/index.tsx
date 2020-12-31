@@ -1,9 +1,6 @@
 import React from "react";
-import { FlatList } from "react-native";
-import Animated, {
-  useAnimatedScrollHandler,
-  useSharedValue,
-} from "react-native-reanimated";
+import { FlatList, ListRenderItem } from "react-native";
+import Animated, { useAnimatedScrollHandler, useSharedValue } from "react-native-reanimated";
 
 import Car, { CarData } from "../Car";
 import { CAR_ITEM_INTERVAL } from "../../constants";
@@ -25,20 +22,22 @@ const CarList: React.FC<CarListProps> = ({ cars, loadCars, page }) => {
     },
   });
 
+  const renderItem: ListRenderItem<CarData> = ({ item, index }) => (
+    <Car data={item} translationY={translationY} index={index} />
+  );
+  const onEndReached = () => {
+    loadCars(page).catch(console.error);
+  };
+  const keyExtractor = ({ id }: CarData) => id;
+
   return (
     <AnimatedFlatList
       onScroll={onScroll}
       data={cars}
-      keyExtractor={({ id }: CarData) => id}
       onEndReachedThreshold={0.5}
-      onEndReached={() => {
-        loadCars(page).catch(console.error);
-      }}
       snapToInterval={CAR_ITEM_INTERVAL}
       showsVerticalScrollIndicator={false}
-      renderItem={({ item, index }: { item: CarData; index: number }) => (
-        <Car data={item} translationY={translationY} index={index} />
-      )}
+      {...{ renderItem, keyExtractor, onEndReached }}
     />
   );
 };

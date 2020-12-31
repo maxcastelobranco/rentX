@@ -1,15 +1,12 @@
 import React from "react";
-import Animated, {
-  interpolate,
-  useAnimatedStyle,
-  Extrapolate,
-} from "react-native-reanimated";
+import Animated, { interpolate, useAnimatedStyle, Extrapolate } from "react-native-reanimated";
 
 import { baseURL } from "../../../../../../../../services/api";
 import Electric from "../../../../../../../../components/svgs/static/Electric";
 import Gas from "../../../../../../../../components/svgs/static/Gas";
 import Hybrid from "../../../../../../../../components/svgs/static/Hybrid";
 import { CAR_ITEM_INTERVAL, CAR_ITEM_WIDTH } from "../../constants";
+import { EngineTypes, TransmissionTypes } from "../../../../hooks/useFilterBoilerplate";
 
 import { useStyles } from "./styles";
 import CarImages from "./components/CarImages";
@@ -24,8 +21,8 @@ export interface CarData {
   topSpeed: number;
   acceleration: number;
   horsePower: number;
-  engineType: "gas" | "electric" | "hybrid";
-  transmission: "auto" | "manual";
+  engineType: EngineTypes;
+  transmission: TransmissionTypes;
   seating: number;
   images: string[];
 }
@@ -49,19 +46,13 @@ const Car: React.FC<CarProps> = ({
     CAR_ITEM_INTERVAL * (index + 1),
   ];
   const animatedStyle = useAnimatedStyle(() => {
-    const opacity = interpolate(
-      translationY.value,
-      inputRange,
-      [0.9, 1, 0.1],
-      Extrapolate.CLAMP
-    );
+    const opacity = interpolate(translationY.value, inputRange, [0.5, 1, 0]);
     const translateX = interpolate(
       translationY.value,
       inputRange,
       [0, 0, CAR_ITEM_WIDTH],
       Extrapolate.CLAMP
     );
-
     return {
       opacity,
       transform: [{ translateX }],

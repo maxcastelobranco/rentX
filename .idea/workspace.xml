@@ -5,11 +5,53 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2aeeec9b-380a-447b-91f6-3f9957591b9f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/assets/images/BMW/i8/11017-2020-bmw-i8.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/BMW/i8/11017-2020-bmw-i8.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/BMW/i8/2020BMC680012_1280_28.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/BMW/i8/2020BMC680012_1280_28.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/BMW/i8/2020BMC680015_1280_46.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/BMW/i8/2020BMC680015_1280_46.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/BMW/i8/2020BMC680016_1280_01.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/BMW/i8/2020BMC680016_1280_01.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/BMW/i8/2020BMC680018_1280_03.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/BMW/i8/2020BMC680018_1280_03.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/BMW/i8/2020BMC680023_1280_12.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/BMW/i8/2020BMC680023_1280_12.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/screens/home/tabs/Home/components/Filter/components/DailyRate/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/screens/home/tabs/Home/components/Filter/components/DailyRate/styles.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/screens/home/tabs/Home/components/Filter/components/Header/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/screens/home/tabs/Home/components/Filter/components/Header/styles.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/screens/home/tabs/Home/hooks/useFilterBoilerplate.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/.editorconfig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/svgs/static/Gas.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/svgs/static/Gas.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/svgs/static/Hybrid.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/svgs/static/Hybrid.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/screens/home/tabs/Home/components/Results/components/Car/components/CarImages/components/AnimatedImage/styles.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/home/tabs/Home/components/Results/components/Car/components/CarImages/components/AnimatedImage/styles.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/BMW/i8/2020BMC680002_1280_02.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/BMW/i8/2020BMC680002_1280_02.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/BMW/i8/2020BMC680004_1280_05.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/BMW/i8/2020BMC680004_1280_05.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/BMW/i8/2020BMC680005_1280_06.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/BMW/i8/2020BMC680005_1280_06.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/BMW/i8/2020BMC680009_1280_13.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/BMW/i8/2020BMC680009_1280_13.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/BMW/i8/2020BMC680010_1280_18.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/BMW/i8/2020BMC680010_1280_18.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/BMW/i8/2020BMC680019_1280_05.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/BMW/i8/2020BMC680019_1280_05.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/BMW/i8/2020BMC680021_1280_07.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/BMW/i8/2020BMC680021_1280_07.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.json" beforeDir="false" afterPath="$PROJECT_DIR$/db.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/db/data/carData.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/db/data/carData.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/db/db.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/db/db.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/db/dbGenerator.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/db/dbGenerator.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/tabs.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/tabs.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/home/CalendarScreen/components/Header/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/home/CalendarScreen/components/Header/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/home/CalendarScreen/components/Header/styles.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/home/CalendarScreen/components/Header/styles.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/home/tabs/Home/components/Filter/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/home/tabs/Home/components/Filter/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/home/tabs/Home/components/Filter/styles.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/home/tabs/Home/components/Filter/styles.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/home/tabs/Home/components/Results/components/Car/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/home/tabs/Home/components/Results/components/Car/index.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/screens/home/tabs/Home/components/Results/components/CarList/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/home/tabs/Home/components/Results/components/CarList/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/home/tabs/Home/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/home/tabs/Home/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/api.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/api.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,13 +62,21 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JavaScript File" />
-        <option value="TypeScript JSX File" />
         <option value="TypeScript File" />
+        <option value="TypeScript JSX File" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="ProjectId" id="1l9ve5tmjfDCr0wvB7VfDN4kozx" />
   <component name="ProjectLevelVcsManager">
@@ -69,11 +119,11 @@
       <recent name="C:\Users\max_c\OneDrive\Desktop\PortfolioWorthy\rentX\src\db" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\max_c\OneDrive\Desktop\PortfolioWorthy\rentX\src\screens\home\tabs\Home\components\Filter\components" />
+      <recent name="C:\Users\max_c\OneDrive\Desktop\PortfolioWorthy\rentX\src\screens\home\tabs\Home\components\Filter" />
       <recent name="C:\Users\max_c\OneDrive\Desktop\PortfolioWorthy\rentX\src\components\animated" />
       <recent name="C:\Users\max_c\OneDrive\Desktop\PortfolioWorthy\rentX\src\screens\home\tabs\Home\components\Results\components\Car\components\CarImages\components\AnimatedImage" />
       <recent name="C:\Users\max_c\OneDrive\Desktop\PortfolioWorthy\rentX\src\screens\home\tabs\Home\components\Results\components\Car\components\CarImages\components" />
-      <recent name="C:\Users\max_c\OneDrive\Desktop\PortfolioWorthy\rentX\src\screens\home\tabs\screens" />
-      <recent name="C:\Users\max_c\OneDrive\Desktop\PortfolioWorthy\rentX\assets\images\Tesla\Model X" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -136,7 +186,11 @@
       <workItem from="1609267144244" duration="1675000" />
       <workItem from="1609268929344" duration="6496000" />
       <workItem from="1609278614559" duration="11974000" />
-      <workItem from="1609335800716" duration="3608000" />
+      <workItem from="1609335800716" duration="3739000" />
+      <workItem from="1609341259595" duration="1389000" />
+      <workItem from="1609359780560" duration="676000" />
+      <workItem from="1609364842882" duration="3731000" />
+      <workItem from="1609377260632" duration="6407000" />
     </task>
     <servers />
   </component>

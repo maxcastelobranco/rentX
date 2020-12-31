@@ -1,9 +1,6 @@
 import { CompositeNavigationProp, RouteProp } from "@react-navigation/native";
 import { StackNavigationProp } from "@react-navigation/stack";
-import {
-  BottomTabNavigationProp,
-  createBottomTabNavigator,
-} from "@react-navigation/bottom-tabs";
+import { BottomTabNavigationProp, createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import React from "react";
 
 import Listing from "../screens/home/tabs/Listing";
@@ -37,7 +34,7 @@ const Tabs = createBottomTabNavigator<TabRoutes>();
 
 const TabsNavigator: React.FC = () => {
   return (
-    <Tabs.Navigator tabBar={(props) => <TabBar {...props} />}>
+    <Tabs.Navigator lazy={false} tabBar={(props) => <TabBar {...props} />}>
       <Tabs.Screen
         name="Home"
         component={Home}

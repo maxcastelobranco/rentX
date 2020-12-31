@@ -41,4 +41,7 @@ for (let i = 0; i < NUMBER_OF_CARS; i++) {
     ...carData[i],
   });
 }
+
+data.cars = faker.helpers.shuffle(data.cars);
+
 fs.writeFile("db.json", JSON.stringify(data), console.error);

@@ -6,7 +6,7 @@
     "ios": "expo start --ios",
     "web": "expo start --web",
     "eject": "expo eject",
-    "db": "json-server --watch --host 192.168.0.104 ./src/db/db.json --static ./assets/images"
+    "db": "json-server --watch --host 192.168.0.107 ./src/db/db.json --static ./assets/images"
   },
   "dependencies": {
     "@expo/vector-icons": "^12.0.0",
