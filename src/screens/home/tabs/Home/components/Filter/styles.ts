@@ -6,7 +6,7 @@ import { Theme } from "../../../../../../theme";
 
 const { height, width } = Dimensions.get("window");
 
-export const SHEET_HEIGHT = height * 0.9;
+export const SHEET_HEIGHT = height * 2;
 
 export const useStyles = () => {
   const theme = useTheme<Theme>();
@@ -29,7 +29,12 @@ export const useStyles = () => {
     elevation: 10,
   };
 
+  const extraContainerStyles: ViewStyle = {
+    marginTop: theme.spacing.m,
+  };
+
   return {
     containerStyles,
+    extraContainerStyles,
   };
 };

@@ -13,6 +13,7 @@ import Filter from "./components/Filter";
 import Results from "./components/Results";
 import Overlay from "./components/Overlay";
 import { useFilterBoilerplate } from "./hooks/useFilterBoilerplate";
+import { useCarData } from "./components/Results/hooks/useCarData";
 
 const Home: React.FC<TabNavigationProps<"Home">> = ({ navigation }) => {
   const {
@@ -40,6 +41,12 @@ const Home: React.FC<TabNavigationProps<"Home">> = ({ navigation }) => {
 
   const filterOpen = useSharedValue(false);
 
+  const { cars, totalCars, loadCars, reloadCars, page } = useCarData({
+    dailyRate,
+    engineType,
+    transmission,
+  });
+
   return (
     <Box {...containerStyles}>
       <Header
@@ -52,10 +59,18 @@ const Home: React.FC<TabNavigationProps<"Home">> = ({ navigation }) => {
           setEndDate,
         }}
       />
-      <Results {...{ anyPickerOpen, filterOpen }} />
+      <Results
+        {...{ anyPickerOpen, filterOpen, cars, totalCars, loadCars, page }}
+      />
       <Filter
         open={filterOpen}
-        {...{ dailyRate, setDailyRate, engineType, setEngineType, transmission, setTransmission }}
+        {...{
+          dailyRate,
+          setDailyRate,
+          setEngineType,
+          setTransmission,
+          reloadCars,
+        }}
       />
       <Overlay open={filterOpen} />
     </Box>

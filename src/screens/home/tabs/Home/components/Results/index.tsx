@@ -7,12 +7,16 @@ import Animated, {
 
 import { useStyles } from "./styles";
 import Header from "./components/Header";
-import { useCarData } from "./hooks/useCarData";
 import CarList from "./components/CarList";
+import { CarData } from "./components/Car";
 
 interface ResultsProps {
   anyPickerOpen: Animated.SharedValue<boolean>;
   filterOpen: Animated.SharedValue<boolean>;
+  cars: CarData[];
+  totalCars: number;
+  loadCars: (pageNumber: number) => Promise<void>;
+  page: number;
 }
 
 const timingConfig: Animated.WithTimingConfig = {
@@ -20,7 +24,14 @@ const timingConfig: Animated.WithTimingConfig = {
   easing: Easing.bezier(0.22, 1, 0.36, 1),
 };
 
-const Results: React.FC<ResultsProps> = ({ anyPickerOpen, filterOpen }) => {
+const Results: React.FC<ResultsProps> = ({
+  anyPickerOpen,
+  filterOpen,
+  cars,
+  totalCars,
+  loadCars,
+  page,
+}) => {
   const { containerStyles } = useStyles();
 
   const animatedStyle = useAnimatedStyle(() => {
@@ -32,8 +43,6 @@ const Results: React.FC<ResultsProps> = ({ anyPickerOpen, filterOpen }) => {
   const toggleFilter = () => {
     filterOpen.value = !filterOpen.value;
   };
-
-  const { cars, totalCars, loadCars, page } = useCarData();
 
   return (
     <Animated.View style={[containerStyles, animatedStyle]}>

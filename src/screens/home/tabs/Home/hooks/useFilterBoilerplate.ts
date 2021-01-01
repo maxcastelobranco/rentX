@@ -8,10 +8,12 @@ export enum EngineTypes {
   gas = "gas",
   electric = "electric",
   hybrid = "hybrid",
+  all = "all",
 }
 export enum TransmissionTypes {
   auto = "auto",
   manual = "manual",
+  all = "all",
 }
 
 export const useFilterBoilerplate = () => {
@@ -19,9 +21,9 @@ export const useFilterBoilerplate = () => {
     from: 0,
     to: 10000,
   });
-  const [engineType, setEngineType] = useState<EngineTypes>(EngineTypes.gas);
+  const [engineType, setEngineType] = useState<EngineTypes>(EngineTypes.all);
   const [transmission, setTransmission] = useState<TransmissionTypes>(
-    TransmissionTypes.auto
+    TransmissionTypes.all
   );
 
   return {

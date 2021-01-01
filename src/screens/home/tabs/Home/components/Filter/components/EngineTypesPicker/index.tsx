@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import Animated, {
   Easing,
   useAnimatedStyle,
@@ -9,38 +9,33 @@ import { useTheme } from "@shopify/restyle";
 
 import { Box, Text, Theme } from "../../../../../../../../theme";
 import { EngineTypes } from "../../../../hooks/useFilterBoilerplate";
-import Gas from "../../../../../../../../components/svgs/static/engineTypes/Gas";
-import Electric from "../../../../../../../../components/svgs/static/engineTypes/Electric";
-import Hybrid from "../../../../../../../../components/svgs/static/engineTypes/Hybrid";
+import { EngineTypeIconProps } from "../../../../../../../../components/svgs/static/engineTypes/types";
 
 import { useStyles } from "./styles";
 import Option from "./components/Option";
 
+interface EngineTypesPickerProps {
+  selectedOptionIndex: number;
+  setSelectedOptionIndex: React.Dispatch<React.SetStateAction<number>>;
+  options: {
+    type: EngineTypes;
+    Icon: React.FC<EngineTypeIconProps>;
+    iconSize: number;
+  }[];
+}
+
 const { width } = Dimensions.get("window");
-const options = [
-  {
-    type: EngineTypes.gas,
-    Icon: Gas,
-    iconSize: 24,
-  },
-  {
-    type: EngineTypes.electric,
-    Icon: Electric,
-    iconSize: 24,
-  },
-  {
-    type: EngineTypes.hybrid,
-    Icon: Hybrid,
-    iconSize: 36,
-  },
-];
 
 const timingConfig: Animated.WithTimingConfig = {
   duration: 750,
   easing: Easing.bezier(0.16, 1, 0.3, 1),
 };
 
-const EngineTypesPicker: React.FC = () => {
+const EngineTypesPicker: React.FC<EngineTypesPickerProps> = ({
+  selectedOptionIndex,
+  setSelectedOptionIndex,
+  options,
+}) => {
   const {
     containerStyles,
     labelStyles,
@@ -49,7 +44,6 @@ const EngineTypesPicker: React.FC = () => {
 
   const theme = useTheme<Theme>();
   const CONTAINER_SIZE = (width - theme.spacing.l * 2) / 3;
-  const [selectedOptionIndex, setSelectedOptionIndex] = useState(0);
   const animatedBackgroundStyle = useAnimatedStyle(() => {
     return {
       transform: [

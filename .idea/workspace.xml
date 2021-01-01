@@ -5,35 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2aeeec9b-380a-447b-91f6-3f9957591b9f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/svgs/static/engineTypes/types.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/screens/home/tabs/Home/components/Filter/components/EngineTypesPicker/components/Option/index.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/screens/home/tabs/Home/components/Filter/components/EngineTypesPicker/components/Option/styles.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/screens/home/tabs/Home/components/Filter/components/EngineTypesPicker/index.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/screens/home/tabs/Home/components/Filter/components/EngineTypesPicker/styles.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/screens/home/tabs/Home/components/Filter/components/TransmissionTypePicker/index.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/screens/home/tabs/Home/components/Filter/components/TransmissionTypePicker/styles.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/animateScale.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/.editorconfig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/screens/home/tabs/Home/components/Filter/components/TransmissionTypePicker/components/Option/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/screens/home/tabs/Home/components/Filter/components/TransmissionTypePicker/components/Option/styles.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/svgs/animated/reanimatedAnimatedComponents.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/svgs/animated/tabIcons/Calendar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/svgs/static/tabIcons/Calendar.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/svgs/animated/tabIcons/Car.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/svgs/static/tabIcons/Car.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/svgs/animated/tabIcons/House.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/svgs/static/tabIcons/House.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/svgs/animated/tabIcons/User.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/svgs/static/tabIcons/User.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/svgs/animated/tabIcons/types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/svgs/static/tabIcons/types.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/svgs/static/Electric.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/svgs/static/engineTypes/Electric.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/svgs/static/Gas.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/svgs/static/engineTypes/Gas.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/svgs/static/Hybrid.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/svgs/static/engineTypes/Hybrid.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/home.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/home.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/tabs.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/tabs.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/screens/home/tabs/Home/components/Filter/components/DailyRate/Slider/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/home/tabs/Home/components/Filter/components/DailyRate/Slider/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/screens/home/tabs/Home/components/Filter/components/DailyRate/TextData/styles.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/home/tabs/Home/components/Filter/components/DailyRate/TextData/styles.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/home/tabs/Home/components/Filter/components/DailyRate/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/home/tabs/Home/components/Filter/components/DailyRate/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/home/tabs/Home/components/Filter/components/EngineTypesPicker/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/home/tabs/Home/components/Filter/components/EngineTypesPicker/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/home/tabs/Home/components/Filter/components/EngineTypesPicker/styles.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/home/tabs/Home/components/Filter/components/EngineTypesPicker/styles.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/home/tabs/Home/components/Filter/components/TransmissionTypePicker/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/home/tabs/Home/components/Filter/components/TransmissionTypePicker/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/home/tabs/Home/components/Filter/components/TransmissionTypePicker/styles.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/home/tabs/Home/components/Filter/components/TransmissionTypePicker/styles.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/screens/home/tabs/Home/components/Filter/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/home/tabs/Home/components/Filter/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/screens/home/tabs/Home/components/Results/components/Car/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/home/tabs/Home/components/Results/components/Car/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/home/tabs/Home/components/Filter/styles.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/home/tabs/Home/components/Filter/styles.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/home/tabs/Home/components/Results/hooks/useCarData.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/home/tabs/Home/components/Results/hooks/useCarData.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/home/tabs/Home/components/Results/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/home/tabs/Home/components/Results/index.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/screens/home/tabs/Home/hooks/useFilterBoilerplate.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/home/tabs/Home/hooks/useFilterBoilerplate.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/screens/home/tabs/components/TabBar/components/Tab/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/home/tabs/components/TabBar/components/Tab/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/home/tabs/Home/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/home/tabs/Home/index.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,7 +62,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/screens/home/tabs/Home/components/Filter/components/EngineTypesPicker/components/Option" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/screens/home/tabs/Home/components/Filter/components/TransmissionTypePicker" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -94,11 +80,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\max_c\OneDrive\Desktop\PortfolioWorthy\rentX\src\screens\home\tabs\Home\components\Filter\components\TransmissionTypePicker" />
       <recent name="C:\Users\max_c\OneDrive\Desktop\PortfolioWorthy\rentX\src\screens\home\tabs\Home\components\Filter\components\EngineTypesPicker\components\Option" />
       <recent name="C:\Users\max_c\OneDrive\Desktop\PortfolioWorthy\rentX\src\screens\home\tabs\Home\components\Filter\components\TransmissionTypes" />
       <recent name="C:\Users\max_c\OneDrive\Desktop\PortfolioWorthy\rentX\src\screens\home\tabs\Home\components\Filter\components\EngineTypes" />
       <recent name="C:\Users\max_c\OneDrive\Desktop\PortfolioWorthy\rentX\src\screens\home\tabs\Home\components\Filter\components\DailyRate\Slider" />
-      <recent name="C:\Users\max_c\OneDrive\Desktop\PortfolioWorthy\rentX\src\components\svgs\static" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\max_c\OneDrive\Desktop\PortfolioWorthy\rentX\src\components\svgs\static\engineTypes" />
@@ -177,7 +163,8 @@
       <workItem from="1609443572627" duration="8752000" />
       <workItem from="1609456353997" duration="131000" />
       <workItem from="1609470895977" duration="371000" />
-      <workItem from="1609504710327" duration="13144000" />
+      <workItem from="1609504710327" duration="13263000" />
+      <workItem from="1609525854629" duration="8572000" />
     </task>
     <servers />
   </component>

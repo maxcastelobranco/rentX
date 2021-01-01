@@ -6,7 +6,7 @@ import { Theme } from "../../../../../../../../theme";
 const { width } = Dimensions.get("window");
 export const useStyles = () => {
   const theme = useTheme<Theme>();
-  const CONTAINER_SIZE =
+  const ANIMATED_BACKGROUND_SIZE =
     (width - theme.spacing.l * 2) / 3 - theme.spacing.xs * 2;
 
   const containerStyles: BoxProps<Theme> = {
@@ -22,8 +22,8 @@ export const useStyles = () => {
     position: "absolute",
     top: theme.spacing.xs,
     left: theme.spacing.xs,
-    width: CONTAINER_SIZE,
-    height: CONTAINER_SIZE,
+    width: ANIMATED_BACKGROUND_SIZE,
+    height: ANIMATED_BACKGROUND_SIZE,
     backgroundColor: theme.colors.backgroundLight1,
     zIndex: -1,
   };
