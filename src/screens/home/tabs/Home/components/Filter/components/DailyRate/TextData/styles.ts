@@ -20,7 +20,7 @@ export const useStyles = () => {
     variant: "smallTextMediumDark",
   };
   const moneyStyles: TextStyle = {
-    fontFamily: "Roboto-Regular",
+    fontFamily: "Roboto-Bold",
     fontSize: responsivePixelSize(16),
     color: theme.colors.primary,
     marginHorizontal: theme.spacing.xs,

@@ -1,11 +1,21 @@
 import React from "react";
-import Animated, { useAnimatedStyle, withSpring, withTiming } from "react-native-reanimated";
+import Animated, {
+  useAnimatedStyle,
+  withSpring,
+  withTiming,
+} from "react-native-reanimated";
 
-import { DailyRateType, EngineTypes, TransmissionTypes } from "../../hooks/useFilterBoilerplate";
+import {
+  DailyRateType,
+  EngineTypes,
+  TransmissionTypes,
+} from "../../hooks/useFilterBoilerplate";
 
 import { SHEET_HEIGHT, useStyles } from "./styles";
 import Header from "./components/Header";
 import DailyRate from "./components/DailyRate";
+import EngineTypesPicker from "./components/EngineTypesPicker";
+import TransmissionTypePicker from "./components/TransmissionTypePicker";
 
 interface FilterProps {
   open: Animated.SharedValue<boolean>;
@@ -25,7 +35,9 @@ const Filter: React.FC<FilterProps> = ({ open, dailyRate }) => {
     return {
       transform: [
         {
-          translateY: open.value ? withSpring(SNAP_POINTS[0]) : withTiming(SNAP_POINTS[1]),
+          translateY: open.value
+            ? withSpring(SNAP_POINTS[0])
+            : withTiming(SNAP_POINTS[1]),
         },
       ],
     };
@@ -39,6 +51,8 @@ const Filter: React.FC<FilterProps> = ({ open, dailyRate }) => {
     <Animated.View style={[containerStyles, animatedStyle]}>
       <Header onPress={closeFilter} />
       <DailyRate {...{ dailyRate }} />
+      <EngineTypesPicker />
+      <TransmissionTypePicker />
     </Animated.View>
   );
 };

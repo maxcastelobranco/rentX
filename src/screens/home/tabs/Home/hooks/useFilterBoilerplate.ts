@@ -20,7 +20,9 @@ export const useFilterBoilerplate = () => {
     to: 10000,
   });
   const [engineType, setEngineType] = useState<EngineTypes>(EngineTypes.gas);
-  const [transmission, setTransmission] = useState<TransmissionTypes>(TransmissionTypes.auto);
+  const [transmission, setTransmission] = useState<TransmissionTypes>(
+    TransmissionTypes.auto
+  );
 
   return {
     dailyRate,

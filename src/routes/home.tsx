@@ -1,25 +1,21 @@
-import {
-  createStackNavigator,
-  StackNavigationProp,
-} from "@react-navigation/stack";
+import { createStackNavigator, StackNavigationProp } from "@react-navigation/stack";
 import React from "react";
 import { CompositeNavigationProp, RouteProp } from "@react-navigation/native";
 import { BottomTabNavigationProp } from "@react-navigation/bottom-tabs";
 
 import CalendarScreen from "../screens/home/CalendarScreen";
+import { CarData } from "../screens/home/tabs/Home/components/Results/components/Car";
 
 import TabsNavigator, { TabRoutes } from "./tabs";
 
 export type HomeRoutes = {
   CalendarScreen: undefined;
   EditProfile: undefined;
-  CarDetails: undefined;
+  CarDetails: CarData;
   Tabs: undefined;
 };
 
-export type HomeNavigationProp<
-  RouteName extends keyof HomeRoutes
-> = CompositeNavigationProp<
+export type HomeNavigationProp<RouteName extends keyof HomeRoutes> = CompositeNavigationProp<
   StackNavigationProp<HomeRoutes, RouteName>,
   BottomTabNavigationProp<TabRoutes, "Home">
 >;

@@ -28,8 +28,6 @@ const AppStackNavigator: React.FC = () => {
           type: AuthenticationActionTypes.UpdateUser,
           payload: JSON.parse(user),
         });
-
-        setLoadingUser(false);
       }
 
       setLoadingUser(false);

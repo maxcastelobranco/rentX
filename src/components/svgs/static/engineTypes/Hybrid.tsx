@@ -1,11 +1,26 @@
 import * as React from "react";
-import Svg, { SvgProps, Path, Defs, ClipPath, G, Use } from "react-native-svg";
+import Svg, { Path, Defs, ClipPath, G, Use } from "react-native-svg";
+import { useTheme } from "@shopify/restyle";
+
+import { Theme } from "../../../../theme";
+
+import { EngineTypeIconProps } from "./types";
 
 // hybrid car by StringLabs from the Noun Project
 
-const Hybrid: React.FC<SvgProps> = (props: SvgProps) => {
+const Hybrid: React.FC<EngineTypeIconProps> = ({
+  focused = false,
+  ...rest
+}) => {
+  const theme = useTheme<Theme>();
   return (
-    <Svg width={36} height={36} viewBox="0 0 24 24" {...props}>
+    <Svg
+      width={36}
+      height={36}
+      viewBox="0 0 24 24"
+      {...rest}
+      fill={focused ? theme.colors.primary : theme.colors.textMediumLight1}
+    >
       <Defs>
         <Path id="prefix__a" d="M16.644 16h8v8h-8z" />
       </Defs>
@@ -15,12 +30,12 @@ const Hybrid: React.FC<SvgProps> = (props: SvgProps) => {
       <G clipPath="url(#prefix__b)">
         <Path
           d="M20.82 18.667h3.158l-3.86 5.667v-3h-2.807l3.509-5.667v3zm-.702.666v-1.26l-1.568 2.593h2.269v1.465l1.847-2.798h-2.548z"
-          fill="#3d3d4d"
+          // fill="#3d3d4d"
         />
       </G>
       <Path
         d="M6.515 1.475l-.561.561-.913-.913.561-.561.913.913zm-.561 1.002v4.542A.98.98 0 014.973 8H.934a.98.98 0 01-.981-.981V.687C-.047.307.261 0 .64 0h2.748a.22.22 0 01.155.064l2.411 2.413zM1.257.438l.582.687h2.147L3.298.438H1.257zm3.436 4.313a1.75 1.75 0 10-3.499-.001 1.75 1.75 0 003.499.001zm-.978.32a.773.773 0 11-1.545 0c0-.427.773-1.491.773-1.491s.772 1.065.772 1.491zm-.279-.006a.094.094 0 10-.188 0 .294.294 0 01-.294.294.094.094 0 100 .188.482.482 0 00.482-.482zM15.889 15.889H8.111v.556a.557.557 0 01-.555.555H7a.557.557 0 01-.556-.556v-5.556l1.378-3.216A1.112 1.112 0 018.844 7h6.311a1.113 1.113 0 011.022.674l1.379 3.216v5.556A.557.557 0 0117 17h-.556a.557.557 0 01-.556-.556v-.555zM16.444 12H7.556v2.778h8.889V12zm-8.791-1.111h8.693l-1.191-2.778H8.844l-1.191 2.778zm1.291 3.333a.833.833 0 110-1.667.833.833 0 010 1.667zm6.112 0a.833.833 0 110-1.667.833.833 0 010 1.667zM11.858.585a.364.364 0 000 .728c5.623 0 10.188 4.318 10.689 9.811l-1.22-1.22a.363.363 0 00-.514-.001l-.001.001a.363.363 0 00-.001.514l.001.001 1.939 1.939a.363.363 0 00.621-.257C23.373 5.749 18.209.585 11.858.585zM.909 11.536a.363.363 0 00-.366.361v.003c0 6.351 5.164 11.515 11.515 11.515a.364.364 0 000-.728c-5.623 0-10.188-4.318-10.689-9.811l1.22 1.22a.363.363 0 00.514.001l.001-.001a.363.363 0 00.001-.514l-.001-.001-1.939-1.939a.374.374 0 00-.256-.106z"
-        fill="#3d3d4d"
+        // fill="#3d3d4d"
       />
     </Svg>
   );

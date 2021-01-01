@@ -9,8 +9,8 @@ import { RectButton } from "react-native-gesture-handler";
 import { useTiming } from "react-native-redash";
 
 import theme, { Box } from "../../../../../../../theme";
-import { transformOrigin } from "../../../../../../../utils/transformOrigin";
 import { ICON_SIZE } from "../../constants";
+import { animateScale } from "../../../../../../../utils/animateScale";
 
 import { useStyles } from "./styles";
 
@@ -45,25 +45,15 @@ const Tab: React.FC<TabProps> = ({
   const scale = useTiming(isFocused, timingConfig);
   const opacity = useDerivedValue(() => withTiming(isFocused ? 0 : 1));
 
-  const animate = (direction: "fromLeft" | "fromRight") => {
-    "worklet";
-    switch (direction) {
-      case "fromLeft":
-        return transformOrigin({ x: -ICON_SIZE, y: 0 }, { scale: scale.value });
-      case "fromRight":
-        return transformOrigin({ x: ICON_SIZE, y: 0 }, { scale: scale.value });
-    }
-  };
-
   const animatedOverlaidIconStyle = useAnimatedStyle(() => {
     return {
       transform: isFocused
         ? isGoingLeft.value
-          ? animate("fromRight")
-          : animate("fromLeft")
+          ? animateScale({ direction: "fromRight", size: ICON_SIZE, scale })
+          : animateScale({ direction: "fromLeft", size: ICON_SIZE, scale })
         : isGoingLeft.value
-        ? animate("fromLeft")
-        : animate("fromRight"),
+        ? animateScale({ direction: "fromLeft", size: ICON_SIZE, scale })
+        : animateScale({ direction: "fromRight", size: ICON_SIZE, scale }),
     };
   });
   const animatedBottomIconStyle = useAnimatedStyle(() => {

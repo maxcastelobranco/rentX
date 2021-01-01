@@ -1,12 +1,19 @@
 import React from "react";
-import Animated, { interpolate, useAnimatedStyle, Extrapolate } from "react-native-reanimated";
+import Animated, {
+  interpolate,
+  useAnimatedStyle,
+  Extrapolate,
+} from "react-native-reanimated";
 
 import { baseURL } from "../../../../../../../../services/api";
-import Electric from "../../../../../../../../components/svgs/static/Electric";
-import Gas from "../../../../../../../../components/svgs/static/Gas";
-import Hybrid from "../../../../../../../../components/svgs/static/Hybrid";
+import Electric from "../../../../../../../../components/svgs/static/engineTypes/Electric";
+import Gas from "../../../../../../../../components/svgs/static/engineTypes/Gas";
+import Hybrid from "../../../../../../../../components/svgs/static/engineTypes/Hybrid";
 import { CAR_ITEM_INTERVAL, CAR_ITEM_WIDTH } from "../../constants";
-import { EngineTypes, TransmissionTypes } from "../../../../hooks/useFilterBoilerplate";
+import {
+  EngineTypes,
+  TransmissionTypes,
+} from "../../../../hooks/useFilterBoilerplate";
 
 import { useStyles } from "./styles";
 import CarImages from "./components/CarImages";

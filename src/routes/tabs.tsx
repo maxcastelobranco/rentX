@@ -1,6 +1,9 @@
 import { CompositeNavigationProp, RouteProp } from "@react-navigation/native";
 import { StackNavigationProp } from "@react-navigation/stack";
-import { BottomTabNavigationProp, createBottomTabNavigator } from "@react-navigation/bottom-tabs";
+import {
+  BottomTabNavigationProp,
+  createBottomTabNavigator,
+} from "@react-navigation/bottom-tabs";
 import React from "react";
 
 import Listing from "../screens/home/tabs/Listing";
@@ -8,10 +11,10 @@ import Scheduling from "../screens/home/tabs/Scheduling";
 import Home from "../screens/home/tabs/Home";
 import Profile from "../screens/home/tabs/Profile";
 import TabBar from "../screens/home/tabs/components/TabBar";
-import House from "../components/svgs/animated/tabIcons/House";
-import Car from "../components/svgs/animated/tabIcons/Car";
-import Calendar from "../components/svgs/animated/tabIcons/Calendar";
-import User from "../components/svgs/animated/tabIcons/User";
+import House from "../components/svgs/static/tabIcons/House";
+import Car from "../components/svgs/static/tabIcons/Car";
+import Calendar from "../components/svgs/static/tabIcons/Calendar";
+import User from "../components/svgs/static/tabIcons/User";
 
 import { HomeRoutes } from "./home";
 

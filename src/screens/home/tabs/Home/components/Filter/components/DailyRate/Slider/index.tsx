@@ -5,7 +5,10 @@ import Animated, {
   useSharedValue,
   withSpring,
 } from "react-native-reanimated";
-import { PanGestureHandler, PanGestureHandlerGestureEvent } from "react-native-gesture-handler";
+import {
+  PanGestureHandler,
+  PanGestureHandlerGestureEvent,
+} from "react-native-gesture-handler";
 
 import { Box } from "../../../../../../../../../theme";
 import SliderButton, {
@@ -40,7 +43,8 @@ const Slider: React.FC<SliderProps> = ({ startValue, endValue }) => {
     },
     onActive: ({ translationX, velocityX }, { offsetX }) => {
       const dt = offsetX + translationX;
-      const maxTranslation = maxWidth + translateXRight.value - SLIDER_BUTTON_WIDTH * 2;
+      const maxTranslation =
+        maxWidth + translateXRight.value - SLIDER_BUTTON_WIDTH * 2;
       if (dt >= 0 && dt <= maxTranslation) {
         const scaleValue = Math.floor((10000 * dt) / maxWidth);
         startValue.value = scaleValue < 100 ? 0 : scaleValue;
@@ -60,7 +64,8 @@ const Slider: React.FC<SliderProps> = ({ startValue, endValue }) => {
     onActive: ({ translationX, velocityX }, { offsetX }) => {
       const dt = offsetX + translationX;
       const absoluteDt = Math.abs(dt);
-      const maxTranslation = maxWidth - translateXLeft.value - SLIDER_BUTTON_WIDTH * 2;
+      const maxTranslation =
+        maxWidth - translateXLeft.value - SLIDER_BUTTON_WIDTH * 2;
       if (dt <= 0 && absoluteDt <= maxTranslation) {
         const scaleValue = Math.floor(10000 - (10000 * absoluteDt) / maxWidth);
         endValue.value = scaleValue > 9900 ? 10000 : scaleValue;
@@ -104,7 +109,9 @@ const Slider: React.FC<SliderProps> = ({ startValue, endValue }) => {
       </PanGestureHandler>
       <Animated.View style={[redLineStyles, animatedRedLineStyle]} />
       <PanGestureHandler onGestureEvent={onGestureEventRight}>
-        <Animated.View style={[sliderButtonContainerStyles, animatedStyleRight]}>
+        <Animated.View
+          style={[sliderButtonContainerStyles, animatedStyleRight]}
+        >
           <SliderButton />
           <Box {...rightSideLineCoverStyles} />
         </Animated.View>
