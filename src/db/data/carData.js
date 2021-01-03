@@ -183,8 +183,8 @@ module.exports = {
       topSpeed: 150,
       acceleration: 7.3,
       horsePower: 170,
-      engineType: "gas",
-      transmission: "hybrid",
+      engineType: "hybrid",
+      transmission: "auto",
       seating: 5,
       images: [
         "/BMW/i3/2020BMC600001_1280_01.png",

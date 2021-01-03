@@ -10,29 +10,11 @@ import Electric from "../../../../../../../../components/svgs/static/engineTypes
 import Gas from "../../../../../../../../components/svgs/static/engineTypes/Gas";
 import Hybrid from "../../../../../../../../components/svgs/static/engineTypes/Hybrid";
 import { CAR_ITEM_INTERVAL, CAR_ITEM_WIDTH } from "../../constants";
-import {
-  EngineTypes,
-  TransmissionTypes,
-} from "../../../../hooks/useFilterBoilerplate";
+import { CarData } from "../../../../../../../../context/reducers/carParamsReducer";
 
 import { useStyles } from "./styles";
 import CarImages from "./components/CarImages";
-import CarData from "./components/CarData";
-
-export interface CarData {
-  id: string;
-  dailyRate: number;
-  available: true;
-  make: string;
-  model: string;
-  topSpeed: number;
-  acceleration: number;
-  horsePower: number;
-  engineType: EngineTypes;
-  transmission: TransmissionTypes;
-  seating: number;
-  images: string[];
-}
+import CarSpecs from "./components/CarSpecs";
 
 interface CarProps {
   data: CarData;
@@ -77,7 +59,7 @@ const Car: React.FC<CarProps> = ({
 
   return (
     <Animated.View style={[animatedStyle, containerStyles]}>
-      <CarData {...{ make, model, dailyRate }} />
+      <CarSpecs {...{ make, model, dailyRate }} />
       {icon}
       <CarImages {...{ imageUris }} />
     </Animated.View>

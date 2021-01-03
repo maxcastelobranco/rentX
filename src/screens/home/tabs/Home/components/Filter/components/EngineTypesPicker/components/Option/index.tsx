@@ -91,7 +91,11 @@ const Option: React.FC<OptionProps> = ({
   });
 
   const onPress = () => {
-    setSelectedOptionIndex(index);
+    if (selectedOptionIndex === index) {
+      setSelectedOptionIndex(-1);
+    } else {
+      setSelectedOptionIndex(index);
+    }
   };
 
   return (

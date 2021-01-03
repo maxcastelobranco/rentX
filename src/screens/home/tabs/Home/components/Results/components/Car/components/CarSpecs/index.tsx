@@ -4,13 +4,13 @@ import { Box, Text } from "../../../../../../../../../../theme";
 
 import { useStyles } from "./styles";
 
-interface CarDataProps {
+interface CarSpecsProps {
   make: string;
   model: string;
   dailyRate: number;
 }
 
-const CarData: React.FC<CarDataProps> = ({ make, model, dailyRate }) => {
+const CarSpecs: React.FC<CarSpecsProps> = ({ make, model, dailyRate }) => {
   const {
     makeModelContainerStyles,
     dailyRateContainerStyles,
@@ -33,4 +33,4 @@ const CarData: React.FC<CarDataProps> = ({ make, model, dailyRate }) => {
   );
 };
 
-export default CarData;
+export default CarSpecs;

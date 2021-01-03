@@ -8,8 +8,8 @@ import { Dimensions } from "react-native";
 import { useTheme } from "@shopify/restyle";
 
 import { Box, Text, Theme } from "../../../../../../../../theme";
-import { EngineTypes } from "../../../../hooks/useFilterBoilerplate";
 import { EngineTypeIconProps } from "../../../../../../../../components/svgs/static/engineTypes/types";
+import { EngineTypes } from "../../../../../../../../context/reducers/carParamsReducer";
 
 import { useStyles } from "./styles";
 import Option from "./components/Option";

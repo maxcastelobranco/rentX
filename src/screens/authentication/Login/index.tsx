@@ -79,9 +79,8 @@ const Login: React.FC<AuthenticationNavigationProps<"Login">> = ({
     const [user] = data;
 
     if (user) {
-      console.log(user);
       if (remember) {
-        await AsyncStorage.setItem("@rentX:user", JSON.stringify(user));
+        await AsyncStorage.setItem("@rentX:userId", user.id);
       }
 
       dispatch({

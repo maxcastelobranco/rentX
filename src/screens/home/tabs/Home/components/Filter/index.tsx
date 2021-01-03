@@ -1,20 +1,28 @@
 import React, { useState } from "react";
 import Animated, {
+  useAnimatedGestureHandler,
   useAnimatedStyle,
   useSharedValue,
   withSpring,
   withTiming,
 } from "react-native-reanimated";
-
 import {
-  DailyRateType,
-  EngineTypes,
-  TransmissionTypes,
-} from "../../hooks/useFilterBoilerplate";
+  PanGestureHandler,
+  PanGestureHandlerGestureEvent,
+} from "react-native-gesture-handler";
+import { snapPoint } from "react-native-redash";
+
 import Button from "../../../../../../components/animated/Button";
 import Gas from "../../../../../../components/svgs/static/engineTypes/Gas";
 import Electric from "../../../../../../components/svgs/static/engineTypes/Electric";
 import Hybrid from "../../../../../../components/svgs/static/engineTypes/Hybrid";
+import {
+  CarParamsActionTypes,
+  EngineTypes,
+  TransmissionTypes,
+} from "../../../../../../context/reducers/carParamsReducer";
+import { useAppContext } from "../../../../../../context";
+import { INCREMENT } from "../Results/constants";
 
 import { SHEET_HEIGHT, useStyles } from "./styles";
 import Header from "./components/Header";
@@ -24,11 +32,7 @@ import TransmissionTypePicker from "./components/TransmissionTypePicker";
 
 interface FilterProps {
   open: Animated.SharedValue<boolean>;
-  dailyRate: DailyRateType;
-  setDailyRate: React.Dispatch<React.SetStateAction<DailyRateType>>;
-  setEngineType: React.Dispatch<React.SetStateAction<EngineTypes>>;
-  setTransmission: React.Dispatch<React.SetStateAction<TransmissionTypes>>;
-  reloadCars: () => Promise<void>;
+  setEnd: React.Dispatch<React.SetStateAction<number>>;
 }
 const SNAP_POINTS = [SHEET_HEIGHT * 0.6, SHEET_HEIGHT];
 
@@ -54,16 +58,32 @@ const transmissionTypeOptions = [
   TransmissionTypes.manual,
 ];
 
-const Filter: React.FC<FilterProps> = ({
-  open,
-  dailyRate,
-  setDailyRate,
-  setEngineType,
-  setTransmission,
-  // reloadCars,
-}) => {
+const Filter: React.FC<FilterProps> = ({ open, setEnd }) => {
+  const {
+    state: {
+      carParams: { dailyRate },
+    },
+    dispatch,
+  } = useAppContext();
   const { containerStyles, extraContainerStyles } = useStyles();
 
+  const translateY = useSharedValue(0);
+  const onGestureEvent = useAnimatedGestureHandler<PanGestureHandlerGestureEvent>(
+    {
+      onActive: ({ translationY }) => {
+        translateY.value = translationY;
+      },
+      onEnd: ({ velocityY }) => {
+        const destination = snapPoint(translateY.value, velocityY, SNAP_POINTS);
+        if (destination === SNAP_POINTS[0]) {
+          open.value = true;
+        } else if (destination === SNAP_POINTS[1]) {
+          open.value = false;
+        }
+        translateY.value = withTiming(0);
+      },
+    }
+  );
   const animatedStyle = useAnimatedStyle(() => {
     return {
       transform: [
@@ -72,6 +92,9 @@ const Filter: React.FC<FilterProps> = ({
             ? withSpring(SNAP_POINTS[0])
             : withTiming(SNAP_POINTS[1]),
         },
+        {
+          translateY: translateY.value,
+        },
       ],
     };
   });
@@ -79,38 +102,53 @@ const Filter: React.FC<FilterProps> = ({
     open.value = false;
   };
 
-  const [engineTypeIndex, setEngineTypeIndex] = useState(0);
-  const [transmissionTypeIndex, setTransmissionTypeIndex] = useState(0);
+  const [engineTypeIndex, setEngineTypeIndex] = useState(-1);
+  const [transmissionTypeIndex, setTransmissionTypeIndex] = useState(-1);
   const startValue = useSharedValue(dailyRate.from);
   const endValue = useSharedValue(dailyRate.to);
 
   const onPress = () => {
-    setDailyRate({
-      from: startValue.value,
-      to: endValue.value,
+    setEnd(INCREMENT);
+
+    const engineType =
+      engineTypeIndex >= 0 ? engineTypeOptions[engineTypeIndex].type : "";
+    const transmission =
+      transmissionTypeIndex >= 0
+        ? transmissionTypeOptions[transmissionTypeIndex]
+        : "";
+
+    dispatch({
+      type: CarParamsActionTypes.Update,
+      payload: {
+        dailyRate: {
+          from: startValue.value,
+          to: endValue.value,
+        },
+        engineType,
+        transmission,
+      },
     });
-    setEngineType(engineTypeOptions[engineTypeIndex].type);
-    setTransmission(transmissionTypeOptions[transmissionTypeIndex]);
     closeFilter();
-    // reloadCars().catch(console.error);
   };
 
   return (
-    <Animated.View style={[containerStyles, animatedStyle]}>
-      <Header onPress={closeFilter} />
-      <DailyRate {...{ startValue, endValue }} />
-      <EngineTypesPicker
-        options={engineTypeOptions}
-        selectedOptionIndex={engineTypeIndex}
-        setSelectedOptionIndex={setEngineTypeIndex}
-      />
-      <TransmissionTypePicker
-        options={transmissionTypeOptions}
-        selectedOptionIndex={transmissionTypeIndex}
-        setSelectedOptionIndex={setTransmissionTypeIndex}
-      />
-      <Button enabled label="Done" {...{ extraContainerStyles, onPress }} />
-    </Animated.View>
+    <PanGestureHandler onGestureEvent={onGestureEvent}>
+      <Animated.View style={[containerStyles, animatedStyle]}>
+        <Header onPress={closeFilter} />
+        <DailyRate {...{ startValue, endValue }} />
+        <EngineTypesPicker
+          options={engineTypeOptions}
+          selectedOptionIndex={engineTypeIndex}
+          setSelectedOptionIndex={setEngineTypeIndex}
+        />
+        <TransmissionTypePicker
+          options={transmissionTypeOptions}
+          selectedOptionIndex={transmissionTypeIndex}
+          setSelectedOptionIndex={setTransmissionTypeIndex}
+        />
+        <Button enabled label="Done" {...{ extraContainerStyles, onPress }} />
+      </Animated.View>
+    </PanGestureHandler>
   );
 };
 

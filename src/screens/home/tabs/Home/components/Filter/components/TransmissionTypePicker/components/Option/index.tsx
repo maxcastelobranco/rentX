@@ -39,7 +39,11 @@ const Option: React.FC<OptionProps> = ({
   } = useStyles();
 
   const onPress = () => {
-    setSelectedOptionIndex(index);
+    if (selectedOptionIndex === index) {
+      setSelectedOptionIndex(-1);
+    } else {
+      setSelectedOptionIndex(index);
+    }
   };
   const isFocused = selectedOptionIndex === index;
   const labelSize = option.length * 10;

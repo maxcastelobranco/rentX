@@ -10,6 +10,7 @@ import { add } from "date-fns";
 import { AppActions, InitialAppState } from "./types";
 import { timeIntervalReducer } from "./reducers/timeIntervalReducer";
 import { authenticationReducer } from "./reducers/authenticationReducer";
+import { carParamsReducer } from "./reducers/carParamsReducer";
 
 const today = new Date();
 const tomorrow = add(today, { days: 1 });
@@ -31,6 +32,14 @@ const initialState: InitialAppState = {
       avatarUrl: "",
     },
   },
+  carParams: {
+    dailyRate: {
+      from: 0,
+      to: 10000,
+    },
+    engineType: "",
+    transmission: "",
+  },
 };
 
 const AppContext = createContext<{
@@ -42,11 +51,12 @@ const AppContext = createContext<{
 });
 
 const mainReducer: Reducer<InitialAppState, AppActions> = (
-  { timeInterval, authentication }: InitialAppState,
+  { timeInterval, authentication, carParams }: InitialAppState,
   action: AppActions
 ) => ({
   timeInterval: timeIntervalReducer(timeInterval, action),
   authentication: authenticationReducer(authentication, action),
+  carParams: carParamsReducer(carParams, action),
 });
 
 const AppProvider: React.FC = ({ children }) => {

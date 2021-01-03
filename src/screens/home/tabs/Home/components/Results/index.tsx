@@ -8,15 +8,12 @@ import Animated, {
 import { useStyles } from "./styles";
 import Header from "./components/Header";
 import CarList from "./components/CarList";
-import { CarData } from "./components/Car";
 
 interface ResultsProps {
   anyPickerOpen: Animated.SharedValue<boolean>;
   filterOpen: Animated.SharedValue<boolean>;
-  cars: CarData[];
-  totalCars: number;
-  loadCars: (pageNumber: number) => Promise<void>;
-  page: number;
+  end: number;
+  setEnd: React.Dispatch<React.SetStateAction<number>>;
 }
 
 const timingConfig: Animated.WithTimingConfig = {
@@ -26,11 +23,9 @@ const timingConfig: Animated.WithTimingConfig = {
 
 const Results: React.FC<ResultsProps> = ({
   anyPickerOpen,
+  end,
+  setEnd,
   filterOpen,
-  cars,
-  totalCars,
-  loadCars,
-  page,
 }) => {
   const { containerStyles } = useStyles();
 
@@ -46,8 +41,8 @@ const Results: React.FC<ResultsProps> = ({
 
   return (
     <Animated.View style={[containerStyles, animatedStyle]}>
-      <Header onPress={toggleFilter} {...{ totalCars }} />
-      <CarList {...{ cars, loadCars, page }} />
+      <Header onPress={toggleFilter} />
+      <CarList {...{ end, setEnd }} />
     </Animated.View>
   );
 };

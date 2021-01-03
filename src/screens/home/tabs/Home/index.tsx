@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { useSharedValue } from "react-native-reanimated";
 
 import { Box } from "../../../../theme";
@@ -12,8 +12,7 @@ import { useStyles } from "./styles";
 import Filter from "./components/Filter";
 import Results from "./components/Results";
 import Overlay from "./components/Overlay";
-import { useFilterBoilerplate } from "./hooks/useFilterBoilerplate";
-import { useCarData } from "./components/Results/hooks/useCarData";
+import { INCREMENT } from "./components/Results/constants";
 
 const Home: React.FC<TabNavigationProps<"Home">> = ({ navigation }) => {
   const {
@@ -30,22 +29,9 @@ const Home: React.FC<TabNavigationProps<"Home">> = ({ navigation }) => {
     endDate,
     setEndDate,
   } = useCalendarBoilerplate(timeInterval.startDate, timeInterval.endDate);
-  const {
-    dailyRate,
-    setDailyRate,
-    engineType,
-    setEngineType,
-    transmission,
-    setTransmission,
-  } = useFilterBoilerplate();
 
   const filterOpen = useSharedValue(false);
-
-  const { cars, totalCars, loadCars, reloadCars, page } = useCarData({
-    dailyRate,
-    engineType,
-    transmission,
-  });
+  const [end, setEnd] = useState(INCREMENT);
 
   return (
     <Box {...containerStyles}>
@@ -59,19 +45,8 @@ const Home: React.FC<TabNavigationProps<"Home">> = ({ navigation }) => {
           setEndDate,
         }}
       />
-      <Results
-        {...{ anyPickerOpen, filterOpen, cars, totalCars, loadCars, page }}
-      />
-      <Filter
-        open={filterOpen}
-        {...{
-          dailyRate,
-          setDailyRate,
-          setEngineType,
-          setTransmission,
-          reloadCars,
-        }}
-      />
+      <Results {...{ anyPickerOpen, filterOpen, end, setEnd }} />
+      <Filter open={filterOpen} {...{ setEnd }} />
       <Overlay open={filterOpen} />
     </Box>
   );
