@@ -8,13 +8,13 @@ import { fonts } from "./assets/fonts";
 import AppStackNavigator from "./src/routes";
 import theme from "./src/theme";
 import { AppProvider } from "./src/context";
-import { assets } from "./assets/images";
+// import { assets } from "./assets/images";
 
 const App: React.FC = () => {
   return (
     <AppProvider>
       <ThemeProvider {...{ theme }}>
-        <LoadAssets {...{ fonts, assets }}>
+        <LoadAssets {...{ fonts }}>
           <StatusBar hidden style="light" />
           <AppStackNavigator />
         </LoadAssets>

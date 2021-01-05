@@ -12,7 +12,7 @@ interface OverlayProps {
 const Overlay: React.FC<OverlayProps> = ({ open }) => {
   const animatedStyle = useAnimatedStyle(() => {
     return {
-      opacity: withTiming(open.value ? 0.6 : 0),
+      opacity: withTiming(open.value ? 0.7 : 0),
     };
   });
 

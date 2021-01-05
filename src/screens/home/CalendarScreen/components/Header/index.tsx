@@ -26,7 +26,11 @@ const Header: React.FC<HeaderProps> = ({
   setEndDate,
   showTitle,
 }) => {
-  const { containerStyles, titleStyles, datePickerContainerStyles } = useStyles();
+  const {
+    containerStyles,
+    titleStyles,
+    datePickerContainerStyles,
+  } = useStyles();
 
   return (
     <Box {...containerStyles}>

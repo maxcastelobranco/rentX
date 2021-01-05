@@ -5,8 +5,8 @@ import {
 import { BackHandler } from "react-native";
 import React from "react";
 
-import { HomeRoutes } from "../../../../routes/home";
-import { TabRoutes } from "../../../../routes/tabs";
+import { HomeRoutes } from "../routes/home";
+import { TabRoutes } from "../routes/tabs";
 
 export const usePreventGoingBack = (
   destiny: keyof HomeRoutes | keyof TabRoutes,

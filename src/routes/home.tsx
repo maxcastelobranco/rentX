@@ -8,6 +8,7 @@ import { BottomTabNavigationProp } from "@react-navigation/bottom-tabs";
 
 import CalendarScreen from "../screens/home/CalendarScreen";
 import { CarData } from "../context/reducers/carParamsReducer";
+import CarDetails from "../screens/home/CarDetails";
 
 import TabsNavigator, { TabRoutes } from "./tabs";
 
@@ -36,6 +37,7 @@ const HomeNavigator: React.FC = () => {
   return (
     <HomeStack.Navigator headerMode="none">
       <HomeStack.Screen name="CalendarScreen" component={CalendarScreen} />
+      <HomeStack.Screen name="CarDetails" component={CarDetails} />
       <HomeStack.Screen name="Tabs" component={TabsNavigator} />
     </HomeStack.Navigator>
   );

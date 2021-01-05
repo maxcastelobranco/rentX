@@ -4,6 +4,8 @@ import Animated, {
   useAnimatedStyle,
   Extrapolate,
 } from "react-native-reanimated";
+import { RectButton } from "react-native-gesture-handler";
+import { useNavigation } from "@react-navigation/native";
 
 import { baseURL } from "../../../../../../../../services/api";
 import Electric from "../../../../../../../../components/svgs/static/engineTypes/Electric";
@@ -22,11 +24,9 @@ interface CarProps {
   translationY: Animated.SharedValue<number>;
 }
 
-const Car: React.FC<CarProps> = ({
-  data: { make, model, dailyRate, images, engineType },
-  translationY,
-  index,
-}) => {
+const Car: React.FC<CarProps> = ({ data, translationY, index }) => {
+  const { images, engineType, make, model, dailyRate } = data;
+  const navigation = useNavigation();
   const { containerStyles, iconStyles } = useStyles();
   const imageUris = images.map((image) => `${baseURL}${image}`);
   const inputRange = [
@@ -57,12 +57,18 @@ const Car: React.FC<CarProps> = ({
       <Hybrid style={iconStyles} />
     );
 
+  const onPress = () => {
+    navigation.navigate("CarDetails", data);
+  };
+
   return (
-    <Animated.View style={[animatedStyle, containerStyles]}>
-      <CarSpecs {...{ make, model, dailyRate }} />
-      {icon}
-      <CarImages {...{ imageUris }} />
-    </Animated.View>
+    <RectButton {...{ onPress }}>
+      <Animated.View style={[animatedStyle, containerStyles]}>
+        <CarSpecs {...{ make, model, dailyRate }} />
+        {icon}
+        <CarImages {...{ imageUris }} />
+      </Animated.View>
+    </RectButton>
   );
 };
 

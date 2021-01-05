@@ -44,4 +44,45 @@ for (let i = 0; i < NUMBER_OF_CARS; i++) {
 
 data.cars = faker.helpers.shuffle(data.cars);
 
+function splitCamelCase(word) {
+  let output,
+    i,
+    l,
+    capRe = /[A-Z]/;
+  if (typeof word !== "string") {
+    throw new Error('The "word" parameter must be a string.');
+  }
+  output = [];
+  for (i = 0, l = word.length; i < l; i += 1) {
+    if (i === 0) {
+      output.push(word[i].toUpperCase());
+    } else {
+      if (
+        i > 0 &&
+        capRe.test(word[i]) &&
+        !capRe.test(word[i + 1]) &&
+        !capRe.test(word[i - 1])
+      ) {
+        output.push(" ");
+      }
+      output.push(word[i]);
+    }
+  }
+  return output.join("");
+}
+
+const makesAndModels = data.cars.map(({ make, model }) => {
+  const makeAndModel = `${make} ${splitCamelCase(model)}`;
+
+  return {
+    makeAndModel,
+    makeAndModelSplit: makeAndModel.split(""),
+  };
+});
+
+fs.writeFile(
+  "makesAndModels.json",
+  JSON.stringify(makesAndModels),
+  console.error
+);
 fs.writeFile("db.json", JSON.stringify(data), console.error);

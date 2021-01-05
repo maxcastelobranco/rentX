@@ -71,7 +71,7 @@ const Input: React.ForwardRefRenderFunction<InputRef, InputProps> = (
 
   const focused = useSharedValue(false);
   const placeholderAnimationDriver = useDerivedValue(() => {
-    return focused.value || value ? withSpring(1) : withSpring(0);
+    return withSpring(focused.value || value ? 1 : 0);
   });
 
   const handleFocus = () => {

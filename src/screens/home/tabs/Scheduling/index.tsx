@@ -2,7 +2,7 @@ import React from "react";
 
 import { Box } from "../../../../theme";
 import { TabNavigationProps } from "../../../../routes/tabs";
-import { usePreventGoingBack } from "../hooks/usePreventGoingBack";
+import { usePreventGoingBack } from "../../../../hooks/usePreventGoingBack";
 
 const Scheduling: React.FC<TabNavigationProps<"Scheduling">> = ({
   navigation,
