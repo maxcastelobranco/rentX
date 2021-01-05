@@ -3,6 +3,7 @@ import { TextInput } from "react-native";
 import { Feather } from "@expo/vector-icons";
 import { useTheme } from "@shopify/restyle";
 import Animated from "react-native-reanimated";
+import { RectButton } from "react-native-gesture-handler";
 
 import Placeholder from "../../../../../../../components/animated/Input/components/Placeholder";
 import { Box, Theme } from "../../../../../../../theme";
@@ -16,6 +17,7 @@ interface InputProps {
   onFocus: () => void;
   onBlur: () => void;
   onChangeText: (text: string) => void;
+  onSubmitEditing: () => void;
   value: string;
 }
 
@@ -27,6 +29,7 @@ const Input: React.FC<InputProps> = ({
   onFocus,
   onBlur,
   onChangeText,
+  onSubmitEditing,
   value,
 }) => {
   const theme = useTheme<Theme>();
@@ -41,15 +44,23 @@ const Input: React.FC<InputProps> = ({
       <TextInput
         ref={inputRef}
         style={inputStyles}
-        {...{ onFocus, onBlur, onChangeText, value }}
+        {...{ onFocus, onBlur, onChangeText, onSubmitEditing, value }}
       />
-      <Box {...iconContainerStyles}>
-        <Feather
-          name="search"
-          size={ICON_SIZE}
-          color={theme.colors.textDark1}
-        />
-      </Box>
+      <RectButton
+        onPress={() => {
+          onSubmitEditing();
+          onBlur();
+          inputRef.current?.blur();
+        }}
+      >
+        <Box {...iconContainerStyles}>
+          <Feather
+            name="search"
+            size={ICON_SIZE}
+            color={theme.colors.textDark1}
+          />
+        </Box>
+      </RectButton>
     </Box>
   );
 };

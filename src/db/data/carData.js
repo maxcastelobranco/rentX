@@ -384,7 +384,7 @@ module.exports = {
     },
     {
       make: "Chevrolet",
-      model: "Silverado1500",
+      model: "Silverado 1500",
       topSpeed: 250,
       acceleration: 5.9,
       horsePower: 355,
@@ -401,7 +401,7 @@ module.exports = {
     },
     {
       make: "Chevrolet",
-      model: "Silverado2500HD",
+      model: "Silverado 2500 HD",
       topSpeed: 250,
       acceleration: 6.5,
       horsePower: 401,
@@ -420,7 +420,7 @@ module.exports = {
     },
     {
       make: "Chevrolet",
-      model: "Silverado3500HD",
+      model: "Silverado 3500 HD",
       topSpeed: 250,
       acceleration: 5.9,
       horsePower: 401,
@@ -514,7 +514,7 @@ module.exports = {
     },
     {
       make: "Fiat",
-      model: "500L",
+      model: "500 L",
       topSpeed: 209,
       acceleration: 12.8,
       horsePower: 160,
@@ -534,7 +534,7 @@ module.exports = {
     },
     {
       make: "Fiat",
-      model: "500X",
+      model: "500 X",
       topSpeed: 200,
       acceleration: 7.7,
       horsePower: 168,
@@ -554,7 +554,7 @@ module.exports = {
     },
     {
       make: "Ford",
-      model: "BroncoSport",
+      model: "Bronco Sport",
       topSpeed: 209,
       acceleration: 6.7,
       horsePower: 245,
@@ -610,7 +610,7 @@ module.exports = {
     },
     {
       make: "Ford",
-      model: "MustangMachE",
+      model: "Mustang Mach E",
       topSpeed: 180,
       acceleration: 7,
       horsePower: 332,
@@ -746,7 +746,7 @@ module.exports = {
     },
     {
       make: "Tesla",
-      model: "ModelS",
+      model: "Model S",
       topSpeed: 250,
       acceleration: 2.6,
       horsePower: 604,
@@ -765,7 +765,7 @@ module.exports = {
     },
     {
       make: "Tesla",
-      model: "ModelX",
+      model: "Model X",
       topSpeed: 250,
       acceleration: 2.9,
       horsePower: 604,
@@ -784,7 +784,7 @@ module.exports = {
     },
     {
       make: "Tesla",
-      model: "ModelY",
+      model: "Model Y",
       topSpeed: 241,
       acceleration: 3.7,
       horsePower: 456,
@@ -800,7 +800,7 @@ module.exports = {
     },
     {
       make: "Tesla",
-      model: "Model3",
+      model: "Model 3",
       topSpeed: 261,
       acceleration: 3.3,
       horsePower: 506,

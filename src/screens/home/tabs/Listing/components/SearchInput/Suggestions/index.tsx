@@ -11,7 +11,7 @@ import { useStyles } from "./styles";
 interface SuggestionsProps {
   filteredMakesAndModels: MakeAndModel[];
   regex: RegExp;
-  onSuggestionPress: () => void;
+  onSuggestionPress: (id: string) => void;
   value: string;
 }
 
@@ -30,11 +30,16 @@ const Suggestions: React.FC<SuggestionsProps> = ({
 
   return (
     <ScrollView style={scrollViewStyles}>
-      {filteredMakesAndModels.map(({ makeAndModel, makeAndModelSplit }) => {
+      {filteredMakesAndModels.map(({ id, makeAndModel, makeAndModelSplit }) => {
         const matchIndex = makeAndModel.search(regex);
 
         return (
-          <RectButton key={makeAndModel} onPress={onSuggestionPress}>
+          <RectButton
+            key={id}
+            onPress={() => {
+              onSuggestionPress(id);
+            }}
+          >
             <Box {...suggestionContainerStyles}>
               {makeAndModelSplit.map((char, index) => {
                 const fontWeight =

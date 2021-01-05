@@ -5,7 +5,7 @@ import { FontAwesome5 } from "@expo/vector-icons";
 import { Box, Text } from "../../../../../../../../theme";
 import responsivePixelSize from "../../../../../../../../utils/responsivePixelSize";
 import { useAppContext } from "../../../../../../../../context";
-import { useCars } from "../../../../../../../../hooks/useCars";
+import { useHomePageCars } from "../../../../../../../../hooks/useHomePageCars";
 import Loading from "../../../../../../../../components/static/Loading";
 
 import { useStyles } from "./styles";
@@ -19,7 +19,7 @@ const Header: React.FC<HeaderProps> = ({ onPress }) => {
   const {
     state: { carParams },
   } = useAppContext();
-  const { cars, error, isLoading } = useCars(carParams);
+  const { cars, error, isLoading } = useHomePageCars(carParams);
 
   const {
     containerStyles,

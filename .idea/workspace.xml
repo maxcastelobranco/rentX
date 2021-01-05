@@ -5,31 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2aeeec9b-380a-447b-91f6-3f9957591b9f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/db/makesAndModels.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/screens/home/CarDetails/index.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/screens/home/tabs/Listing/components/Header/index.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/screens/home/tabs/Listing/components/Header/styles.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/screens/home/tabs/Listing/components/SearchInput/Input/index.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/screens/home/tabs/Listing/components/SearchInput/Input/styles.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/screens/home/tabs/Listing/components/SearchInput/Suggestions/index.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/screens/home/tabs/Listing/components/SearchInput/Suggestions/styles.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/screens/home/tabs/Listing/components/SearchInput/index.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/screens/home/tabs/Listing/components/SearchInput/styles.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/screens/home/tabs/Listing/styles.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/hooks/useListingPageCars.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/screens/home/tabs/Listing/components/Results/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/screens/home/tabs/components/ListEmptyComponent.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/screens/home/tabs/components/ListFooterComponent.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/animated/Input/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/animated/Input/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/db/data/carData.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/db/data/carData.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/db/db.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/db/db.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/db/dbGenerator.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/db/dbGenerator.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/home.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/home.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/screens/home/CalendarScreen/components/Header/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/home/CalendarScreen/components/Header/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/screens/home/tabs/Home/components/Overlay/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/home/tabs/components/Overlay/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/screens/home/tabs/Home/components/Results/components/Car/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/home/tabs/Home/components/Results/components/Car/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/screens/home/tabs/Home/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/home/tabs/Home/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/db/makesAndModels.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/db/makesAndModels.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hooks/useCars.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/hooks/useHomePageCars.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/home/tabs/Home/components/Results/components/CarList/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/home/tabs/Home/components/Results/components/CarList/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/home/tabs/Home/components/Results/components/Header/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/home/tabs/Home/components/Results/components/Header/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/home/tabs/Listing/components/SearchInput/Input/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/home/tabs/Listing/components/SearchInput/Input/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/home/tabs/Listing/components/SearchInput/Suggestions/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/home/tabs/Listing/components/SearchInput/Suggestions/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/home/tabs/Listing/components/SearchInput/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/home/tabs/Listing/components/SearchInput/index.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/screens/home/tabs/Listing/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/home/tabs/Listing/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/screens/home/tabs/Profile/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/home/tabs/Profile/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/screens/home/tabs/Scheduling/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/home/tabs/Scheduling/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/screens/home/tabs/hooks/usePreventGoingBack.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/hooks/usePreventGoingBack.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/theme/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/theme/index.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,7 +66,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/screens/home/tabs/Listing/components/SearchInput/Suggestions" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/hooks" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -93,10 +84,10 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\max_c\OneDrive\Desktop\PortfolioWorthy\rentX\src\hooks" />
       <recent name="C:\Users\max_c\OneDrive\Desktop\PortfolioWorthy\rentX\src\screens\home\tabs\Listing\components\SearchInput\Suggestions" />
       <recent name="C:\Users\max_c\OneDrive\Desktop\PortfolioWorthy\rentX\src\screens\home\tabs\Listing\components\SearchInput\Input" />
       <recent name="C:\Users\max_c\OneDrive\Desktop\PortfolioWorthy\rentX\src\screens\home\tabs\Listing\components\SearchInput" />
-      <recent name="C:\Users\max_c\OneDrive\Desktop\PortfolioWorthy\rentX\src\hooks" />
       <recent name="C:\Users\max_c\OneDrive\Desktop\PortfolioWorthy\rentX\src\screens\home\tabs\Listing\components\Header" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -193,6 +184,7 @@
       <workItem from="1609852616001" duration="7295000" />
       <workItem from="1609869095446" duration="4993000" />
       <workItem from="1609877046117" duration="2951000" />
+      <workItem from="1609882730656" duration="4062000" />
     </task>
     <servers />
   </component>

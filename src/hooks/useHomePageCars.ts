@@ -3,7 +3,7 @@ import useSWR from "swr";
 import { fetcher } from "../services/api";
 import { CarData, CarParamsState } from "../context/reducers/carParamsReducer";
 
-export const useCars = ({
+export const useHomePageCars = ({
   dailyRate,
   engineType,
   transmission,

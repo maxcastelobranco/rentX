@@ -16,6 +16,7 @@ import Input from "./Input";
 import Suggestions from "./Suggestions";
 
 export interface MakeAndModel {
+  id: string;
   makeAndModel: string;
   makeAndModelSplit: string[];
 }
@@ -26,12 +27,14 @@ interface SearchInputProps {
   focused: Animated.SharedValue<boolean>;
   value: string;
   setValue: React.Dispatch<React.SetStateAction<string>>;
+  setQuery: React.Dispatch<React.SetStateAction<string>>;
 }
 
 const SearchInput: React.FC<SearchInputProps> = ({
   focused,
   value,
   setValue,
+  setQuery,
 }) => {
   const theme = useTheme<Theme>();
   const { containerStyles } = useStyles();
@@ -61,11 +64,19 @@ const SearchInput: React.FC<SearchInputProps> = ({
     },
     [setValue]
   );
-  const onSuggestionPress = useCallback(() => {
+  const onSubmitEditing: () => void = useCallback(() => {
+    setQuery(value);
     setValue("");
-    onBlur();
-    inputRef.current?.blur();
-  }, [onBlur, setValue]);
+  }, [setQuery, setValue, value]);
+  const onSuggestionPress = useCallback(
+    (id: string) => {
+      setQuery(id);
+      setValue("");
+      onBlur();
+      inputRef.current?.blur();
+    },
+    [onBlur, setQuery, setValue]
+  );
 
   useEffect(() => {
     if (!value || value.length < 2) {
@@ -92,6 +103,7 @@ const SearchInput: React.FC<SearchInputProps> = ({
           onFocus,
           onBlur,
           onChangeText,
+          onSubmitEditing,
           value,
         }}
       />
