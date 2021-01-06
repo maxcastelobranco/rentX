@@ -11,12 +11,16 @@ interface AnimatedImageProps {
   uri: string;
   index: number;
   currentIndex: Animated.SharedValue<number>;
+  width: number;
+  height: number;
 }
 
 const AnimatedImage: React.FC<AnimatedImageProps> = ({
   uri,
   index,
   currentIndex,
+  width,
+  height,
 }) => {
   const { imageStyles } = useStyles();
 
@@ -45,7 +49,14 @@ const AnimatedImage: React.FC<AnimatedImageProps> = ({
     <Animated.Image
       key={uri}
       source={{ uri }}
-      style={[imageStyles, animatedStyle]}
+      style={[
+        imageStyles,
+        {
+          width,
+          height,
+        },
+        animatedStyle,
+      ]}
       resizeMode="contain"
     />
   );

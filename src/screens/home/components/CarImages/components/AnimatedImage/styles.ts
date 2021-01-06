@@ -1,7 +1,7 @@
 import { useTheme } from "@shopify/restyle";
 import { Dimensions, ImageStyle } from "react-native";
 
-import { Theme } from "../../../../../../../../../../../../theme";
+import { Theme } from "../../../../../../theme";
 
 const { width } = Dimensions.get("window");
 

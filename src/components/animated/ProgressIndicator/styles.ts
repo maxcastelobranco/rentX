@@ -9,7 +9,6 @@ export const useStyles = (index: number) => {
   const theme = useTheme<Theme>();
 
   return {
-    backgroundColor: theme.colors.textDark1,
     width: PROGRESS_INDICATOR_SIZE,
     height: PROGRESS_INDICATOR_SIZE,
     marginLeft: index === 0 ? 0 : theme.spacing.xs,

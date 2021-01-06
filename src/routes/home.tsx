@@ -12,10 +12,15 @@ import CarDetails from "../screens/home/CarDetails";
 
 import TabsNavigator, { TabRoutes } from "./tabs";
 
+interface CarDetailsParams {
+  data: CarData;
+  currentImageIndex: number;
+}
+
 export type HomeRoutes = {
   CalendarScreen: undefined;
   EditProfile: undefined;
-  CarDetails: CarData;
+  CarDetails: CarDetailsParams;
   Tabs: undefined;
 };
 
