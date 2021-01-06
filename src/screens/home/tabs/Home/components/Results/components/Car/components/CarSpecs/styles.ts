@@ -18,7 +18,7 @@ export const useStyles = () => {
     variant: "labelsLight",
   };
   const contentStyles: TextProps<Theme> = {
-    variant: "regularTextDark",
+    variant: "mediumTextDark",
   };
 
   return {

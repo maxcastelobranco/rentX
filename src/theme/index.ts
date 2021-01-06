@@ -88,6 +88,12 @@ const theme = createTheme({
       fontSize: responsivePixelSize(24),
       lineHeight: responsivePixelSize(30),
     },
+    mediumTextDark: {
+      fontFamily: "Roboto-Medium",
+      color: "textDark1",
+      fontSize: responsivePixelSize(24),
+      lineHeight: responsivePixelSize(30),
+    },
     smallTextLight: {
       fontFamily: "Roboto-Regular",
       color: "textLight2",

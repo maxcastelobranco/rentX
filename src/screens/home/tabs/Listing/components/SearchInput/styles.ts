@@ -6,6 +6,7 @@ export const useStyles = () => {
   const containerStyles: BoxProps<Theme> = {
     backgroundColor: "textLight1",
     marginHorizontal: "l",
+    marginBottom: "s",
     shadowColor: "backgroundDark3",
     shadowOffset: {
       width: 0,

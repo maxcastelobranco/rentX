@@ -9,7 +9,6 @@ export const useStyles = () => {
   const containerStyles: ViewStyle = {
     flex: 1,
     backgroundColor: theme.colors.backgroundLight2,
-    paddingHorizontal: theme.spacing.l,
     paddingTop: theme.spacing.s,
   };
 

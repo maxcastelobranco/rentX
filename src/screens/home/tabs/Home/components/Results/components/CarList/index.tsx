@@ -1,9 +1,10 @@
 import React, { useMemo } from "react";
 import { FlatList, ListRenderItem } from "react-native";
-import {
+import Animated, {
   useAnimatedScrollHandler,
   useSharedValue,
 } from "react-native-reanimated";
+import { useTheme } from "@shopify/restyle";
 
 import { useHomePageCars } from "../../../../../../../../hooks/useHomePageCars";
 import Car from "../Car";
@@ -11,21 +12,24 @@ import { CarData } from "../../../../../../../../context/reducers/carParamsReduc
 import { useAppContext } from "../../../../../../../../context";
 import Loading from "../../../../../../../../components/static/Loading";
 import { CAR_ITEM_INTERVAL, INCREMENT } from "../../constants";
-import { Text } from "../../../../../../../../theme";
+import { Text, Theme } from "../../../../../../../../theme";
 import ListFooterComponent from "../../../../../components/ListFooterComponent";
 import ListEmptyComponent from "../../../../../components/ListEmptyComponent";
 
 interface CarListProps {
   end: number;
   setEnd: React.Dispatch<React.SetStateAction<number>>;
+  headerHeight: number;
 }
 
-const CarList: React.FC<CarListProps> = ({ end, setEnd }) => {
+const AnimatedFlatList = Animated.createAnimatedComponent(FlatList);
+
+const CarList: React.FC<CarListProps> = ({ end, setEnd, headerHeight }) => {
   const {
     state: { carParams },
   } = useAppContext();
   const { cars, isLoading, error } = useHomePageCars(carParams);
-  const isLoadingMoreCars = useSharedValue(false);
+  const theme = useTheme<Theme>();
 
   const translationY = useSharedValue(0);
   const onScroll = useAnimatedScrollHandler({
@@ -44,11 +48,9 @@ const CarList: React.FC<CarListProps> = ({ end, setEnd }) => {
   const onEndReached = () => {
     if (cars) {
       if (end <= cars.length) {
-        isLoadingMoreCars.value = true;
         setEnd((prevState) => prevState + INCREMENT);
       }
     }
-    isLoadingMoreCars.value = false;
   };
   const keyExtractor = ({ id }: CarData) => id;
 
@@ -60,7 +62,7 @@ const CarList: React.FC<CarListProps> = ({ end, setEnd }) => {
   }
 
   return (
-    <FlatList
+    <AnimatedFlatList
       {...{
         data,
         renderItem,
@@ -70,7 +72,10 @@ const CarList: React.FC<CarListProps> = ({ end, setEnd }) => {
         ListEmptyComponent,
       }}
       ListFooterComponent={
-        <ListFooterComponent reachedTheEnd={cars && end > cars.length} />
+        <ListFooterComponent
+          reachedTheEnd={cars && end > cars.length}
+          height={CAR_ITEM_INTERVAL - headerHeight - theme.spacing.s}
+        />
       }
       snapToInterval={CAR_ITEM_INTERVAL}
       onEndReachedThreshold={0.5}

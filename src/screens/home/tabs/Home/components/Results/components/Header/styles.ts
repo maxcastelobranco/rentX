@@ -9,6 +9,7 @@ export const useStyles = () => {
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "space-between",
+    paddingHorizontal: "l",
   };
   const toggleFilterStyles: BoxProps<Theme> = {
     flexDirection: "row",

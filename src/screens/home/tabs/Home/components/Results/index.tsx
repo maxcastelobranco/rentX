@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import Animated, {
   Easing,
   useAnimatedStyle,
   withTiming,
 } from "react-native-reanimated";
+import { View } from "react-native";
 
 import { useStyles } from "./styles";
 import Header from "./components/Header";
@@ -28,6 +29,7 @@ const Results: React.FC<ResultsProps> = ({
   filterOpen,
 }) => {
   const { containerStyles } = useStyles();
+  const [headerHeight, setHeaderHeight] = useState(-1);
 
   const animatedStyle = useAnimatedStyle(() => {
     return {
@@ -41,8 +43,18 @@ const Results: React.FC<ResultsProps> = ({
 
   return (
     <Animated.View style={[containerStyles, animatedStyle]}>
-      <Header onPress={toggleFilter} />
-      <CarList {...{ end, setEnd }} />
+      <View
+        onLayout={({
+          nativeEvent: {
+            layout: { height },
+          },
+        }) => {
+          setHeaderHeight(height);
+        }}
+      >
+        <Header onPress={toggleFilter} />
+      </View>
+      <CarList {...{ end, setEnd, headerHeight }} />
     </Animated.View>
   );
 };

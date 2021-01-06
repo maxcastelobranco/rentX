@@ -12,7 +12,9 @@ export const useStyles = (maxWidth: number) => {
     alignItems: "center",
     marginTop: "s",
   };
-  const sliderButtonContainerStyles: ViewStyle = { backgroundColor: theme.colors.backgroundLight1 };
+  const sliderButtonContainerStyles: ViewStyle = {
+    backgroundColor: theme.colors.backgroundLight1,
+  };
   const redLineStyles: ViewStyle = {
     width: maxWidth - SLIDER_BUTTON_WIDTH * 2,
     height: 2,

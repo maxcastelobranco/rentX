@@ -1,16 +1,29 @@
 import React from "react";
 
 import { Box, Text } from "../../../../../../theme";
+import { useListingPageCars } from "../../../../../../hooks/useListingPageCars";
+import Loading from "../../../../../../components/static/Loading";
 
 import { useStyles } from "./styles";
 
-const Header: React.FC = () => {
+interface HeaderProps {
+  query: string;
+}
+
+const Header: React.FC<HeaderProps> = ({ query }) => {
   const { containerStyles, titleStyles, numberOfCarsStyles } = useStyles();
+  const { cars, error, isLoading } = useListingPageCars(query);
 
   return (
     <Box {...containerStyles}>
       <Text {...titleStyles}>Listing</Text>
-      <Text {...numberOfCarsStyles}>99 cars</Text>
+      {isLoading ? (
+        <Loading color="backgroundLight1" size="small" />
+      ) : error ? (
+        <Text {...numberOfCarsStyles}>{error}</Text>
+      ) : (
+        <Text {...numberOfCarsStyles}>{cars?.length} cars</Text>
+      )}
     </Box>
   );
 };

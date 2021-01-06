@@ -22,7 +22,7 @@ const Listing: React.FC<TabNavigationProps<"Listing">> = ({ navigation }) => {
 
   return (
     <Box {...containerStyles}>
-      <Header />
+      <Header {...{ query }} />
       <SearchInput
         value={searchInputValue}
         setValue={setSearchInputValue}

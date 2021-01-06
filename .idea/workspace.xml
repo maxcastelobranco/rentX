@@ -5,22 +5,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2aeeec9b-380a-447b-91f6-3f9957591b9f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/hooks/useListingPageCars.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/screens/home/tabs/Listing/components/Results/index.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/screens/home/tabs/components/ListEmptyComponent.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/screens/home/tabs/components/ListFooterComponent.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/screens/home/tabs/Listing/components/Results/components/Car/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/screens/home/tabs/Listing/components/Results/components/Car/styles.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/screens/home/tabs/Listing/components/Results/constants.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/db/data/carData.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/db/data/carData.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/db/db.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/db/db.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/db/dbGenerator.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/db/dbGenerator.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/db/makesAndModels.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/db/makesAndModels.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hooks/useCars.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/hooks/useHomePageCars.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/home/tabs/Home/components/Filter/components/DailyRate/Slider/styles.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/home/tabs/Home/components/Filter/components/DailyRate/Slider/styles.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/home/tabs/Home/components/Results/components/Car/components/CarSpecs/styles.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/home/tabs/Home/components/Results/components/Car/components/CarSpecs/styles.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/home/tabs/Home/components/Results/components/Car/styles.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/home/tabs/Home/components/Results/components/Car/styles.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/screens/home/tabs/Home/components/Results/components/CarList/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/home/tabs/Home/components/Results/components/CarList/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/screens/home/tabs/Home/components/Results/components/Header/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/home/tabs/Home/components/Results/components/Header/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/screens/home/tabs/Listing/components/SearchInput/Input/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/home/tabs/Listing/components/SearchInput/Input/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/screens/home/tabs/Listing/components/SearchInput/Suggestions/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/home/tabs/Listing/components/SearchInput/Suggestions/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/screens/home/tabs/Listing/components/SearchInput/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/home/tabs/Listing/components/SearchInput/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/home/tabs/Home/components/Results/components/Header/styles.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/home/tabs/Home/components/Results/components/Header/styles.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/home/tabs/Home/components/Results/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/home/tabs/Home/components/Results/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/home/tabs/Home/components/Results/styles.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/home/tabs/Home/components/Results/styles.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/home/tabs/Listing/components/Header/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/home/tabs/Listing/components/Header/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/home/tabs/Listing/components/Results/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/home/tabs/Listing/components/Results/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/home/tabs/Listing/components/SearchInput/styles.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/home/tabs/Listing/components/SearchInput/styles.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/screens/home/tabs/Listing/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/home/tabs/Listing/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/home/tabs/components/ListFooterComponent.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/home/tabs/components/ListFooterComponent.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/theme/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/theme/index.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,8 +32,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JavaScript File" />
-        <option value="TypeScript File" />
         <option value="TypeScript JSX File" />
+        <option value="TypeScript File" />
       </list>
     </option>
   </component>
@@ -184,7 +185,10 @@
       <workItem from="1609852616001" duration="7295000" />
       <workItem from="1609869095446" duration="4993000" />
       <workItem from="1609877046117" duration="2951000" />
-      <workItem from="1609882730656" duration="4062000" />
+      <workItem from="1609882730656" duration="6491000" />
+      <workItem from="1609895317810" duration="1295000" />
+      <workItem from="1609945006618" duration="597000" />
+      <workItem from="1609954506027" duration="7529000" />
     </task>
     <servers />
   </component>
