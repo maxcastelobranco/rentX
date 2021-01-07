@@ -3,6 +3,8 @@ import Animated, {
   interpolate,
   useAnimatedStyle,
   Extrapolate,
+  useSharedValue,
+  useDerivedValue,
 } from "react-native-reanimated";
 import { RectButton } from "react-native-gesture-handler";
 import { useNavigation } from "@react-navigation/native";
@@ -48,6 +50,18 @@ const Car: React.FC<CarProps> = ({ data, translationY, index }) => {
     };
   });
 
+  const translationX = useSharedValue(0);
+  const currentIndex = useDerivedValue(
+    () => translationX.value / CAR_ITEM_WIDTH
+  );
+
+  const onPress = () => {
+    navigation.navigate("CarDetails", {
+      data,
+      currentImageIndex: Math.round(currentIndex.value),
+    });
+  };
+
   const icon =
     engineType === "electric" ? (
       <Electric style={iconStyles} />
@@ -57,16 +71,12 @@ const Car: React.FC<CarProps> = ({ data, translationY, index }) => {
       <Hybrid style={iconStyles} />
     );
 
-  const onPress = () => {
-    navigation.navigate("CarDetails", data);
-  };
-
   return (
     <RectButton {...{ onPress }}>
       <Animated.View style={[animatedStyle, containerStyles]}>
         <CarSpecs {...{ make, model, dailyRate }} />
         {icon}
-        <CarImages {...{ imageUris }} />
+        <CarImages {...{ imageUris, translationX, currentIndex }} />
       </Animated.View>
     </RectButton>
   );

@@ -1,25 +1,29 @@
 import React from "react";
-import Animated, { useAnimatedScrollHandler } from "react-native-reanimated";
+import Animated, {
+  useAnimatedScrollHandler,
+  useDerivedValue,
+  useSharedValue,
+} from "react-native-reanimated";
+import { Dimensions } from "react-native";
 
-import { Box } from "../../../../../../../../../../theme";
-import { CAR_ITEM_WIDTH } from "../../../../constants";
-import ProgressIndicator from "../../../../../../../../../../components/animated/ProgressIndicator";
+import ProgressIndicator from "../../../../../components/animated/ProgressIndicator";
+import { Box } from "../../../../../theme";
 
-import AnimatedImage from "./components/AnimatedImage";
 import { useStyles } from "./styles";
+import AnimatedImage from "./components/AnimatedImage";
 
 interface CarImagesProps {
   imageUris: string[];
-  translationX: Animated.SharedValue<number>;
-  currentIndex: Animated.SharedValue<number>;
+  scrollViewRef: React.RefObject<Animated.ScrollView>;
 }
 
-const CarImages: React.FC<CarImagesProps> = ({
-  imageUris,
-  translationX,
-  currentIndex,
-}) => {
+const { width } = Dimensions.get("window");
+
+const CarImages: React.FC<CarImagesProps> = ({ imageUris, scrollViewRef }) => {
   const { carListStyles, progressIndicatorContainerStyles } = useStyles();
+
+  const translationX = useSharedValue(0);
+  const currentIndex = useDerivedValue(() => translationX.value / width);
 
   const onScroll = useAnimatedScrollHandler({
     onScroll: ({ contentOffset: { x } }) => {
@@ -30,11 +34,12 @@ const CarImages: React.FC<CarImagesProps> = ({
   return (
     <>
       <Animated.ScrollView
-        {...{ onScroll }}
+        ref={scrollViewRef}
         horizontal
-        snapToInterval={CAR_ITEM_WIDTH}
+        snapToInterval={width}
         showsHorizontalScrollIndicator={false}
         style={carListStyles}
+        {...{ onScroll }}
       >
         {imageUris.map((uri, index) => (
           <AnimatedImage key={uri} {...{ index, currentIndex, uri }} />

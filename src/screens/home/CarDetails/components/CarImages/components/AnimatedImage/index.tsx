@@ -46,7 +46,6 @@ const AnimatedImage: React.FC<AnimatedImageProps> = ({
       key={uri}
       source={{ uri }}
       style={[imageStyles, animatedStyle]}
-      resizeMode="contain"
     />
   );
 };

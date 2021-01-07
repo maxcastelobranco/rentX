@@ -12,10 +12,15 @@ import CarDetails from "../screens/home/CarDetails";
 
 import TabsNavigator, { TabRoutes } from "./tabs";
 
+interface CarDetailsParams {
+  data: CarData;
+  currentImageIndex: number;
+}
+
 export type HomeRoutes = {
   CalendarScreen: undefined;
   EditProfile: undefined;
-  CarDetails: CarData;
+  CarDetails: CarDetailsParams;
   Tabs: undefined;
 };
 
@@ -37,8 +42,8 @@ const HomeNavigator: React.FC = () => {
   return (
     <HomeStack.Navigator headerMode="none">
       <HomeStack.Screen name="CalendarScreen" component={CalendarScreen} />
-      <HomeStack.Screen name="CarDetails" component={CarDetails} />
       <HomeStack.Screen name="Tabs" component={TabsNavigator} />
+      <HomeStack.Screen name="CarDetails" component={CarDetails} />
     </HomeStack.Navigator>
   );
 };

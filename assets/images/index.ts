@@ -280,3 +280,5 @@ export const assets = [
   require("./Tesla/Model3/2020TSC030017_1280_01.png"),
   require("./Tesla/Roadster/9120-2020-tesla-roadster.png"),
 ];
+
+export const ASPECT_RATIO = 555 / 416;

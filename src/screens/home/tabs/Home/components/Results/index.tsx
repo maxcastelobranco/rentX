@@ -6,9 +6,9 @@ import Animated, {
 } from "react-native-reanimated";
 import { View } from "react-native";
 
-import { useStyles } from "./styles";
-import Header from "./components/Header";
 import CarList from "./components/CarList";
+import Header from "./components/Header";
+import { useStyles } from "./styles";
 
 interface ResultsProps {
   anyPickerOpen: Animated.SharedValue<boolean>;
