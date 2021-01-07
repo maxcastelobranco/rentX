@@ -1,4 +1,4 @@
-import { BoxProps, useTheme } from "@shopify/restyle";
+import { useTheme } from "@shopify/restyle";
 import { ViewStyle } from "react-native";
 
 import { Theme } from "../../../../../../../../theme";
@@ -19,16 +19,9 @@ export const useStyles = () => {
     bottom: theme.spacing.s,
     left: theme.spacing.s,
   };
-  const progressIndicatorContainerStyles: BoxProps<Theme> = {
-    flexDirection: "row",
-    position: "absolute",
-    bottom: theme.spacing.s,
-    right: theme.spacing.s,
-  };
 
   return {
     containerStyles,
     iconStyles,
-    progressIndicatorContainerStyles,
   };
 };

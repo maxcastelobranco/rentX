@@ -79,10 +79,7 @@ const Car: React.FC<CarProps> = ({ data, index, translationY }) => {
     );
 
   const onPress = () => {
-    navigation.navigate("CarDetails", {
-      data,
-      currentImageIndex: 0,
-    });
+    navigation.navigate("CarDetails", data);
   };
 
   const imageUri = `${baseURL}${image}`;

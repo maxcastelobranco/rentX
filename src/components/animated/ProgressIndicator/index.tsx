@@ -4,24 +4,18 @@ import Animated, {
   useAnimatedStyle,
   Extrapolate,
 } from "react-native-reanimated";
-import { useTheme } from "@shopify/restyle";
-
-import { Colors, Theme } from "../../../theme";
 
 import { useStyles } from "./styles";
 
 interface ProgressIndicatorProps {
   index: number;
   currentIndex: Animated.SharedValue<number>;
-  backgroundColor?: Colors;
 }
 
 const ProgressIndicator: React.FC<ProgressIndicatorProps> = ({
   index,
   currentIndex,
-  backgroundColor = "textDark1",
 }) => {
-  const theme = useTheme<Theme>();
   const progressIndicatorStyles = useStyles(index);
   const inputRange = [index - 1, index, index + 1];
   const animatedStyle = useAnimatedStyle(() => ({
@@ -43,17 +37,7 @@ const ProgressIndicator: React.FC<ProgressIndicatorProps> = ({
     ],
   }));
 
-  return (
-    <Animated.View
-      style={[
-        progressIndicatorStyles,
-        {
-          backgroundColor: theme.colors[backgroundColor],
-        },
-        animatedStyle,
-      ]}
-    />
-  );
+  return <Animated.View style={[progressIndicatorStyles, animatedStyle]} />;
 };
 
 export default ProgressIndicator;
