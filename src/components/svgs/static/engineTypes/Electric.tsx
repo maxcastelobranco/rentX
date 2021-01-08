@@ -17,8 +17,13 @@ const Electric: React.FC<EngineTypeIconProps> = ({
       <G clipPath="url(#prefix__clip0)">
         <Path
           d="M12.526 8H22L10.421 25v-9H2L12.526-1v9zm-2.105 2V6.22L5.718 14h6.808v4.394L18.066 10h-7.645z"
-          // fill="#3D3D4D"
-          fill={focused ? theme.colors.primary : theme.colors.textMediumLight1}
+          fill={
+            rest.fill
+              ? rest.fill
+              : focused
+              ? theme.colors.primary
+              : theme.colors.textMediumLight1
+          }
         />
       </G>
       <Defs>

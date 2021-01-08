@@ -16,7 +16,7 @@ import Slider from "./components/Slider";
 import constants from "./constants";
 
 interface DatePickerProps {
-  label: string;
+  label: "From" | "To";
   selfOpen: Animated.SharedValue<boolean>;
   otherOpen: Animated.SharedValue<boolean>;
   date: Date;

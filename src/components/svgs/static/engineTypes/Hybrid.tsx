@@ -18,8 +18,14 @@ const Hybrid: React.FC<EngineTypeIconProps> = ({
       width={36}
       height={36}
       viewBox="0 0 24 24"
+      fill={
+        rest.fill
+          ? rest.fill
+          : focused
+          ? theme.colors.primary
+          : theme.colors.textMediumLight1
+      }
       {...rest}
-      fill={focused ? theme.colors.primary : theme.colors.textMediumLight1}
     >
       <Defs>
         <Path id="prefix__a" d="M16.644 16h8v8h-8z" />

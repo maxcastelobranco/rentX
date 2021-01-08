@@ -5,23 +5,36 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2aeeec9b-380a-447b-91f6-3f9957591b9f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/screens/home/CarDetails/components/CarImages/components/AnimatedImage/index.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/screens/home/CarDetails/components/CarImages/components/AnimatedImage/styles.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/screens/home/CarDetails/components/CarImages/index.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/screens/home/CarDetails/components/CarImages/styles.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/screens/home/CarDetails/styles.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/svgs/static/Acceleration.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/svgs/static/Speedometer.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/svgs/static/Transmission.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/svgs/static/Wheel.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/screens/home/CarDetails/components/CarSpecs/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/screens/home/CarDetails/components/CarSpecs/styles.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/screens/home/CarDetails/components/Lease/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/screens/home/CarDetails/components/Lease/styles.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/screens/home/CarDetails/components/TimeInterval/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/screens/home/CarDetails/components/TimeInterval/styles.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/screens/home/CarLeaseSuccessful/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utils/money.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/index.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/animated/FullScreenNotification/styles.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/animated/FullScreenNotification/styles.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/svgs/static/engineTypes/Electric.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/svgs/static/engineTypes/Electric.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/svgs/static/engineTypes/Gas.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/svgs/static/engineTypes/Gas.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/svgs/static/engineTypes/Hybrid.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/svgs/static/engineTypes/Hybrid.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/context/reducers/timeIntervalReducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/context/reducers/timeIntervalReducer.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/routes/home.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/home.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/home/CalendarScreen/components/Calendar/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/home/CalendarScreen/components/Calendar/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/home/CalendarScreen/components/DatePicker/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/home/CalendarScreen/components/DatePicker/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/home/CalendarScreen/components/Header/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/home/CalendarScreen/components/Header/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/home/CarDetails/components/CarImages/components/AnimatedImage/styles.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/home/CarDetails/components/CarImages/components/AnimatedImage/styles.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/home/CarDetails/components/CarImages/styles.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/home/CarDetails/components/CarImages/styles.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/screens/home/CarDetails/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/home/CarDetails/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/screens/home/tabs/Home/components/Results/components/Car/components/CarImages/components/AnimatedImage/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/home/tabs/Home/components/Results/components/Car/components/CarImages/components/AnimatedImage/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/screens/home/tabs/Home/components/Results/components/Car/components/CarImages/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/home/tabs/Home/components/Results/components/Car/components/CarImages/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/screens/home/tabs/Home/components/Results/components/Car/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/home/tabs/Home/components/Results/components/Car/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/screens/home/tabs/Home/components/Results/components/CarList/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/home/tabs/Home/components/Results/components/CarList/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/screens/home/tabs/Home/components/Results/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/home/tabs/Home/components/Results/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/home/CarDetails/styles.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/home/CarDetails/styles.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/home/tabs/Home/components/Results/components/Car/components/CarSpecs/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/home/tabs/Home/components/Results/components/Car/components/CarSpecs/index.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/screens/home/tabs/Listing/components/Results/components/Car/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/home/tabs/Listing/components/Results/components/Car/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,8 +45,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JavaScript File" />
-        <option value="TypeScript JSX File" />
         <option value="TypeScript File" />
+        <option value="TypeScript JSX File" />
       </list>
     </option>
   </component>
@@ -67,7 +80,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/screens/home/CarDetails/components" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/utils" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -85,11 +98,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\max_c\OneDrive\Desktop\PortfolioWorthy\rentX\src\screens\home\CarDetails\components" />
-      <recent name="C:\Users\max_c\OneDrive\Desktop\PortfolioWorthy\rentX\src\hooks" />
-      <recent name="C:\Users\max_c\OneDrive\Desktop\PortfolioWorthy\rentX\src\screens\home\tabs\Listing\components\SearchInput\Suggestions" />
-      <recent name="C:\Users\max_c\OneDrive\Desktop\PortfolioWorthy\rentX\src\screens\home\tabs\Listing\components\SearchInput\Input" />
-      <recent name="C:\Users\max_c\OneDrive\Desktop\PortfolioWorthy\rentX\src\screens\home\tabs\Listing\components\SearchInput" />
+      <recent name="C:\Users\max_c\OneDrive\Desktop\PortfolioWorthy\rentX\src\utils" />
+      <recent name="C:\Users\max_c\OneDrive\Desktop\PortfolioWorthy\rentX\src\screens\home\CarDetails\components\Lease" />
+      <recent name="C:\Users\max_c\OneDrive\Desktop\PortfolioWorthy\rentX\src\screens\home\CarDetails\components\TimeInterval" />
+      <recent name="C:\Users\max_c\OneDrive\Desktop\PortfolioWorthy\rentX\src\components\svgs\static" />
+      <recent name="C:\Users\max_c\OneDrive\Desktop\PortfolioWorthy\rentX\src\screens\home\CarDetails\components\CarSpecs" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\max_c\OneDrive\Desktop\PortfolioWorthy\rentX\src\screens\home\tabs\components" />
@@ -192,7 +205,9 @@
       <workItem from="1609981047539" duration="928000" />
       <workItem from="1610019879618" duration="881000" />
       <workItem from="1610045185156" duration="2071000" />
-      <workItem from="1610048021591" duration="10458000" />
+      <workItem from="1610048021591" duration="11239000" />
+      <workItem from="1610062282014" duration="1443000" />
+      <workItem from="1610119653696" duration="14911000" />
     </task>
     <servers />
   </component>

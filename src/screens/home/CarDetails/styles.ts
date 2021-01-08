@@ -1,13 +1,19 @@
-import { BoxProps } from "@shopify/restyle";
+import { useTheme } from "@shopify/restyle";
+import { ViewStyle } from "react-native";
 
 import { Theme } from "../../../theme";
 
 export const useStyles = () => {
-  const containerStyles: BoxProps<Theme> = {
-    flex: 1,
-    backgroundColor: "backgroundLight1",
-    padding: "l",
+  const theme = useTheme<Theme>();
+
+  const goBackButtonStyles: ViewStyle = {
+    padding: theme.spacing.s,
+    alignItems: "center",
+    justifyContent: "center",
+    position: "absolute",
+    top: theme.spacing.s,
+    left: theme.spacing.s,
   };
 
-  return { containerStyles };
+  return { goBackButtonStyles };
 };

@@ -9,6 +9,7 @@ import { BottomTabNavigationProp } from "@react-navigation/bottom-tabs";
 import CalendarScreen from "../screens/home/CalendarScreen";
 import { CarData } from "../context/reducers/carParamsReducer";
 import CarDetails from "../screens/home/CarDetails";
+import CarLeaseSuccessful from "../screens/home/CarLeaseSuccessful";
 
 import TabsNavigator, { TabRoutes } from "./tabs";
 
@@ -21,6 +22,9 @@ export type HomeRoutes = {
   CalendarScreen: undefined;
   EditProfile: undefined;
   CarDetails: CarDetailsParams;
+  CarLeaseSuccessful: {
+    makeAndModel: string;
+  };
   Tabs: undefined;
 };
 
@@ -44,6 +48,10 @@ const HomeNavigator: React.FC = () => {
       <HomeStack.Screen name="CalendarScreen" component={CalendarScreen} />
       <HomeStack.Screen name="Tabs" component={TabsNavigator} />
       <HomeStack.Screen name="CarDetails" component={CarDetails} />
+      <HomeStack.Screen
+        name="CarLeaseSuccessful"
+        component={CarLeaseSuccessful}
+      />
     </HomeStack.Navigator>
   );
 };

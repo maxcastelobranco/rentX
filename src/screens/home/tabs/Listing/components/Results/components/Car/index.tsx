@@ -16,6 +16,7 @@ import { Box, Text } from "../../../../../../../../theme";
 import { baseURL } from "../../../../../../../../services/api";
 import { CAR_ITEM_INTERVAL, CAR_ITEM_WIDTH } from "../../constants";
 import responsivePixelSize from "../../../../../../../../utils/responsivePixelSize";
+import { money } from "../../../../../../../../utils/money";
 
 import { useStyles } from "./styles";
 
@@ -97,7 +98,7 @@ const Car: React.FC<CarProps> = ({ data, index, translationY }) => {
             Daily Rate
           </Text>
           <Text {...contentStyles} color="primary">
-            {`$${dailyRate}`}
+            {`${money(dailyRate)}`}
           </Text>
         </Box>
         <Image

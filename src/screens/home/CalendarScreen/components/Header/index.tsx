@@ -37,7 +37,7 @@ const Header: React.FC<HeaderProps> = ({
       {showTitle && <Text {...titleStyles}>Pick a date and find a ride.</Text>}
       <Box {...datePickerContainerStyles}>
         <DatePicker
-          label="from"
+          label="From"
           selfOpen={startDatePickerOpen}
           otherOpen={endDatePickerOpen}
           date={startDate}
@@ -45,7 +45,7 @@ const Header: React.FC<HeaderProps> = ({
         />
         <LongArrow />
         <DatePicker
-          label="to"
+          label="To"
           selfOpen={endDatePickerOpen}
           otherOpen={startDatePickerOpen}
           date={endDate}

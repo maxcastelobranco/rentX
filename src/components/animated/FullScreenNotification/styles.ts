@@ -12,16 +12,18 @@ export const useStyles = () => {
     alignItems: "center",
   };
   const doneStyles: ViewStyle = {
-    marginTop: theme.spacing.xl,
+    marginTop: theme.spacing.l,
   };
   const titleStyles: TextProps<Theme> = {
     marginTop: "ml",
     variant: "titleLightLargeSemiBold",
+    textAlign: "center",
   };
   const descriptionStyles: TextProps<Theme> = {
     marginTop: "xs",
     variant: "regularTextDark",
     marginBottom: "l",
+    textAlign: "center",
   };
   const buttonStyles: ViewStyle = {
     backgroundColor: theme.colors.backgroundDark2,

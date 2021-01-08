@@ -12,7 +12,7 @@ export enum TimeIntervalActionTypes {
 }
 
 type TimeIntervalActionPayloads = {
-  [TimeIntervalActionTypes.Update]: TimeIntervalState;
+  [TimeIntervalActionTypes.Update]: Partial<TimeIntervalState>;
 };
 
 export type TimeIntervalActions = ActionMap<TimeIntervalActionPayloads>[keyof TimeIntervalActionPayloads];
@@ -26,8 +26,8 @@ export const timeIntervalReducer: Reducer<TimeIntervalState, AppActions> = (
       const { startDate, endDate } = action.payload;
 
       return {
-        startDate,
-        endDate,
+        startDate: startDate ? startDate : state.startDate,
+        endDate: endDate ? endDate : state.endDate,
       };
     default:
       return state;

@@ -7,12 +7,14 @@ export const useStyles = () => {
   const theme = useTheme<Theme>();
   const carListStyles: ViewStyle = {
     zIndex: -1,
+    paddingTop: theme.spacing.l,
+    backgroundColor: theme.colors.backgroundLight1,
   };
   const progressIndicatorContainerStyles: BoxProps<Theme> = {
     flexDirection: "row",
     position: "absolute",
-    bottom: theme.spacing.s,
-    right: theme.spacing.s,
+    top: theme.spacing.ml,
+    right: theme.spacing.ml,
   };
 
   return {

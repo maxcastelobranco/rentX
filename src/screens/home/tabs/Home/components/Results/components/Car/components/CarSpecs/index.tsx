@@ -1,6 +1,7 @@
 import React from "react";
 
 import { Box, Text } from "../../../../../../../../../../theme";
+import { money } from "../../../../../../../../../../utils/money";
 
 import { useStyles } from "./styles";
 
@@ -26,7 +27,7 @@ const CarSpecs: React.FC<CarSpecsProps> = ({ make, model, dailyRate }) => {
       <Box pointerEvents="none" {...dailyRateContainerStyles}>
         <Text {...labelStyles}>Daily Rate</Text>
         <Text {...contentStyles} color="primary">
-          {`$${dailyRate}`}
+          {`${money(dailyRate)}`}
         </Text>
       </Box>
     </>

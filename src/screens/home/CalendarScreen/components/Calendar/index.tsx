@@ -98,6 +98,7 @@ const Calendar: React.FC<CalendarProps> = ({
     setCurrentDate((prevState) => sub(prevState, { months: 1 }));
   };
   const onPress = () => {
+    navigation.navigate("Tabs");
     dispatch({
       type: TimeIntervalActionTypes.Update,
       payload: {
@@ -105,7 +106,6 @@ const Calendar: React.FC<CalendarProps> = ({
         endDate,
       },
     });
-    navigation.navigate("Tabs");
   };
 
   return (
