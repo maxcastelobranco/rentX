@@ -28,6 +28,7 @@ const theme = createTheme({
   colors: {
     primary: palette.crimson,
     primaryLight: palette.salmonPink,
+    success: palette.greenPantone,
     backgroundDark1: palette.raisinBlack,
     backgroundDark2: palette.jet,
     backgroundDark3: palette.black,

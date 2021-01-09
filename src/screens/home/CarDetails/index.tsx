@@ -33,7 +33,7 @@ const CarDetails: React.FC<HomeNavigationProps<"CarDetails">> = ({
   const theme = useTheme<Theme>();
   const { goBackButtonStyles } = useStyles();
   const scrollViewRef = useAnimatedRef<Animated.ScrollView>();
-  const { images, dailyRate, make, model } = data;
+  const { id, images, dailyRate, make, model } = data;
 
   const imageUris = images.map((image) => `${baseURL}${image}`);
 
@@ -56,7 +56,7 @@ const CarDetails: React.FC<HomeNavigationProps<"CarDetails">> = ({
       <CarImages {...{ imageUris, scrollViewRef }} />
       <CarSpecs {...{ data }} />
       <TimeInterval />
-      <Lease {...{ dailyRate, make, model, navigation }} />
+      <Lease carId={id} {...{ dailyRate, make, model, navigation }} />
     </Box>
   );
 };

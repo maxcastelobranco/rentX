@@ -14,7 +14,6 @@ interface HeaderProps {
   endDate: Date;
   setStartDate: React.Dispatch<React.SetStateAction<Date>>;
   setEndDate: React.Dispatch<React.SetStateAction<Date>>;
-  showTitle?: boolean;
 }
 
 const Header: React.FC<HeaderProps> = ({
@@ -24,7 +23,6 @@ const Header: React.FC<HeaderProps> = ({
   endDate,
   setStartDate,
   setEndDate,
-  showTitle,
 }) => {
   const {
     containerStyles,
@@ -34,7 +32,7 @@ const Header: React.FC<HeaderProps> = ({
 
   return (
     <Box {...containerStyles}>
-      {showTitle && <Text {...titleStyles}>Pick a date and find a ride.</Text>}
+      <Text {...titleStyles}>Pick a date and find a ride.</Text>
       <Box {...datePickerContainerStyles}>
         <DatePicker
           label="From"

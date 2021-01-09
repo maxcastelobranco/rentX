@@ -22,7 +22,6 @@ const CalendarScreen: React.FC<HomeNavigationProps<"CalendarScreen">> = ({
   return (
     <>
       <Header
-        showTitle
         {...{
           startDatePickerOpen,
           endDatePickerOpen,

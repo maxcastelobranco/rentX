@@ -46,21 +46,25 @@ const Car: React.FC<CarProps> = ({ data, index, translationY }) => {
     contentStyles,
   } = useStyles();
 
-  const inputRange = [
-    CAR_ITEM_INTERVAL * (index - 1),
-    CAR_ITEM_INTERVAL * index,
-    CAR_ITEM_INTERVAL * (index + 1),
-  ];
   const animatedStyle = useAnimatedStyle(() => {
     const opacity = interpolate(
       translationY.value,
-      inputRange,
-      [0.5, 1, 0],
+      [
+        CAR_ITEM_INTERVAL * (index - 2),
+        CAR_ITEM_INTERVAL * (index - 1),
+        CAR_ITEM_INTERVAL * index,
+        CAR_ITEM_INTERVAL * (index + 1),
+      ],
+      [0.25, 0.75, 1, 0],
       Extrapolate.CLAMP
     );
     const translateX = interpolate(
       translationY.value,
-      inputRange,
+      [
+        CAR_ITEM_INTERVAL * (index - 1),
+        CAR_ITEM_INTERVAL * index,
+        CAR_ITEM_INTERVAL * (index + 1),
+      ],
       [0, 0, CAR_ITEM_WIDTH],
       Extrapolate.CLAMP
     );

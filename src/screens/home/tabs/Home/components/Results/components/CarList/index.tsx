@@ -74,7 +74,7 @@ const CarList: React.FC<CarListProps> = ({ end, setEnd, headerHeight }) => {
       ListFooterComponent={
         <ListFooterComponent
           reachedTheEnd={cars && end > cars.length}
-          height={CAR_ITEM_INTERVAL - headerHeight - theme.spacing.s}
+          height={CAR_ITEM_INTERVAL + headerHeight + theme.spacing.s * 2}
         />
       }
       snapToInterval={CAR_ITEM_INTERVAL}

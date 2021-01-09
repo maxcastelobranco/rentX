@@ -7,7 +7,7 @@ import {
 import React from "react";
 
 import Listing from "../screens/home/tabs/Listing";
-import Scheduling from "../screens/home/tabs/Scheduling";
+import Leases from "../screens/home/tabs/Leases";
 import Home from "../screens/home/tabs/Home";
 import Profile from "../screens/home/tabs/Profile";
 import TabBar from "../screens/home/tabs/components/TabBar";
@@ -21,7 +21,7 @@ import { HomeRoutes } from "./home";
 export type TabRoutes = {
   Home: undefined;
   Listing: undefined;
-  Scheduling: undefined;
+  Leases: undefined;
   Profile: undefined;
 };
 
@@ -53,8 +53,8 @@ const TabsNavigator: React.FC = () => {
         }}
       />
       <Tabs.Screen
-        name="Scheduling"
-        component={Scheduling}
+        name="Leases"
+        component={Leases}
         options={{
           tabBarIcon: (props) => <Calendar {...props} />,
         }}

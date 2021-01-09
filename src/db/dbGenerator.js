@@ -1,5 +1,6 @@
 const fs = require("fs");
 
+const dateFns = require("date-fns");
 const faker = require("faker");
 faker.seed(69);
 
@@ -11,7 +12,7 @@ const NUMBER_OF_CARS = carData.length;
 
 const userIds = [];
 const carIds = [];
-const data = { users: [], cars: [] };
+const data = { users: [], cars: [], carLeases: [] };
 
 for (let i = 0; i < NUMBER_OF_USERS; i++) {
   userIds.push(faker.random.uuid());
@@ -40,6 +41,23 @@ for (let i = 0; i < NUMBER_OF_CARS; i++) {
     available: true,
     ...carData[i],
   });
+}
+
+for (let i = 0; i < NUMBER_OF_USERS; i++) {
+  for (let l = 0; l < faker.random.number({ min: 3, max: 10 }); l++) {
+    const startDate = faker.date.past(faker.random.number({ min: 1, max: 10 }));
+    const endDate = dateFns.add(startDate, {
+      days: faker.random.number({ min: 3, max: 60 }),
+    });
+
+    data.carLeases.push({
+      id: faker.random.uuid(),
+      userId: userIds[i],
+      carId: carIds[faker.random.number({ min: 0, max: NUMBER_OF_CARS - 1 })],
+      startDate,
+      endDate,
+    });
+  }
 }
 
 data.cars = faker.helpers.shuffle(data.cars);

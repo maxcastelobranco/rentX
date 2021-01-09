@@ -8,4 +8,4 @@ const { width } = Dimensions.get("window");
 export const CAR_ITEM_HEIGHT = responsivePixelSize(150);
 export const CAR_ITEM_WIDTH = width - theme.spacing.l * 2;
 export const CAR_ITEM_INTERVAL = theme.spacing.s * 2 + CAR_ITEM_HEIGHT;
-export const INCREMENT = 10;
+export const INCREMENT = 5;

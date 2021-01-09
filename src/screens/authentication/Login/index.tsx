@@ -2,7 +2,6 @@ import React, { useRef } from "react";
 import { SubmitHandler, useForm } from "react-hook-form";
 import { KeyboardAvoidingView, TextInput } from "react-native";
 import AsyncStorage from "@react-native-community/async-storage";
-import { CommonActions } from "@react-navigation/native";
 import { useSharedValue, withSpring } from "react-native-reanimated";
 
 import { Text } from "../../../theme";
@@ -28,9 +27,7 @@ interface FormValues {
   remember: boolean;
 }
 
-const Login: React.FC<AuthenticationNavigationProps<"Login">> = ({
-  navigation,
-}) => {
+const Login: React.FC<AuthenticationNavigationProps<"Login">> = () => {
   const {
     state: {
       authentication: { error, loading },
@@ -80,18 +77,13 @@ const Login: React.FC<AuthenticationNavigationProps<"Login">> = ({
 
     if (user) {
       if (remember) {
-        await AsyncStorage.setItem("@rentX:userId", user.id);
+        await AsyncStorage.setItem("@rentX:user", JSON.stringify(user));
       }
 
       dispatch({
         type: AuthenticationActionTypes.LoginSucceeded,
         payload: user,
       });
-      navigation.dispatch(
-        CommonActions.reset({
-          routes: [{ name: "Home" }],
-        })
-      );
     } else {
       dispatch({
         type: AuthenticationActionTypes.LoginFailed,

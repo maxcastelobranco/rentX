@@ -31,16 +31,24 @@ const Car: React.FC<CarProps> = ({ data, translationY, index }) => {
   const navigation = useNavigation();
   const { containerStyles, iconStyles } = useStyles();
   const imageUris = images.map((image) => `${baseURL}${image}`);
-  const inputRange = [
-    CAR_ITEM_INTERVAL * (index - 1),
-    CAR_ITEM_INTERVAL * index,
-    CAR_ITEM_INTERVAL * (index + 1),
-  ];
   const animatedStyle = useAnimatedStyle(() => {
-    const opacity = interpolate(translationY.value, inputRange, [0.5, 1, 0]);
+    const opacity = interpolate(
+      translationY.value,
+      [
+        CAR_ITEM_INTERVAL * (index - 2),
+        CAR_ITEM_INTERVAL * (index - 1),
+        CAR_ITEM_INTERVAL * index,
+        CAR_ITEM_INTERVAL * (index + 1),
+      ],
+      [0.1, 0.5, 1, 0]
+    );
     const translateX = interpolate(
       translationY.value,
-      inputRange,
+      [
+        CAR_ITEM_INTERVAL * (index - 1),
+        CAR_ITEM_INTERVAL * index,
+        CAR_ITEM_INTERVAL * (index + 1),
+      ],
       [0, 0, CAR_ITEM_WIDTH],
       Extrapolate.CLAMP
     );
