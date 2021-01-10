@@ -1,11 +1,7 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { createStackNavigator } from "@react-navigation/stack";
-import AsyncStorage from "@react-native-community/async-storage";
 
-import { AuthenticationActionTypes } from "../context/reducers/authenticationReducer";
 import { useAppContext } from "../context";
-import { Box } from "../theme";
-import RedLight from "../components/svgs/static/RedLight";
 
 import AuthenticationNavigator from "./authentication";
 import HomeNavigator from "./home";
@@ -18,29 +14,11 @@ export type AppRoutes = {
 const AppStack = createStackNavigator<AppRoutes>();
 
 const AppStackNavigator: React.FC = () => {
-  const { state, dispatch } = useAppContext();
-  const [loadingUser, setLoadingUser] = useState(true);
-
-  useEffect(() => {
-    AsyncStorage.getItem("@rentX:user").then((user) => {
-      if (user) {
-        dispatch({
-          type: AuthenticationActionTypes.UpdateUser,
-          payload: JSON.parse(user),
-        });
-        setLoadingUser(false);
-      }
-    });
-    setLoadingUser(false);
-  }, [dispatch]);
+  const { state } = useAppContext();
 
   return (
     <>
-      {loadingUser ? (
-        <Box flex={1} alignItems="center" justifyContent="center">
-          <RedLight />
-        </Box>
-      ) : state.authentication.user.id.length ? (
+      {state.authentication.user.id.length ? (
         <AppStack.Navigator headerMode="none">
           <AppStack.Screen name="Home" component={HomeNavigator} />
         </AppStack.Navigator>

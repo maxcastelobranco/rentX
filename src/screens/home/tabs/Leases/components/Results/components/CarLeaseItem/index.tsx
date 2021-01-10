@@ -57,21 +57,23 @@ const CarLeaseItem: React.FC<CarProps> = ({
         LEASE_ITEM_INTERVAL * (index - 2),
         LEASE_ITEM_INTERVAL * (index - 1),
         LEASE_ITEM_INTERVAL * index,
-        LEASE_ITEM_INTERVAL * (index + 1),
       ],
-      [0.25, 0.75, 1, 0],
+      [0.25, 0.75, 1],
       Extrapolate.CLAMP
     );
-    const translateX = interpolate(
-      translationY.value,
-      [
-        LEASE_ITEM_INTERVAL * (index - 1),
-        LEASE_ITEM_INTERVAL * index,
-        LEASE_ITEM_INTERVAL * (index + 1),
-      ],
-      [0, 0, LEASE_ITEM_WIDTH],
-      Extrapolate.CLAMP
-    );
+    const translateX =
+      index === 0
+        ? 0
+        : interpolate(
+            translationY.value,
+            [
+              LEASE_ITEM_INTERVAL * (index - 1),
+              LEASE_ITEM_INTERVAL * index,
+              LEASE_ITEM_INTERVAL * (index + 1),
+            ],
+            [0, 0, LEASE_ITEM_WIDTH],
+            Extrapolate.CLAMP
+          );
     return {
       opacity,
       transform: [{ translateX }],
@@ -156,7 +158,7 @@ const CarLeaseItem: React.FC<CarProps> = ({
             ? "Leasing:"
             : leasedInThePast
             ? "Leased:"
-            : "scheduled to:"}
+            : "Scheduled:"}
         </Text>
         <Text
           {...dateStyles}

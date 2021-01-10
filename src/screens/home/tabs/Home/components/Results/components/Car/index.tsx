@@ -38,20 +38,22 @@ const Car: React.FC<CarProps> = ({ data, translationY, index }) => {
         CAR_ITEM_INTERVAL * (index - 2),
         CAR_ITEM_INTERVAL * (index - 1),
         CAR_ITEM_INTERVAL * index,
-        CAR_ITEM_INTERVAL * (index + 1),
       ],
-      [0.1, 0.5, 1, 0]
+      [0.1, 0.5, 1]
     );
-    const translateX = interpolate(
-      translationY.value,
-      [
-        CAR_ITEM_INTERVAL * (index - 1),
-        CAR_ITEM_INTERVAL * index,
-        CAR_ITEM_INTERVAL * (index + 1),
-      ],
-      [0, 0, CAR_ITEM_WIDTH],
-      Extrapolate.CLAMP
-    );
+    const translateX =
+      index === 0
+        ? 0
+        : interpolate(
+            translationY.value,
+            [
+              CAR_ITEM_INTERVAL * (index - 1),
+              CAR_ITEM_INTERVAL * index,
+              CAR_ITEM_INTERVAL * (index + 1),
+            ],
+            [0, 0, CAR_ITEM_WIDTH],
+            Extrapolate.CLAMP
+          );
     return {
       opacity,
       transform: [{ translateX }],

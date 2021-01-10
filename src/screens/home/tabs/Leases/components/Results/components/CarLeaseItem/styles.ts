@@ -37,7 +37,7 @@ export const useStyles = () => {
     fontFamily: "Archivo-Regular",
     textTransform: "uppercase",
     color: "textMediumLight1",
-    fontSize: responsivePixelSize(14),
+    fontSize: responsivePixelSize(12),
   };
   const contentStyles: TextProps<Theme> = {
     fontFamily: "Roboto-Medium",
