@@ -40,6 +40,9 @@ for (let i = 0; i < NUMBER_OF_CARS; i++) {
     dailyRate: faker.random.number({ min: 500, max: 10000 }),
     available: true,
     ...carData[i],
+    images: carData[i].images.map(
+      (image) => `http://192.168.0.107:3000${image}`
+    ),
   });
 }
 

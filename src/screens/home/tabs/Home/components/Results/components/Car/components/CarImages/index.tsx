@@ -9,13 +9,13 @@ import AnimatedImage from "./components/AnimatedImage";
 import { useStyles } from "./styles";
 
 interface CarImagesProps {
-  imageUris: string[];
+  images: string[];
   translationX: Animated.SharedValue<number>;
   currentIndex: Animated.SharedValue<number>;
 }
 
 const CarImages: React.FC<CarImagesProps> = ({
-  imageUris,
+  images,
   translationX,
   currentIndex,
 }) => {
@@ -36,12 +36,12 @@ const CarImages: React.FC<CarImagesProps> = ({
         showsHorizontalScrollIndicator={false}
         style={carListStyles}
       >
-        {imageUris.map((uri, index) => (
+        {images.map((uri, index) => (
           <AnimatedImage key={uri} {...{ index, currentIndex, uri }} />
         ))}
       </Animated.ScrollView>
       <Box {...progressIndicatorContainerStyles}>
-        {imageUris.map((_, index) => (
+        {images.map((_, index) => (
           <ProgressIndicator key={index} {...{ index, currentIndex }} />
         ))}
       </Box>

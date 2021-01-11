@@ -14,6 +14,14 @@ import { carParamsReducer } from "./reducers/carParamsReducer";
 
 const today = new Date();
 const tomorrow = add(today, { days: 1 });
+export const initialUserState = {
+  id: "",
+  firstName: "",
+  lastName: "",
+  email: "",
+  password: "",
+  avatarUrl: "",
+};
 
 const initialState: InitialAppState = {
   timeInterval: {
@@ -23,14 +31,7 @@ const initialState: InitialAppState = {
   authentication: {
     error: "",
     loading: false,
-    user: {
-      id: "",
-      firstName: "",
-      lastName: "",
-      email: "",
-      password: "",
-      avatarUrl: "",
-    },
+    user: initialUserState,
   },
   carParams: {
     dailyRate: {

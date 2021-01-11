@@ -13,13 +13,13 @@ import { useStyles } from "./styles";
 import AnimatedImage from "./components/AnimatedImage";
 
 interface CarImagesProps {
-  imageUris: string[];
+  images: string[];
   scrollViewRef: React.RefObject<Animated.ScrollView>;
 }
 
 const { width } = Dimensions.get("window");
 
-const CarImages: React.FC<CarImagesProps> = ({ imageUris, scrollViewRef }) => {
+const CarImages: React.FC<CarImagesProps> = ({ images, scrollViewRef }) => {
   const { carListStyles, progressIndicatorContainerStyles } = useStyles();
 
   const translationX = useSharedValue(0);
@@ -41,12 +41,12 @@ const CarImages: React.FC<CarImagesProps> = ({ imageUris, scrollViewRef }) => {
         style={carListStyles}
         {...{ onScroll }}
       >
-        {imageUris.map((uri, index) => (
+        {images.map((uri, index) => (
           <AnimatedImage key={uri} {...{ index, currentIndex, uri }} />
         ))}
       </Animated.ScrollView>
       <Box {...progressIndicatorContainerStyles}>
-        {imageUris.map((_, index) => (
+        {images.map((_, index) => (
           <ProgressIndicator key={index} {...{ index, currentIndex }} />
         ))}
       </Box>

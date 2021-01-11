@@ -6,20 +6,18 @@ import { TabNavigationProps } from "../../../../routes/tabs";
 import { usePreventGoingBack } from "../../../../hooks/usePreventGoingBack";
 import Overlay from "../components/Overlay";
 
-import { useStyles } from "./styles";
 import Filter from "./components/Filter";
 import Results from "./components/Results";
 import { INCREMENT } from "./components/Results/constants";
 
 const Home: React.FC<TabNavigationProps<"Home">> = ({ navigation }) => {
-  const { containerStyles } = useStyles();
   usePreventGoingBack("CalendarScreen", navigation);
 
   const filterOpen = useSharedValue(false);
   const [end, setEnd] = useState(INCREMENT);
 
   return (
-    <Box {...containerStyles}>
+    <Box flex={1}>
       <Results {...{ filterOpen, end, setEnd }} />
       <Filter open={filterOpen} {...{ setEnd }} />
       <Overlay open={filterOpen} />

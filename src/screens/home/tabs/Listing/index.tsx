@@ -6,14 +6,12 @@ import { TabNavigationProps } from "../../../../routes/tabs";
 import { usePreventGoingBack } from "../../../../hooks/usePreventGoingBack";
 import Overlay from "../components/Overlay";
 
-import { useStyles } from "./styles";
 import Header from "./components/Header";
 import SearchInput from "./components/SearchInput";
 import Results from "./components/Results";
 
 const Listing: React.FC<TabNavigationProps<"Listing">> = ({ navigation }) => {
   usePreventGoingBack("CalendarScreen", navigation);
-  const { containerStyles } = useStyles();
   const focused = useSharedValue(false);
   const [query, setQuery] = useState("");
   const [searchInputValue, setSearchInputValue] = useState("");
@@ -21,7 +19,7 @@ const Listing: React.FC<TabNavigationProps<"Listing">> = ({ navigation }) => {
   const open = useDerivedValue(() => focused.value || !!searchInputValue);
 
   return (
-    <Box {...containerStyles}>
+    <Box flex={1}>
       <Header {...{ query }} />
       <SearchInput
         value={searchInputValue}

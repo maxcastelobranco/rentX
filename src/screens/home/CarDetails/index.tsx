@@ -11,7 +11,6 @@ import { useTheme } from "@shopify/restyle";
 
 import { Box, Theme } from "../../../theme";
 import { HomeNavigationProps } from "../../../routes/home";
-import { baseURL } from "../../../services/api";
 import responsivePixelSize from "../../../utils/responsivePixelSize";
 
 import CarImages from "./components/CarImages";
@@ -35,8 +34,6 @@ const CarDetails: React.FC<HomeNavigationProps<"CarDetails">> = ({
   const scrollViewRef = useAnimatedRef<Animated.ScrollView>();
   const { id, images, dailyRate, make, model } = data;
 
-  const imageUris = images.map((image) => `${baseURL}${image}`);
-
   useEffect(() => {
     runOnUI(() => {
       "worklet";
@@ -53,7 +50,7 @@ const CarDetails: React.FC<HomeNavigationProps<"CarDetails">> = ({
           color={theme.colors.textMediumLight1}
         />
       </RectButton>
-      <CarImages {...{ imageUris, scrollViewRef }} />
+      <CarImages {...{ images, scrollViewRef }} />
       <CarSpecs {...{ data }} />
       <TimeInterval />
       <Lease carId={id} {...{ dailyRate, make, model, navigation }} />

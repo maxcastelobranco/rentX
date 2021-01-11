@@ -13,7 +13,6 @@ import Electric from "../../../../../../../../components/svgs/static/engineTypes
 import Gas from "../../../../../../../../components/svgs/static/engineTypes/Gas";
 import Hybrid from "../../../../../../../../components/svgs/static/engineTypes/Hybrid";
 import { Box, Text } from "../../../../../../../../theme";
-import { baseURL } from "../../../../../../../../services/api";
 import { CAR_ITEM_INTERVAL, CAR_ITEM_WIDTH } from "../../constants";
 import responsivePixelSize from "../../../../../../../../utils/responsivePixelSize";
 import { money } from "../../../../../../../../utils/money";
@@ -92,8 +91,6 @@ const Car: React.FC<CarProps> = ({ data, index, translationY }) => {
     });
   };
 
-  const imageUri = `${baseURL}${image}`;
-
   return (
     <RectButton {...{ onPress }}>
       <Animated.View style={[animatedStyle, containerStyles]}>
@@ -109,7 +106,7 @@ const Car: React.FC<CarProps> = ({ data, index, translationY }) => {
         </Box>
         <Image
           resizeMode="contain"
-          source={{ uri: imageUri }}
+          source={{ uri: image }}
           style={imageStyles}
         />
         {icon}

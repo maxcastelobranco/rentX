@@ -9,7 +9,6 @@ import Animated, {
 import { RectButton } from "react-native-gesture-handler";
 import { useNavigation } from "@react-navigation/native";
 
-import { baseURL } from "../../../../../../../../services/api";
 import Electric from "../../../../../../../../components/svgs/static/engineTypes/Electric";
 import Gas from "../../../../../../../../components/svgs/static/engineTypes/Gas";
 import Hybrid from "../../../../../../../../components/svgs/static/engineTypes/Hybrid";
@@ -30,7 +29,6 @@ const Car: React.FC<CarProps> = ({ data, translationY, index }) => {
   const { images, engineType, make, model, dailyRate } = data;
   const navigation = useNavigation();
   const { containerStyles, iconStyles } = useStyles();
-  const imageUris = images.map((image) => `${baseURL}${image}`);
   const animatedStyle = useAnimatedStyle(() => {
     const opacity = interpolate(
       translationY.value,
@@ -86,7 +84,7 @@ const Car: React.FC<CarProps> = ({ data, translationY, index }) => {
       <Animated.View style={[animatedStyle, containerStyles]}>
         <CarSpecs {...{ make, model, dailyRate }} />
         {icon}
-        <CarImages {...{ imageUris, translationX, currentIndex }} />
+        <CarImages {...{ images, translationX, currentIndex }} />
       </Animated.View>
     </RectButton>
   );

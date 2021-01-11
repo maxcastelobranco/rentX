@@ -13,7 +13,6 @@ import Electric from "../../../../../../../../components/svgs/static/engineTypes
 import Gas from "../../../../../../../../components/svgs/static/engineTypes/Gas";
 import Hybrid from "../../../../../../../../components/svgs/static/engineTypes/Hybrid";
 import { Box, Text } from "../../../../../../../../theme";
-import { baseURL } from "../../../../../../../../services/api";
 import { LEASE_ITEM_INTERVAL, LEASE_ITEM_WIDTH } from "../../constants";
 import responsivePixelSize from "../../../../../../../../utils/responsivePixelSize";
 import { money } from "../../../../../../../../utils/money";
@@ -116,8 +115,6 @@ const CarLeaseItem: React.FC<CarProps> = ({
     });
   };
 
-  const imageUri = `${baseURL}${image}`;
-
   const parsedStartDate = parseISO(startDate);
   const parsedEndDate = parseISO(endDate);
   const formattedStartDate = format(parsedStartDate, "LLL do, yyy");
@@ -143,7 +140,7 @@ const CarLeaseItem: React.FC<CarProps> = ({
           </Box>
           <Image
             resizeMode="contain"
-            source={{ uri: imageUri }}
+            source={{ uri: image }}
             style={imageStyles}
           />
           {icon}
