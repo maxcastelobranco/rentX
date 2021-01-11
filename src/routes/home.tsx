@@ -10,6 +10,7 @@ import CalendarScreen from "../screens/home/CalendarScreen";
 import { CarData } from "../context/reducers/carParamsReducer";
 import CarDetails from "../screens/home/CarDetails";
 import CarLeaseSuccessful from "../screens/home/CarLeaseSuccessful";
+import ExitAppConfirmation from "../screens/home/ExitAppConfirmation";
 
 import TabsNavigator, { TabRoutes } from "./tabs";
 
@@ -25,6 +26,7 @@ export type HomeRoutes = {
   CarLeaseSuccessful: {
     makeAndModel: string;
   };
+  ExitAppConfirmation: undefined;
   Tabs: undefined;
 };
 
@@ -51,6 +53,10 @@ const HomeNavigator: React.FC = () => {
       <HomeStack.Screen
         name="CarLeaseSuccessful"
         component={CarLeaseSuccessful}
+      />
+      <HomeStack.Screen
+        name="ExitAppConfirmation"
+        component={ExitAppConfirmation}
       />
     </HomeStack.Navigator>
   );

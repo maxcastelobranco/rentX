@@ -5,15 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2aeeec9b-380a-447b-91f6-3f9957591b9f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/screens/home/tabs/Profile/components/Content/components/Car/index.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/screens/home/tabs/Profile/components/Content/components/Car/styles.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/screens/home/tabs/Profile/components/Content/index.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/screens/home/tabs/Profile/components/Content/styles.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/svgs/animated/Cancel.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/screens/home/ExitAppConfirmation/index.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/db/db.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/db/db.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hooks/useCarLeases.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/hooks/useCarLeases.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/screens/home/tabs/Profile/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/home/tabs/Profile/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/screens/home/tabs/Profile/styles.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/home/tabs/Profile/styles.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/animated/FullScreenNotification/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/animated/FullScreenNotification/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/animated/FullScreenNotification/styles.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/animated/FullScreenNotification/styles.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/svgs/animated/Done.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/svgs/animated/Done.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/context/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/context/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/home.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/home.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/authentication/SignUpSuccessful/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/authentication/SignUpSuccessful/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/home/tabs/Profile/components/Header/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/home/tabs/Profile/components/Header/index.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,8 +25,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JavaScript File" />
-        <option value="TypeScript JSX File" />
         <option value="TypeScript File" />
+        <option value="TypeScript JSX File" />
       </list>
     </option>
   </component>
@@ -56,7 +57,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/screens/home/tabs/Profile/components/Content/components" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components/svgs/animated" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -74,11 +75,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\max_c\OneDrive\Desktop\PortfolioWorthy\rentX\src\components\svgs\animated" />
       <recent name="C:\Users\max_c\OneDrive\Desktop\PortfolioWorthy\rentX\src\screens\home\tabs\Profile\components\Content\components" />
       <recent name="C:\Users\max_c\OneDrive\Desktop\PortfolioWorthy\rentX\src\screens\home\tabs\Profile\components\Header\components\Avatar" />
       <recent name="C:\Users\max_c\OneDrive\Desktop\PortfolioWorthy\rentX\src\components\svgs\static" />
       <recent name="C:\Users\max_c\OneDrive\Desktop\PortfolioWorthy\rentX\src\screens\home\tabs\Leases" />
-      <recent name="C:\Users\max_c\OneDrive\Desktop\PortfolioWorthy\rentX\src\hooks" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\max_c\OneDrive\Desktop\PortfolioWorthy\rentX\src\screens\home\tabs\components" />
@@ -191,7 +192,7 @@
       <workItem from="1610217042520" duration="14611000" />
       <workItem from="1610284735643" duration="6798000" />
       <workItem from="1610314042527" duration="7492000" />
-      <workItem from="1610370967078" duration="16885000" />
+      <workItem from="1610370967078" duration="22477000" />
     </task>
     <servers />
   </component>

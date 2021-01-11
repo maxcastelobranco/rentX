@@ -1,14 +1,12 @@
 import React, { useState } from "react";
 import { RectButton } from "react-native-gesture-handler";
-import AsyncStorage from "@react-native-community/async-storage";
 import Animated, { useAnimatedStyle } from "react-native-reanimated";
 import { mix } from "react-native-redash";
+import { useNavigation } from "@react-navigation/native";
 
 import { Box, Text } from "../../../../../../theme";
 import Edit from "../../../../../../components/svgs/static/Edit";
 import Logout from "../../../../../../components/svgs/static/Logout";
-import { initialUserState, useAppContext } from "../../../../../../context";
-import { AuthenticationActionTypes } from "../../../../../../context/reducers/authenticationReducer";
 
 import { useStyles } from "./styles";
 import Avatar from "./components/Avatar";
@@ -28,8 +26,8 @@ const Header: React.FC<HeaderProps> = ({
   isImageFullScreenSpringTransition,
   avatarUrl,
 }) => {
+  const navigation = useNavigation();
   const { containerStyles, buttonsContainerStyles, titleStyles } = useStyles();
-  const { dispatch } = useAppContext();
   const [buttonsContainerHeight, setButtonsContainerHeight] = useState(0);
 
   const animatedButtonsContainerStyle = useAnimatedStyle(() => {
@@ -47,12 +45,8 @@ const Header: React.FC<HeaderProps> = ({
     };
   });
 
-  const logout = () => {
-    AsyncStorage.clear().catch(console.error);
-    dispatch({
-      type: AuthenticationActionTypes.UpdateUser,
-      payload: initialUserState,
-    });
+  const exitApp = () => {
+    navigation.navigate("ExitAppConfirmation");
   };
 
   return (
@@ -72,7 +66,7 @@ const Header: React.FC<HeaderProps> = ({
             <Edit />
           </RectButton>
           <Text {...titleStyles}>Profile</Text>
-          <RectButton onPress={logout}>
+          <RectButton onPress={exitApp}>
             <Logout />
           </RectButton>
         </Box>

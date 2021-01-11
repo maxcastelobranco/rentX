@@ -10,7 +10,7 @@ const SignUpSuccessful: React.FC<
     <FullScreenNotification
       title="Account created!"
       description="Now just login and enjoy"
-      onPress={() => {
+      okButtonPress={() => {
         navigation.navigate("Login");
       }}
     />

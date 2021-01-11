@@ -1,7 +1,9 @@
 import { BoxProps, TextProps, useTheme } from "@shopify/restyle";
-import { ViewStyle } from "react-native";
+import { Dimensions, ViewStyle } from "react-native";
 
 import { Theme } from "../../../theme";
+
+const { width } = Dimensions.get("window");
 
 export const useStyles = () => {
   const theme = useTheme<Theme>();
@@ -11,7 +13,7 @@ export const useStyles = () => {
     paddingVertical: "l",
     alignItems: "center",
   };
-  const doneStyles: ViewStyle = {
+  const iconStyles: ViewStyle = {
     marginTop: theme.spacing.l,
   };
   const titleStyles: TextProps<Theme> = {
@@ -34,13 +36,21 @@ export const useStyles = () => {
   const buttonTextStyles: TextProps<Theme> = {
     variant: "regularTextMediumLight",
   };
+  const yesOrNoStyles: BoxProps<Theme> = {
+    width,
+    paddingHorizontal: "xxl",
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "space-between",
+  };
 
   return {
     containerStyles,
-    doneStyles,
+    iconStyles,
     titleStyles,
     descriptionStyles,
     buttonStyles,
     buttonTextStyles,
+    yesOrNoStyles,
   };
 };

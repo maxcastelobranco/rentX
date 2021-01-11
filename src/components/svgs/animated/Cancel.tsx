@@ -17,11 +17,11 @@ const timingConfig: Animated.WithTimingConfig = {
   easing: Easing.bezier(0.87, 0, 0.13, 1),
 };
 
-const Done: React.FC<SvgProps> = (props: SvgProps) => {
+const Cancel: React.FC<SvgProps> = (props: SvgProps) => {
   const borderRef = useAnimatedRef<typeof AnimatedPath>();
-  const checkRef = useAnimatedRef<typeof AnimatedPath>();
+  const xRef = useAnimatedRef<typeof AnimatedPath>();
   const [borderLength, setBorderLength] = useState(0);
-  const [checkLength, setCheckLength] = useState(0);
+  const [xLength, setXLength] = useState(0);
 
   const animationDriver = useSharedValue(0);
 
@@ -34,20 +34,14 @@ const Done: React.FC<SvgProps> = (props: SvgProps) => {
       strokeDashoffset: mix(animationDriver.value, borderLength, 0),
     };
   });
-  const animatedCheckProps = useAnimatedProps(() => {
+  const animatedXProps = useAnimatedProps(() => {
     return {
-      strokeDashoffset: mix(animationDriver.value, checkLength, 0),
+      strokeDashoffset: mix(animationDriver.value, xLength, 0),
     };
   });
 
   return (
-    <Svg
-      width={61.7262}
-      height={68.1158}
-      data-name="Layer 1"
-      viewBox="0 0  61.7262 68.1158"
-      {...props}
-    >
+    <Svg width={80} height={80} viewBox="0 0 80 80" {...props}>
       <AnimatedPath
         ref={borderRef}
         onLayout={() => {
@@ -57,26 +51,27 @@ const Done: React.FC<SvgProps> = (props: SvgProps) => {
         animatedProps={animatedBorderProps}
         fill="none"
         stroke="#29292e"
+        strokeWidth={6}
         strokeLinecap="round"
         strokeLinejoin="round"
-        strokeWidth={6}
-        d="M3.003 3H58.72v62.113H3.003z"
+        strokeMiterlimit={10}
+        d="M13.253 10.259h53.494v59.482H13.253z"
       />
       <AnimatedPath
-        ref={checkRef}
+        ref={xRef}
         onLayout={() => {
-          setCheckLength(checkRef.current.getTotalLength);
+          setXLength(xRef.current.getTotalLength);
         }}
-        strokeDasharray={checkLength}
-        animatedProps={animatedCheckProps}
+        strokeDasharray={xLength}
+        animatedProps={animatedXProps}
         fill="none"
-        stroke="#03b352"
-        strokeMiterlimit={10}
+        stroke="#dc1637"
         strokeWidth={6}
-        d="M15.369 31.354l12.132 12.132L46.358 24.63"
+        strokeMiterlimit={10}
+        d="M30.573 30.57l18.854 18.86M49.427 30.57L30.573 49.43"
       />
     </Svg>
   );
 };
 
-export default Done;
+export default Cancel;
