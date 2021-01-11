@@ -11,7 +11,7 @@ export interface CarLease {
 }
 
 export const useCarLeases = (userId: string) => {
-  const { data: carLeases, error, mutate } = useSWR<CarLease[]>(
+  const { data: carLeases, error } = useSWR<CarLease[]>(
     `carLeases?userId=${userId}&_sort=startDate&_order=desc`,
     fetcher
   );
@@ -20,6 +20,5 @@ export const useCarLeases = (userId: string) => {
     carLeases,
     error,
     isLoading: !carLeases && !error,
-    mutate,
   };
 };
