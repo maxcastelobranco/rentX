@@ -37,7 +37,7 @@ const Tabs = createBottomTabNavigator<TabRoutes>();
 
 const TabsNavigator: React.FC = () => {
   return (
-    <Tabs.Navigator lazy={false} tabBar={(props) => <TabBar {...props} />}>
+    <Tabs.Navigator tabBar={(props) => <TabBar {...props} />}>
       <Tabs.Screen
         name="Home"
         component={Home}

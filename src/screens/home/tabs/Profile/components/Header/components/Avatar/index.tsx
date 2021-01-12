@@ -113,16 +113,18 @@ const Avatar: React.FC<AvatarProps> = ({
 
   return (
     <Pressable onPress={toggleFullScreenImage} disabled={isImageFullScreen}>
-      <PinchGestureHandler
-        onGestureEvent={onPinchGestureEvent}
-        enabled={isImageFullScreen}
-      >
-        <Animated.Image
-          resizeMode="cover"
-          source={{ uri: avatarUrl }}
-          style={[avatarStyles, animatedImageStyle]}
-        />
-      </PinchGestureHandler>
+      {!!avatarUrl.length && (
+        <PinchGestureHandler
+          onGestureEvent={onPinchGestureEvent}
+          enabled={isImageFullScreen}
+        >
+          <Animated.Image
+            resizeMode="cover"
+            source={{ uri: avatarUrl }}
+            style={[avatarStyles, animatedImageStyle]}
+          />
+        </PinchGestureHandler>
+      )}
       <Animated.View
         style={[
           {

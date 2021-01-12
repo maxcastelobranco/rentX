@@ -104,11 +104,13 @@ const Car: React.FC<CarProps> = ({ data, index, translationY }) => {
             {`${money(dailyRate)}`}
           </Text>
         </Box>
-        <Image
-          resizeMode="contain"
-          source={{ uri: image }}
-          style={imageStyles}
-        />
+        {!!image.length && (
+          <Image
+            resizeMode="contain"
+            source={{ uri: image }}
+            style={imageStyles}
+          />
+        )}
         {icon}
       </Animated.View>
     </RectButton>

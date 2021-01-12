@@ -79,11 +79,13 @@ const Car: React.FC<CarProps> = ({ id }) => {
             {`${money(dailyRate)}`}
           </Text>
         </Box>
-        <Image
-          resizeMode="contain"
-          source={{ uri: image }}
-          style={imageStyles}
-        />
+        {!!image.length && (
+          <Image
+            resizeMode="contain"
+            source={{ uri: image }}
+            style={imageStyles}
+          />
+        )}
         {icon}
       </Box>
     </RectButton>

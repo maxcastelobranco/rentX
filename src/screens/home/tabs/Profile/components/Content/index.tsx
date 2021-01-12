@@ -59,7 +59,7 @@ const Content: React.FC<ContentProps> = ({
   });
 
   useEffect(() => {
-    if (carLeases) {
+    if (carLeases?.length) {
       const leaseMap: { [key: string]: number } = {};
 
       carLeases.map(({ carId }) => {
