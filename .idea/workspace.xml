@@ -6,13 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="2aeeec9b-380a-447b-91f6-3f9957591b9f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/animated/Button/styles.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/animated/Button/styles.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/tabs.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/tabs.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/screens/home/tabs/Leases/components/Results/components/CarLeaseItem/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/home/tabs/Leases/components/Results/components/CarLeaseItem/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/screens/home/tabs/Listing/components/Results/components/Car/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/home/tabs/Listing/components/Results/components/Car/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/screens/home/tabs/Profile/components/Content/components/Car/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/home/tabs/Profile/components/Content/components/Car/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/screens/home/tabs/Profile/components/Content/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/home/tabs/Profile/components/Content/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/screens/home/tabs/Profile/components/Header/components/Avatar/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/home/tabs/Profile/components/Header/components/Avatar/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/db/db.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/db/db.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/home/tabs/Home/components/Results/components/Header/styles.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/home/tabs/Home/components/Results/components/Header/styles.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,6 +50,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="full.screen.before.presentation.mode" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components/svgs/animated" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
@@ -191,7 +187,23 @@
       <workItem from="1610284735643" duration="6798000" />
       <workItem from="1610314042527" duration="7492000" />
       <workItem from="1610370967078" duration="22477000" />
-      <workItem from="1610476611548" duration="1323000" />
+      <workItem from="1610476611548" duration="2940000" />
+      <workItem from="1610544443416" duration="718000" />
+      <workItem from="1610559119683" duration="1273000" />
+      <workItem from="1610577215610" duration="594000" />
+      <workItem from="1610811361384" duration="103000" />
+      <workItem from="1610822635244" duration="334000" />
+      <workItem from="1610823858940" duration="2385000" />
+      <workItem from="1610893286019" duration="1789000" />
+      <workItem from="1610901266534" duration="1318000" />
+      <workItem from="1610925995602" duration="22000" />
+      <workItem from="1611448390500" duration="670000" />
+      <workItem from="1612120877247" duration="715000" />
+      <workItem from="1612131115031" duration="139000" />
+      <workItem from="1612395225662" duration="641000" />
+      <workItem from="1612467942401" duration="1176000" />
+      <workItem from="1612726915015" duration="545000" />
+      <workItem from="1613073132980" duration="2711000" />
     </task>
     <servers />
   </component>

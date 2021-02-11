@@ -4,7 +4,7 @@
       "id": "46c952cd-8244-41a0-8aab-1b0c1135eba5",
       "firstName": "Kieran",
       "lastName": "Casper",
-      "email": "Kieran63@hotmail.com",
+      "email": "kieran63@hotmail.com",
       "password": "123456",
       "avatarUrl": "https://images.unsplash.com/photo-1542996966-2e31c00bae31?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80"
     },
@@ -17099,6 +17099,27 @@
       "carId": "e13e6012-1540-4f44-af4a-823953931a2a",
       "startDate": "2021-03-27T00:00:00-03:00",
       "endDate": "2021-04-01T00:00:00-03:00"
+    },
+    {
+      "id": "84eaf77c-73ff-49f4-a2d4-fd73261c8b50",
+      "userId": "46c952cd-8244-41a0-8aab-1b0c1135eba5",
+      "carId": "f9a294c5-8faa-4e0e-bfb1-342187db064b",
+      "startDate": "2021-02-11T17:47:33-03:00",
+      "endDate": "2021-02-12T17:47:33-03:00"
+    },
+    {
+      "id": "03049fa9-8e39-4900-b970-6313824d053a",
+      "userId": "46c952cd-8244-41a0-8aab-1b0c1135eba5",
+      "carId": "f9a294c5-8faa-4e0e-bfb1-342187db064b",
+      "startDate": "2021-02-11T17:47:33-03:00",
+      "endDate": "2021-02-12T17:47:33-03:00"
+    },
+    {
+      "id": "6bb3b48e-8f89-4530-b270-088f5dffb663",
+      "userId": "46c952cd-8244-41a0-8aab-1b0c1135eba5",
+      "carId": "15efbde7-1b84-40de-97cd-1d734910646e",
+      "startDate": "2021-02-11T17:53:39-03:00",
+      "endDate": "2021-02-12T17:53:39-03:00"
     }
   ]
 }
