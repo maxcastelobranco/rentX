@@ -1,8 +1,6 @@
-# Proffy 2.0
+# RentX
 
-<div style="display: flex; justify-content: center">
-    <img src="assets/splash.png" width="300" alt="Proffy Splash">
-</div>
+<img src="assets/splash.png" width="300" alt="Proffy Splash">
 
 ## Technologies used in this project
 * [React Native](https://github.com/facebook/react-native)
@@ -10,29 +8,42 @@
 * [Reanimated 2](https://github.com/software-mansion/react-native-reanimated)
 * [Shopify's Restyle](https://github.com/Shopify/restyle)
 * [React Hook Form](https://github.com/react-hook-form/react-hook-form)
+* [DateFns](https://github.com/date-fns/date-fns)
 * [JSON Server](https://github.com/typicode/json-server)
 * [FakerJs](https://github.com/Marak/faker.js)
 
+### Custom Splash Screen animation
+![Splash](/assets/readme/splash.gif)
+
 ### OnBoarding animation
-![OnBoarding animation](/assets/readme/onBoarding.gif)
+![OnBoarding](/assets/readme/onBoarding.gif)
 
 ### Login page demo
-![OnBoarding animation](/assets/readme/loginPage.gif)
+![Login](/assets/readme/login.gif)
 
-### Sign Up page demo
-![OnBoarding animation](/assets/readme/signUp.gif)
+### Calendar page demo 1
+![Calendar 1](/assets/readme/calendar1.gif)
 
-### Reset Password page demo
-![OnBoarding animation](/assets/readme/resetPassword.gif)
+### Calendar page demo 2
+![Calendar 2](/assets/readme/calendar2.gif)
 
-### Login success
-![OnBoarding animation](/assets/readme/login.gif)
+### Tabbar animation
+![Tabbar](/assets/readme/tabbar.gif)
 
-### Profile page
-![OnBoarding animation](/assets/readme/profile.gif)
+### Results page demo
+![Results](/assets/readme/results.gif)
 
-### Study page tinder like animation
-![OnBoarding animation](/assets/readme/study.gif)
+### Results page filter component
+![Filter](/assets/readme/filter.gif)
 
-### Study page dropdown filter
-![OnBoarding animation](/assets/readme/filter.gif)
+### Car lease
+![Lease](/assets/readme/lease.gif)
+
+### Listing page demo
+![Listing](/assets/readme/listing.gif)
+
+### Leases page demo
+![Leases](/assets/readme/leases.gif)
+
+### Profile page demo
+![Profile](/assets/readme/profile.gif)
