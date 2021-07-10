@@ -17,7 +17,7 @@ const CarLeaseSuccessful: React.FC<
 
   return (
     <FullScreenNotification
-      {...{ onPress }}
+      okButtonPress={onPress}
       title={`${makeAndModel} was leased!`}
       description={`Now just get yourself to the closest rentX dealership. ${makeAndModel} will be waiting for you.`}
     />

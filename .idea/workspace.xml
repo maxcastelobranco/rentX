@@ -6,8 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="2aeeec9b-380a-447b-91f6-3f9957591b9f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/db/db.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/db/db.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/screens/home/tabs/Home/components/Results/components/Header/styles.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/home/tabs/Home/components/Results/components/Header/styles.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/home/CarLeaseSuccessful/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/home/CarLeaseSuccessful/index.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,7 +51,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="full.screen.before.presentation.mode" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components/svgs/animated" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -69,18 +69,18 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\max_c\OneDrive\Desktop\PortfolioWorthy\rentX" />
       <recent name="C:\Users\max_c\OneDrive\Desktop\PortfolioWorthy\rentX\src\components\svgs\animated" />
       <recent name="C:\Users\max_c\OneDrive\Desktop\PortfolioWorthy\rentX\src\screens\home\tabs\Profile\components\Content\components" />
       <recent name="C:\Users\max_c\OneDrive\Desktop\PortfolioWorthy\rentX\src\screens\home\tabs\Profile\components\Header\components\Avatar" />
       <recent name="C:\Users\max_c\OneDrive\Desktop\PortfolioWorthy\rentX\src\components\svgs\static" />
-      <recent name="C:\Users\max_c\OneDrive\Desktop\PortfolioWorthy\rentX\src\screens\home\tabs\Leases" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\max_c\OneDrive\Desktop\PortfolioWorthy\rentX\.github" />
       <recent name="C:\Users\max_c\OneDrive\Desktop\PortfolioWorthy\rentX\src\screens\home\tabs\components" />
       <recent name="C:\Users\max_c\OneDrive\Desktop\PortfolioWorthy\rentX\src\hooks" />
       <recent name="C:\Users\max_c\OneDrive\Desktop\PortfolioWorthy\rentX\src\components\svgs\static\engineTypes" />
       <recent name="C:\Users\max_c\OneDrive\Desktop\PortfolioWorthy\rentX\src\components\svgs\static" />
-      <recent name="C:\Users\max_c\OneDrive\Desktop\PortfolioWorthy\rentX\src\screens\home\tabs\Home\components\Filter\components" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -203,7 +203,25 @@
       <workItem from="1612395225662" duration="641000" />
       <workItem from="1612467942401" duration="1176000" />
       <workItem from="1612726915015" duration="545000" />
-      <workItem from="1613073132980" duration="2711000" />
+      <workItem from="1613073132980" duration="5963000" />
+      <workItem from="1613761809750" duration="70000" />
+      <workItem from="1613770972043" duration="646000" />
+      <workItem from="1614260519352" duration="594000" />
+      <workItem from="1614381447850" duration="605000" />
+      <workItem from="1614617967957" duration="29000" />
+      <workItem from="1614618587344" duration="822000" />
+      <workItem from="1617129157429" duration="571000" />
+      <workItem from="1617391123445" duration="569000" />
+      <workItem from="1622137511710" duration="537000" />
+      <workItem from="1622213355445" duration="1348000" />
+      <workItem from="1622292598667" duration="463000" />
+      <workItem from="1622465395064" duration="2313000" />
+      <workItem from="1624286494183" duration="805000" />
+      <workItem from="1624367367292" duration="3841000" />
+      <workItem from="1624802662926" duration="1217000" />
+      <workItem from="1624832255156" duration="945000" />
+      <workItem from="1625064607606" duration="58000" />
+      <workItem from="1625948783364" duration="506000" />
     </task>
     <servers />
   </component>
