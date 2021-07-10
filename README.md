@@ -18,38 +18,38 @@
 * [JSON Server](https://github.com/typicode/json-server)
 * [FakerJs](https://github.com/Marak/faker.js)
 
-### Custom Splash Screen animation
+## Custom Splash Screen animation
 ![Splash](/.github/splash.gif)
 
-### OnBoarding animation
+## OnBoarding animation
 ![OnBoarding](/.github/onBoarding.gif)
 
-### Login page demo
+## Login page demo
 ![Login](/.github/login.gif)
 
-### Calendar page demo 1
+## Calendar page demo 1
 ![Calendar 1](/.github/calendar1.gif)
 
-### Calendar page demo 2
+## Calendar page demo 2
 ![Calendar 2](/.github/calendar2.gif)
 
-### Tabbar animation
+## Tabbar animation
 ![Tabbar](/.github/tabbar.gif)
 
-### Results page demo
+## Results page demo
 ![Results](/.github/results.gif)
 
-### Results page filter component
+## Results page filter component
 ![Filter](/.github/filter.gif)
 
-### Car lease
+## Car lease
 ![Lease](/.github/lease.gif)
 
-### Listing page demo
+## Listing page demo
 ![Listing](/.github/listing.gif)
 
-### Leases page demo
+## Leases page demo
 ![Leases](/.github/leases.gif)
 
-### Profile page demo
+## Profile page demo
 ![Profile](/.github/profile.gif)
